@@ -1,0 +1,171 @@
+{
+ "file_management": {
+  "file.put": [
+   [
+    "file_name",
+    "str",
+    "extract"
+   ],
+   ["path","str","extract"]
+   
+
+  ],
+  "file.get": [
+   [
+    "path",
+    "le fichier Rapport mensuel.pdf",
+    "target"
+   ]
+  ],
+  "file.copy": [
+    ["file_name","str","extract"],
+   [
+    "source_path",
+    "str",
+    "extract"
+   ],
+   [
+    "target_path",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.move": [
+   [
+    "source_path",
+    "str",
+    "extract"
+   ],
+   [
+    "target_path",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.delete": [
+   [
+    "path",
+    "le fichier Rapport mensuel.pdf",
+    "target"
+   ]
+  ],
+  "file.mkcol": [
+   [
+    "folder",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.propfind": ["path","nom du dossier ou fichier","extract"],
+  "file.proppatch": [
+   [
+    "path",
+    "str",
+    "extract"
+   ],
+   [
+    "property",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.direct_editing": [
+   [
+    "path",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.share.create": [
+   [
+    "path",
+    "str - file or folder path",
+    "extract"
+   ],
+   [
+    "recipient",
+    "str",
+    "extract"
+   ],
+   [
+    "recipient_email",
+    "str",
+    "extract"
+   ],
+   [
+    "link",
+    "bool",
+    "extract"
+   ]
+  ],
+  "file.share.delete": [
+   [
+    "share",
+    "le partage « Dossier clients »",
+    "target"
+   ],
+   [
+    "share_id",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.share.update": [
+   [
+    "share",
+    "le partage « Dossier clients »",
+    "target"
+   ],
+   [
+    "share_id",
+    "str",
+    "extract"
+   ],
+   [
+    "link",
+    "bool",
+    "extract"
+   ],["rule","str","extract"]
+  ],
+  "file.share.transfer": [
+   [
+    "share",
+    "le partage « Dossier clients »",
+    "target"
+   ],
+   [
+    "transfer_to",
+    "str",
+    "extract"
+   ],
+    [
+     "transfer_to_email",
+     "str",
+     "extract"
+    ]
+  ],
+  "file.version.list": [
+   [
+    "path",
+    "le fichier Rapport mensuel.pdf",
+    "target"
+   ]
+  ],
+  "file.version.restore": [
+   [
+    "path",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.trashbin.list": [],
+  "file.trashbin.restore": [
+   [
+    "file_name",
+    "str",
+    "extract"
+   ]
+  ],
+  "file.trashbin.purge": []
+ }
+}

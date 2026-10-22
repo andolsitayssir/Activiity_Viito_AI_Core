@@ -1,0 +1,36 @@
+services:
+  viito:
+    build: .
+    image: viito:latest
+    container_name: viito
+    env_file:
+      # Secrets + model names + LLM keys (OPENROUTER_API_KEY, credentials...).
+      - .env
+    environment:
+      # Backends run on the Docker HOST (outside this compose), never inside the
+      # container. The app's own .env points URL vars at localhost, which would
+      # resolve to the container itself, so they are overridden here to reach
+      # the host. On Docker Desktop / Docker Engine with host-gateway this works
+      # out of the box; edit these if a backend lives elsewhere.
+      CHATWOOT_URL: http://host.docker.internal:3000
+      ODOO_URL: http://host.docker.internal:8069
+      STALWART_URL: http://host.docker.internal:8089
+      ONLYOFFICE_URL: http://host.docker.internal:8093
+      ONLYOFFICE_DS_INTERNAL_URL: http://host.docker.internal:8088
+      VIKUNJA_URL: http://host.docker.internal:3456
+      RAG_URL: http://host.docker.internal:8787
+      NEXTCLOUD_URL: http://host.docker.internal:8092
+    extra_hosts:
+      # Resolves host.docker.internal to the Docker host (Windows/macOS + Linux).
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistent state: user files, uploads, sessions, checkpoint store.
+      - ./memory:/app/memory
+      - ./server/webapp/uploads:/app/server/webapp/uploads
+      - ./server/memory/uploads:/app/server/memory/uploads
+      - ./server/webapp/viito_store.json:/app/server/webapp/viito_store.json
+      - ./server/webapp/onlyoffice_sessions.json:/app/server/webapp/onlyoffice_sessions.json
+      - ./server/webapp/onlyoffice_viito_sessions.json:/app/server/webapp/onlyoffice_viito_sessions.json
+    restart: unless-stopped

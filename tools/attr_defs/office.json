@@ -1,0 +1,370 @@
+{
+ "office": {
+  "office.callback.error": [],
+  "office.callback.force_save": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.callback.save_ready": [
+    [
+     "document",
+     "le document Rapport mensuel",
+     "target"
+    ]
+   ],
+  "office.command.drop": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ],
+   [
+    "user",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.command.forcesave": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.command.info": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.command.meta": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.command.version": [],
+  "office.converter.convert": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "extract"
+   ],
+   [
+    "target_format",
+    "str",
+    "extract"
+   ],
+   [
+    "title",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.docbuilder.generate": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.editor.add_title": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+   [
+    "title_text",
+    "str",
+    "extract"
+   ],["title_size","taille du titre","target"],
+   ["title_color","couleur du titre","target"],
+   ["title_style","style du titre","target"],
+   ["position","position du titre","target"]
+  ],
+  "office.editor.deny_editing": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ],
+   [
+    "user",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.download_as": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ],
+   [
+    "format",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.add_content": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+   [
+    "text",
+    "contenue à ajouter",
+    "extract"
+   ], [
+      "position",
+      "str",
+      "extract"
+    ],
+    ["text_format","format du text","target"],
+    ["text_style","style du text","target"],
+     ["text_color","couleur du text","target"],
+     ["text_size","taille du text","target"]
+  ],
+  "office.editor.create": [
+   [
+    "name",
+    "le nom du fichier a creer (ex. test.docx)",
+    "extract"
+   ],
+   [
+    "content",
+    "le contenu texte du fichier",
+    "extract"
+   ],
+   [
+    "folder",
+    "le dossier de destination",
+    "extract"
+   ],
+   [
+    "format",
+    "le format de fichier (word/cell/slide ou docx/xlsx/pptx)",
+    "extract"
+   ]
+  ],
+
+  "office.editor.edit_content": [
+   [
+    "target_doc",
+    "le document",
+    "extract"
+   ],
+   
+   [
+    "text",
+    "le text à modifier",
+    "extract"
+   ],
+["target_text","le text à insérer","target"],
+    [
+      "position",
+      "str",
+      "extract"
+    ],
+    ["text_format","format du text","target"],
+    ["text_style","style du text","target"],
+    ["text_color","couleur du text","target"],
+    ["text_size","taille du text","target"]
+  ],
+
+  "office.editor.insert_image": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+   [
+    "image_url",
+    "str",
+    "extract"
+   ],
+   [
+    "position",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.insert_table": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+
+   ["cols_num","number of columsns","int"],
+   [
+    "rows_num",
+    "number of rows",
+    "int"
+   ],
+   ["columns_titles","columns titles","str[]"],
+   ["rows_data","rows data","str[]"],
+   [
+    "position",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.remove_table": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+   [
+    "position",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.modify_table":[
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+["cols_num","number of columsns","int"],
+   [
+    "rows_num",
+    "number of rows",
+    "int"
+   ],
+   ["columns_titles","columns titles","str[]"],
+   ["rows_data","rows data","str[]"],
+   [
+    "position",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.remove_image": [
+   [
+    "target_doc",
+    "le document",
+    "target"
+   ],
+   [
+    "image",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.mail_merge": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ],
+   [
+    "merge_source",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.editor.refresh_file": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.editor.refresh_history": [[
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.editor.start_filling": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.check_file_info": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.enumerate_children": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.get_file": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.lock": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.put_file": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.put_relative": [
+   [
+    "document_name",
+    "str",
+    "extract"
+   ],
+   [
+    "format",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.wopi.refresh_lock": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ],
+  "office.wopi.rename": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ],
+   [
+    "new_name",
+    "str",
+    "extract"
+   ]
+  ],
+  "office.wopi.unlock": [
+   [
+    "document",
+    "le document Rapport mensuel",
+    "target"
+   ]
+  ]
+ }
+}

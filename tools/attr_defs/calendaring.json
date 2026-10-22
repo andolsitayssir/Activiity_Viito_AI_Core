@@ -1,0 +1,130 @@
+{
+ "calendaring": {
+  "event.create": [
+   [
+    "title",
+    "str",
+    "extract"
+   ],
+   ["company", "str", "extract"],
+   [
+    "start_day",
+    "str",
+    "extract"
+   ],   [
+    "start_month",
+    "str",
+    "extract"
+   ],   [
+    "start_year",
+    "str",
+    "extract"
+   ],
+   [
+    "start_hour",
+    "str",
+    "extract"
+   ],
+   ["start_minute",
+    "str",
+    "extract"
+   ],
+   [
+    "end_hour",
+    "str",
+    "extract"
+   ],
+   [
+    "end_minute",
+    "str",
+    "extract"
+   ],
+   [
+    "location",
+    "str",
+    "extract"
+   ],
+   [
+    "attendees",
+    "list[str]",
+    "extract"
+   ],
+   [
+    "description",
+    "str",
+    "extract"
+   ],
+   [
+    "calendar",
+    "str",
+    "extract"
+   ]
+  ],
+"event.query": [["title", "str", "extract"],["start_day", "str", "extract"],["start_month", "str", "extract"],["start_year", "str", "extract"],["attendees", "list[str]", "extract"]],
+   "event.modify": [["title", "str", "extract"],["company", "str", "extract"],["start_day", "str", "extract"],["start_month", "str", "extract"],["start_year", "str", "extract"],["start_hour", "str", "extract"],["start_minute", "str", "extract"],["end_hour", "str", "extract"],["end_minute", "str", "extract"],["location", "str", "extract"],["attendees", "list[str]", "extract"],["description", "str", "extract"],["calendar", "str", "extract"]],
+   "event.update": [["title", "str", "extract"],["company", "str", "extract"],["start_day", "str", "extract"],["start_month", "str", "extract"],["start_year", "str", "extract"],["start_hour", "str", "extract"],["start_minute", "str", "extract"],["end_hour", "str", "extract"],["end_minute", "str", "extract"],["location", "str", "extract"],["attendees", "list[str]", "extract"],["description", "str", "extract"],["calendar", "str", "extract"]],
+   "event.delete": [["title", "str", "extract"],["company", "str", "extract"],["start_day", "str", "extract"],["start_month", "str", "extract"],["start_year", "str", "extract"],["attendees", "list[str]", "extract"]],
+  "event.free_busy": [
+   [
+    "from_day",
+    "str",
+    "extract"
+   ],   [
+    "from_month",
+    "str",
+    "extract"
+   ],   [
+    "from_year",
+    "str",
+    "extract"
+   ],
+   [
+    "day_to",
+    "str",
+    "extract"
+   ],   [
+    "month_to",
+    "str",
+    "extract"
+   ],   [
+    "year_to",
+    "str",
+    "extract"
+   ],
+   [
+    "attendees",
+    "list[str]",
+    "extract"
+   ]
+  ],
+  "event.recurrence": [
+    ["title","str","extract"],
+   [
+    "recurrence",
+    "str",
+    "extract"
+   ],
+   ["count","int -number of recurence","extract"]
+  ],
+  "event.reminder": [
+
+   [
+    "hours_before",
+    "str",
+    "extract"
+   ]
+   ,["minutes_before","str", "extract"],
+   ["days_before", "str", "extract"]
+  ],
+  "event.multiget": [["title", "str", "extract"],["start_day", "str", "extract"],["start_month", "str", "extract"],["start_year", "str", "extract"],["start_time", "str", "extract"],["attendees", "list[str]", "extract"]],
+  "event.sync": [],
+  "calendar.create": [
+   [
+    "name",
+    "str",
+    "extract"
+   ]
+  ],
+  "calendar.list": []
+ }
+}

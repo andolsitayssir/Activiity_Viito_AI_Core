@@ -1,0 +1,21 @@
+.git
+.git_tmp
+.env
+env
+memory
+metrics
+mlruns
+toools api list
+tools-secrets.txt
+**/__pycache__
+**/*.pyc
+*.pyo
+.pytest_cache
+server/webapp/frontend/node_modules
+server/webapp/frontend/dist
+server/webapp/uploads
+server/memory/uploads
+server/webapp/viito_store.json
+server/webapp/onlyoffice_sessions.json
+server/webapp/onlyoffice_viito_sessions.json
+*.session

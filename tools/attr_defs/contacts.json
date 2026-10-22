@@ -1,0 +1,183 @@
+{
+ "contacts": {
+  "res.partner.create": [
+   [
+    "name",
+    "str",
+    "extract"
+   ],
+   [
+    "company",
+    "le nom de la societe(Acme)",
+    "extract"
+   ],
+   ["is_company", "bool", "extract"],
+   [
+    "email",
+    "str",
+    "extract"
+   ],
+   [
+    "phone",
+    "str",
+    "extract"
+   ],
+   [
+    "mobile",
+    "str",
+    "extract"
+   ],
+   [
+    "website",
+    "str",
+    "extract"
+   ],
+   [
+    "tags",
+    "list[str]",
+    "extract"
+   ],
+   [
+    "address",
+    "street/full adress",
+    "extract"
+   ],
+   [
+    "city",
+    "city",
+    "extract"
+   ],
+   [
+    "zip",
+    "str",
+    "extract"
+   ],
+   [
+    "country",
+    "country",
+    "extract"
+   ],["events", "list[str]", "extract"]
+  ],
+  "res.partner.write": [
+[
+    "name",
+    "str",
+    "extract"
+   ],
+   [
+    "company",
+    "la sociÃ©tÃ© Acme",
+    "extract"
+   ],
+   ["email",
+    "email",
+    "extract"
+   ],
+
+   [
+    "phone",
+    "str",
+    "extract"
+   ],
+   [
+    "mobile",
+    "str",
+    "extract"
+   ],
+   [
+    "website",
+    "str",
+    "extract"
+   ],
+   [
+    "tags",
+    "list[str]",
+    "extract"
+   ],
+   ["address", "street/full adress", "extract"],["city", "city", "extract"],["zip", "str", "extract"],["country", "country", "extract"]
+,["events", "list[str]", "extract"]
+  ],
+  "res.partner.search_read": [
+   [
+    "search_query",
+    "str",
+    "extract"
+   ],
+   [
+    "name",
+    "str",
+    "extract"
+   ]
+  ],
+  "res.partner.unlink": [
+   [
+    "partner",
+    "le contact TechNova",
+    "target"
+   ]
+  ],
+  "res.partner.copy": [
+   [
+    "partner",
+    "le contact TechNova",
+    "extract"
+   ]
+  ],
+  "res.partner.find_or_create": [
+   [
+    "email",
+    "str",
+    "extract"
+   ],
+   [
+    "name",
+    "str",
+    "extract"
+   ]
+  ],
+  "res.partner.create_company": [
+   [
+    "name",
+    "str",
+    "extract"
+   ],
+    [
+     "email",
+     "str",
+     "extract"
+    ],
+    [
+     "phone",
+     "str",
+     "extract"
+    ],
+    [
+     "website",
+     "str",
+     "extract"
+    ]
+  ],
+  "res.partner.open_commercial_extract": [
+   [
+    "partner",
+    "le contact TechNova",
+    "target"
+   ]
+  ],
+  "res.partner.address_get": [
+   [
+    "partner",
+    "le contact TechNova",
+    "target"
+   ]
+  ],
+  "res.partner.read_group": [
+   [
+    "group_by",
+    "str",
+    "extract"
+   ]
+  ],
+  "res.company.action_all_company_branches": ["company", "nom du societe", "extract"]
+ }
+}

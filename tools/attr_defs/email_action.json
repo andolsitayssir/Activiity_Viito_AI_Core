@@ -1,0 +1,137 @@
+{
+ "email_action": {
+  "email.email_submission.set": [
+   ["recipients", "list[email]", "extract"],
+   ["cc", "list[email]", "extract"],
+   ["sender_identity", "str", "entity"],
+   ["mailbox", "list[email]", "entity"],
+   ["attachment_names", "list[str]", "extract"],
+   ["content", "str", "extract"],
+   ["subject", "str", "extract"]
+  ],
+  "email.email.set": [
+   ["sender_identity", "str", "entity"]
+  ],
+  "email.email.query": [
+   ["search_query", "str", "extract"]
+  ],
+  "email.email.get": [
+   ["sender", "l'expediteur", "target"],
+   ["recipients", "les destinataires", "target"],
+   ["cc", "les destinataires en copie", "target"],
+   ["bcc", "les destinataires en copie cachee", "target"],
+   ["subject", "l'objet de l'email", "target"],
+   ["body_text", "le corps de l'email en texte brut", "target"],
+   ["body_html", "le corps de l'email en HTML", "target"],
+   ["attachments", "les pieces jointes de l'email", "target"],
+   ["email", "l'email de Medisys", "target"]
+  ],
+  "email.email.copy": [
+   ["email", "str", "extract"],
+   ["mailbox", "str", "extract"]
+  ],
+  "email.email.import": [],
+  "email.email.parse": [
+   ["recipients", "list[email]", "extract"]
+  ],
+  "email.email.query_changes": [],
+  "email.email.search_snippet": [
+   ["search_query", "str", "extract"]
+  ],
+  "email.blob.upload": [
+   ["attachments", "list[str]", "extract"]
+  ],
+  "email.blob.get": [
+   ["recipients", "list[email]", "extract"],
+   ["email_subject", "str", "extract"],
+   ["attachment", "la piece jointe devis_2026-118.pdf", "target"]
+  ],
+  "email.blob.lookup": [
+   ["recipients", "list[email]", "extract"],
+   ["email_subject", "str", "extract"],
+   ["attachment", "str", "extract"]
+  ],
+  "email.blob.copy": [
+   ["recipients", "list[email]", "extract"],
+   ["email_subject", "str", "extract"],
+   ["attachment", "str", "extract"]
+  ],
+  "email.mailbox.create": [
+   ["mailbox", "str", "extract"]
+  ],
+  "email.mailbox.rename": [
+   ["mailbox", "str", "entity"],
+   ["target_mailbox", "str", "extract"]
+  ],
+  "email.mailbox.delete": [
+   ["mailbox", "str", "entity"]
+  ],
+  "email.mailbox.query": [
+   ["box_query", "str", "extract"]
+  ],
+  "email.mailbox.get": [
+   ["mailbox", "la boite mail INBOX", "target"]
+  ],
+  "email.mailbox.set": [
+   ["mailbox", "str", "entity"]
+  ],
+  "email.thread.get": [
+   ["thread", "la conversation T-001", "target"]
+  ],
+  "email.thread.get_changes": [
+   ["mailbox", "str", "entity"]
+  ],
+  "email.identity.get": [
+   ["identity", "l'identite contact@acme.fr", "target"]
+  ],
+  "email.identity.set": [
+   ["sender_email", "str", "extract"]
+  ],
+  "email.smtp.data": [
+   ["mailbox", "str", "entity"],
+   ["recipients", "list[email]", "extract"]
+  ],
+  "email.smtp.mail_from": [
+   ["from_address", "str", "extract"]
+  ],
+  "email.smtp.rcpt_to": [
+   ["recipients", "list[str]", "extract"]
+  ],
+  "email.push_subscription.get": [
+   ["push_subscription", "l'abonnement push", "target"]
+  ],
+  "email.push_subscription.set": [],
+  "email.vacation_response.set": [
+   ["vacation_subject", "str", "extract"],
+   ["vacation_body", "str", "extract"],
+   ["vacation_enabled", "bool", "extract"],
+   ["vacation_start_day", "day", "extract"],
+   ["start_month", "month", "extract"],
+   ["start_year", "year", "extract"],
+   ["vacation_end_month", "month", "extract"],
+   ["vacation_end_year", "year", "extract"],
+   ["vacation_end_hour", "hour", "extract"]
+  ],
+  "email.sieve_script.query": [],
+  "email.sieve_script.set": [
+   ["filter_name", "str", "extract"],
+   ["filter", "str", "entity"]
+  ],
+  "email.sieve_script.validate": [
+   ["filter_rule", "str", "extract"]
+  ],
+  "email.quota.get": [],
+   "email.email_submission.query": [
+    ["search_query", "str", "extract"],
+    ["sent_day", "day", "extract"],
+    ["sent_month", "month", "extract"],
+    ["sent_year", "year", "extract"]
+   ],
+   "email.email.reply": [
+    ["email", "l'id du message a repondre (obtenu via email.email.query)", "extract"],
+    ["recipients", "adresses email des destinataires", "extract"],
+    ["content", "le contenu de la reponse", "extract"],
+    ["attachments", "list[str]", "extract"]
+   ]
+  }
+}

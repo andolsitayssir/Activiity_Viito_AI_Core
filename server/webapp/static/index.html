@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Routing Eval</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f1117;color:#e1e4e8;line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+h1{font-size:22px;font-weight:600;margin-bottom:4px}
+.subtitle{color:#8b949e;font-size:13px;margin-bottom:24px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600;margin-bottom:12px;color:#c9d1d9}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.form-group{display:flex;flex-direction:column;gap:4px;flex:1;min-width:180px}
+.form-group label{font-size:12px;color:#8b949e;font-weight:500}
+select,input[type=text]{background:#0d1117;border:1px solid #30363d;color:#c9d1d9;padding:8px 10px;border-radius:6px;font-size:13px;outline:none}
+select:focus,input:focus{border-color:#58a6ff}
+select{cursor:pointer}
+.btn{padding:8px 16px;border-radius:6px;border:none;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s}
+.btn-primary{background:#238636;color:#fff}.btn-primary:hover{background:#2ea043}
+.btn-primary:disabled{background:#21262d;color:#484f58;cursor:not-allowed}
+.btn-secondary{background:#21262d;color:#c9d1d9;border:1px solid #30363d}.btn-secondary:hover{background:#30363d}
+.upload-zone{border:2px dashed #30363d;border-radius:8px;padding:32px;text-align:center;cursor:pointer;transition:border-color .15s}
+.upload-zone:hover,.upload-zone.dragover{border-color:#58a6ff}
+.upload-zone p{color:#8b949e;font-size:13px}
+.upload-zone .filename{color:#58a6ff;font-weight:500}
+.progress-bar{height:4px;background:#21262d;border-radius:2px;overflow:hidden;margin-top:8px}
+.progress-bar .fill{height:100%;background:#238636;transition:width .3s;width:0%}
+.status-text{font-size:12px;color:#8b949e;margin-top:6px}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.metric{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:12px;text-align:center}
+.metric .value{font-size:22px;font-weight:700;color:#f0f6fc}
+.metric .label{font-size:11px;color:#8b949e;margin-top:2px}
+.per-class{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.per-class th{text-align:left;padding:6px 10px;border-bottom:1px solid #30363d;color:#8b949e;font-weight:500;font-size:11px;text-transform:uppercase}
+.per-class td{padding:6px 10px;border-bottom:1px solid #21262d}
+.per-class .num{text-align:right;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500}
+.pill-green{background:#0d3321;color:#3fb950}.pill-yellow{background:#3d2e00;color:#d29922}.pill-red{background:#3d1418;color:#f85149}
+.hidden{display:none}
+.past-runs{max-height:300px;overflow-y:auto}
+.past-run{display:flex;align-items:center;gap:12px;padding:8px 10px;border-bottom:1px solid #21262d;font-size:12px;cursor:pointer;transition:background .1s}
+.past-run:hover{background:#1c2128}
+.past-run .model{color:#c9d1d9;font-weight:500;min-width:200px}
+.past-run .acc{color:#3fb950;font-weight:600;min-width:60px;text-align:right}
+.past-run .meta{color:#484f58;margin-left:auto}
+.toast{position:fixed;bottom:20px;right:20px;background:#161b22;border:1px solid #30363d;padding:12px 16px;border-radius:8px;font-size:13px;z-index:100;transition:opacity .3s}
+.toast.error{border-color:#f85149;color:#f85149}
+.toast.success{border-color:#3fb950;color:#3fb950}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Routing Eval</h1>
+<p class="subtitle">Test multi-label intent classification models</p>
+
+<div class="card">
+<div class="card-title">Dataset</div>
+<div id="uploadZone" class="upload-zone" ondrop="handleDrop(event)" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')">
+<p id="uploadText">Drop .json, .csv, or .xlsx here or <label for="fileInput" style="color:#58a6ff;cursor:pointer;text-decoration:underline">browse</label></p>
+<input type="file" id="fileInput" accept=".json,.csv,.xlsx" style="display:none" onchange="handleUpload(this.files[0])">
+</div>
+<div id="datasetInfo" class="status-text hidden"></div>
+<div id="columnMapper" class="hidden" style="margin-top:12px">
+<div class="row">
+<div class="form-group">
+<label>Text column (user query)</label>
+<select id="textColSelect"></select>
+</div>
+<div class="form-group">
+<label>Label column (true class)</label>
+<select id="labelColSelect"></select>
+</div>
+</div>
+<div id="samplePreview" style="margin-top:8px;font-size:12px;color:#8b949e"></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">Configuration</div>
+<div class="row">
+<div class="form-group">
+<label>Model</label>
+<select id="modelSelect"></select>
+</div>
+<div class="form-group" style="max-width:260px">
+<label>Custom model (overrides selection)</label>
+<input type="text" id="customModel" placeholder="e.g. openai/gpt-4o">
+</div>
+<div class="form-group" style="max-width:140px">
+<label>Prompt</label>
+<select id="promptSelect">
+<option value="fewshot">Few-shot</option>
+<option value="zeroshot">Zero-shot</option>
+</select>
+</div>
+<div class="form-group" style="max-width:100px">
+<label>Workers</label>
+<input type="text" id="workersInput" value="8">
+</div>
+<div class="form-group" style="flex:0">
+<label>&nbsp;</label>
+<button class="btn btn-primary" id="runBtn" onclick="startRun()" disabled>Run</button>
+</div>
+</div>
+</div>
+
+<div id="progressCard" class="card hidden">
+<div class="card-title">Progress</div>
+<div class="progress-bar"><div class="fill" id="progressFill"></div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+  <span class="status-text" id="statusText"></span>
+  <span class="status-text" id="etaText"></span>
+</div>
+</div>
+
+<div id="resultsCard" class="card hidden">
+<div class="card-title">Results</div>
+<div class="metrics-grid" id="metricsGrid"></div>
+<table class="per-class" id="perClassTable">
+<thead><tr><th>Class</th><th class="num">Support</th><th class="num">Recall</th><th class="num">Precision</th><th class="num">F1</th></tr></thead>
+<tbody id="perClassBody"></tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-title">Past Runs</div>
+<div class="past-runs" id="pastRuns"><p style="color:#484f58;font-size:13px">Loading...</p></div>
+</div>
+</div>
+
+<script>
+let datasetPath = null;
+let polling = null;
+
+async function init() {
+  const res = await fetch('/eval/models');
+  const data = await res.json();
+  const sel = document.getElementById('modelSelect');
+  data.predefined.forEach(m => {
+    const o = document.createElement('option');
+    o.value = m.id; o.textContent = m.name;
+    sel.appendChild(o);
+  });
+  loadPastRuns();
+}
+
+function getModelName() {
+  const custom = document.getElementById('customModel').value.trim();
+  if (custom) return custom;
+  return document.getElementById('modelSelect').value;
+}
+
+async function handleUpload(file) {
+  if (!file) return;
+  const form = new FormData();
+  form.append('file', file);
+  document.getElementById('uploadText').innerHTML = '<span class="filename">Uploading...</span>';
+  try {
+    const res = await fetch('/eval/upload', {method:'POST', body: form});
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    datasetPath = data.path;
+    document.getElementById('uploadText').innerHTML = '<span class="filename">' + data.filename + '</span> (' + data.sample_count + ' samples)';
+    document.getElementById('datasetInfo').className = 'status-text';
+    document.getElementById('datasetInfo').textContent = data.sample_count + ' samples loaded';
+    document.getElementById('runBtn').disabled = false;
+    loadColumns(data.path);
+  } catch(e) {
+    document.getElementById('uploadText').innerHTML = 'Upload failed. Try again.';
+    toast(e.message, 'error');
+  }
+}
+
+async function loadColumns(path) {
+  try {
+    const res = await fetch('/eval/columns?path=' + encodeURIComponent(path));
+    const data = await res.json();
+    if (data.error) return;
+    const textSel = document.getElementById('textColSelect');
+    const labelSel = document.getElementById('labelColSelect');
+    textSel.innerHTML = '';
+    labelSel.innerHTML = '';
+    var textPreferred = ['question','text','query','utterance','prompt','input','message','sentence','intent'];
+    var labelPreferred = ['class','label','target','truth','true_label','expected','route','intent_class','category'];
+    var bestText = null, bestLabel = null;
+    data.columns.forEach(function(c) {
+      var lo = c.toLowerCase();
+      textSel.innerHTML += '<option value="' + c + '">' + c + '</option>';
+      labelSel.innerHTML += '<option value="' + c + '">' + c + '</option>';
+      if (!bestText && textPreferred.indexOf(lo) >= 0) bestText = c;
+      if (!bestLabel && labelPreferred.indexOf(lo) >= 0) bestLabel = c;
+    });
+    if (bestText) textSel.value = bestText;
+    if (bestLabel) labelSel.value = bestLabel;
+    document.getElementById('columnMapper').classList.remove('hidden');
+    var preview = '';
+    if (data.sample) {
+      var keys = Object.keys(data.sample);
+      preview = keys.map(function(k){ return k + ': ' + String(data.sample[k]).substring(0,60); }).join(' | ');
+    }
+    document.getElementById('samplePreview').textContent = 'First row: ' + preview;
+  } catch(e) {}
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('dragover');
+  if (e.dataTransfer.files.length) handleUpload(e.dataTransfer.files[0]);
+}
+
+async function startRun() {
+  const modelName = getModelName();
+  if (!modelName) { toast('Select or type a model name', 'error'); return; }
+  if (!datasetPath) { toast('Upload a dataset first', 'error'); return; }
+
+  const btn = document.getElementById('runBtn');
+  btn.disabled = true;
+  document.getElementById('progressCard').classList.remove('hidden');
+  document.getElementById('resultsCard').classList.add('hidden');
+  document.getElementById('progressFill').style.width = '10%';
+  document.getElementById('statusText').textContent = 'Starting evaluation...';
+
+  try {
+    const res = await fetch('/eval/run', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model_name: modelName,
+        prompt_version: document.getElementById('promptSelect').value,
+        dataset_path: datasetPath,
+        max_workers: parseInt(document.getElementById('workersInput').value) || 8,
+        text_column: document.getElementById('textColSelect').value || null,
+        label_column: document.getElementById('labelColSelect').value || null,
+      })
+    });
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    pollStatus(data.task_id);
+  } catch(e) {
+    toast(e.message, 'error');
+    btn.disabled = false;
+  }
+}
+
+function pollStatus(taskId) {
+  if (polling) clearInterval(polling);
+  polling = setInterval(async () => {
+    try {
+      const res = await fetch('/eval/status/' + taskId);
+      const data = await res.json();
+
+      if (data.total > 0) {
+        var pct = Math.round((data.completed / data.total) * 100);
+        document.getElementById('progressFill').style.width = pct + '%';
+        var rate = data.rate || 0;
+        var remaining = rate > 0 ? (data.total - data.completed) / rate : 0;
+        var etaMin = Math.floor(remaining / 60);
+        var etaSec = Math.floor(remaining % 60);
+        document.getElementById('statusText').textContent = data.completed + ' / ' + data.total + ' samples (' + rate.toFixed(1) + '/s)';
+        document.getElementById('etaText').textContent = remaining > 0 ? 'ETA: ' + etaMin + 'm ' + etaSec + 's' : '';
+      } else {
+        document.getElementById('statusText').textContent = data.progress || data.status;
+        document.getElementById('progressFill').style.width = data.status === 'done' ? '100%' : '10%';
+      }
+
+      if (data.status === 'done') {
+        clearInterval(polling); polling = null;
+        document.getElementById('progressFill').style.width = '100%';
+        document.getElementById('statusText').textContent = 'Complete';
+        document.getElementById('etaText').textContent = '';
+        loadResults(taskId);
+        loadPastRuns();
+      } else if (data.status === 'error') {
+        clearInterval(polling); polling = null;
+        toast(data.error || 'Evaluation failed', 'error');
+        document.getElementById('runBtn').disabled = false;
+        document.getElementById('progressFill').style.width = '0%';
+        document.getElementById('etaText').textContent = '';
+      }
+    } catch(e) { /* retry */ }
+  }, 1000);
+}
+
+async function loadResults(taskId) {
+  const res = await fetch('/eval/results/' + taskId);
+  const s = await res.json();
+  document.getElementById('resultsCard').classList.remove('hidden');
+  document.getElementById('runBtn').disabled = false;
+
+  const fmt = v => (v * 100).toFixed(1) + '%';
+  const fmt2 = v => v.toFixed(2);
+  var metrics = [
+    ['Accuracy', fmt(s.exact_match_accuracy), 'pill-green'],
+    ['Precision', fmt(s.micro_precision), 'pill-green'],
+    ['Recall', fmt(s.micro_recall), 'pill-green'],
+    ['F1', fmt(s.micro_f1), 'pill-green'],
+    ['Multi Exact', fmt(s.multi_label_exact_match), s.multi_label_exact_match > 0.9 ? 'pill-green' : 'pill-yellow'],
+    ['Multi Partial', fmt(s.multi_label_partial_match), 'pill-green'],
+    ['Over-predicted', fmt(s.overpredict_rate), s.overpredict_rate > 0.1 ? 'pill-yellow' : 'pill-green'],
+    ['Under-predicted', fmt(s.underpredict_rate), s.underpredict_rate > 0.05 ? 'pill-red' : 'pill-green'],
+    ['Extra Labels', fmt2(s.avg_extra_labels), s.avg_extra_labels > 0.5 ? 'pill-yellow' : 'pill-green'],
+    ['Avg Latency', s.average_latency_seconds.toFixed(1) + 's', ''],
+    ['Samples', s.total_samples, ''],
+  ];
+  document.getElementById('metricsGrid').innerHTML = metrics.map(([l,v,c]) =>
+    '<div class="metric"><div class="value">' + v + '</div><div class="label">' + l + '</div></div>'
+  ).join('');
+
+  const tbody = document.getElementById('perClassBody');
+  tbody.innerHTML = '';
+  const pl = s.per_label || {};
+  Object.keys(pl).forEach(cls => {
+    const m = pl[cls];
+    const f1Class = m.f1 >= 0.95 ? 'pill-green' : m.f1 >= 0.85 ? 'pill-yellow' : 'pill-red';
+    tbody.innerHTML += '<tr><td>' + cls + '</td><td class="num">' + m.support + '</td><td class="num">' + fmt(m.recall) + '</td><td class="num">' + fmt(m.precision) + '</td><td class="num"><span class="pill ' + f1Class + '">' + fmt(m.f1) + '</span></td></tr>';
+  });
+}
+
+async function loadPastRuns() {
+  try {
+    const res = await fetch('/eval/runs');
+    const data = await res.json();
+    const el = document.getElementById('pastRuns');
+    if (!data.runs.length) { el.innerHTML = '<p style="color:#484f58;font-size:13px">No runs yet</p>'; return; }
+    el.innerHTML = data.runs.map(r => {
+      const rt = (r.runtime_seconds/60).toFixed(0);
+      const acc = (r.accuracy*100).toFixed(1);
+      const pill = r.accuracy >= 0.95 ? 'pill-green' : r.accuracy >= 0.85 ? 'pill-yellow' : 'pill-red';
+      return '<div class="past-run"><span class="model">' + r.model_name + '</span><span class="acc"><span class="pill ' + pill + '">' + acc + '%</span></span><span class="meta">' + r.total_samples + ' samples | ' + r.prompt_version + ' | ' + rt + 'min</span></div>';
+    }).join('');
+  } catch(e) {}
+}
+
+function toast(msg, type) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.style.opacity = '0', 4000);
+  setTimeout(() => el.remove(), 4500);
+}
+
+init();
+</script>
+</body>
+</html>

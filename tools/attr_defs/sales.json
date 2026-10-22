@@ -1,0 +1,240 @@
+{
+ "sales": {
+   "sale.order.create": [
+    [
+     "customer",
+     "str - nom du client",
+     "extract"
+    ],
+    [
+     "currency",
+     "str",
+     "extract"
+    ],
+    [
+     "price_unit",
+     "float",
+     "extract"
+    ],
+    [
+     "tax",
+     "str - nom de la taxe (ex: TVA 20%)",
+     "extract"
+    ]
+   ],
+   "sale.order.write": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+    [
+     "customer",
+     "str - nom du client",
+     "extract"
+    ],
+    [
+     "tax",
+     "str - nom de la taxe",
+     "extract"
+    ]
+   ],
+   "sale.order.search_read": [
+    [
+     "order",
+     "str",
+     "extract"
+    ],
+    [
+     "customer",
+     "str - nom du client",
+     "extract"
+    ],
+    [
+     "currency",
+     "str",
+     "extract"
+    ]
+   ],
+   "sale.order.unlink": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+     [
+      "customer",
+      "str - nom du client",
+      "extract"
+     ]
+   ],
+   "sale.order.action_confirm": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+["customer","str - nom du client","extract"]
+   ],
+   "sale.order.action_cancel": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+["customer","str - nom du client","extract"]
+   ],
+   "sale.order.action_draft": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+["customer","str - nom du client","extract"]
+   ],
+   "sale.order.action_lock": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+["customer","str - nom du client","extract"]
+   ],
+  "sale.order.action_unlock": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.order.action_quotation_send": [
+   [
+    "quotation",
+    "le devis D2026-001",
+    "target"
+   ],
+["customer","str","extract"]
+   ,
+   ["template","template name","extract"]
+
+  ],
+  "sale.order.action_quotation_sent": [
+   [
+    "quotation",
+    "le devis D2026-001",
+    "target"
+   ]
+   ,
+["customer","str","extract"]
+  ],
+  "sale.order.action_open_discount_wizard": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ],
+   [
+    "discount",
+    "float",
+    "extract"
+   ],
+["customer","str","extract"]
+  ],
+  "sale.order.action_update_prices": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ],
+    [
+     "price_unit",
+     "float",
+     "extract"
+    ],
+   ["customer","str","extract"]
+  ],
+   "sale.order.action_update_taxes": [
+    [
+     "order",
+     "la commande C2026-001",
+     "target"
+    ],
+    [
+     "tax",
+     "str - nom de la taxe",
+     "extract"
+    ],
+    ["customer","str - nom du client","extract"]
+   ],
+  "sale.order.action_preview_sale_order": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.order.action_view_invoice": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.order.create_document_from_attachment": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ],
+   ["attachment",
+    "attachement path",
+    "extract"
+   ]
+  ],
+  "sale.order.get_portal_last_transaction": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.order.payment_action_capture": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.order.payment_action_void": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+  "sale.advance.payment.inv.create_invoices": [
+   [
+    "order",
+    "la commande C2026-001",
+    "target"
+   ]
+  ],
+   "sale.order.line.action_add_from_catalog": [
+    [
+     "order",
+     "str - nom ou reference de la commande",
+     "extract"
+    ],
+    [
+     "product",
+     "str - nom du produit",
+     "extract"
+    ],
+    [
+     "tax",
+     "str - nom de la taxe",
+     "extract"
+    ]
+   ]
+ }
+}

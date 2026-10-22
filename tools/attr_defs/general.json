@@ -1,0 +1,110 @@
+{
+ "general": {
+  "conseil personnel": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - rh": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - accounting": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - administration": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - artisanat": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - automobile": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - finance": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - fiscalitÃ©": ["message", "str", "extract"],
+  "conseil professionnel - juridique": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - management": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - marketing": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "conseil professionnel - Ã©dition": ["message", "str", "extract"],
+  "general": [
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "redaction": [
+   [
+    "tone",
+    "str",
+    "extract"
+   ],
+   [
+    "message",
+    "str",
+    "extract"
+   ]
+  ],
+  "resume": [["message", "str", "extract"],["instructions", "str", "extract"]],
+  "traduction": [
+    ["message", "str", "extract"],
+    [
+     "source_language",
+     "str",
+     "extract"
+    ],
+    [
+     "target_language",
+     "str",
+     "extract"
+    ]
+
+  ]
+ }
+}

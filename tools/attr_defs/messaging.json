@@ -1,0 +1,187 @@
+{
+  "messaging": {
+    "messaging.channel.create": [
+      ["title", "str - canal title", "extract"],
+      ["participants", "list[str] - members to invite (@username or phone)", "extract"],
+      ["about", "str - canal description", "extract"],
+      ["message_text", "str - optional first post to publish", "extract"],
+      ["message", "str - optional first post to publish", "extract"]
+    ],
+    "messaging.group.create": [
+      ["title", "str - group title", "extract"],
+      ["participants", "list[str] - members to invite (@username or phone)", "extract"],
+      ["message_text", "str - optional first message to send", "extract"],
+      ["message", "str - optional first message to send", "extract"]
+    ],
+    "messaging.conversation.create": [
+      ["title", "str - conversation title", "extract"],
+      ["subject", "str - conversation subject/name", "extract"],
+      ["contact", "extract - contact of the conversation(user name or number)", "extract"],
+      ["inbox", "extract - inbox where the conversation is created", "extract"],
+      ["assignee", "extract - agent in charge", "extract"],
+      ["status", "str - open | resolved | pending", "extract"],
+      ["priority", "str - urgent | high | medium | low | none", "extract"],
+      ["labels", "list[str] - labels to apply", "extract"]
+    ],
+    "messaging.conversation.read": [
+      ["conversation", "la conversation Acme", "target"]
+    ],
+    "messaging.conversation.update": [
+      ["conversation", "la conversation Acme", "target"],
+      ["subject", "str - new subject", "extract"],
+      ["assignee", "extract - new assignee", "extract"],
+      ["status", "str - open | resolved | pending", "extract"],
+      ["priority", "str - urgent | high | medium | low | none", "extract"],
+      ["labels", "list[str] - labels to set", "extract"]
+    ],
+    "messaging.conversation.delete": [
+      ["conversation", "la conversation Acme", "target"]
+    ],
+    "messaging.conversation.assign": [
+      ["conversation", "extract - conversation", "extract"],
+      ["assignee", "extract - agent to assign", "extract"]
+    ],
+    "messaging.conversation.participants": [
+      ["conversation", "extract - conversation", "extract"],
+      ["participants", "extract - agents to add as participants", "extract"]
+    ],
+    "messaging.conversation.labels": [
+      ["conversation", "extract - conversation", "extract"],
+      ["labels", "list[str] - labels to set", "extract"]
+    ],
+    "messaging.conversation.custom_attributes": [
+      ["conversation", "extract - conversation", "extract"],
+      ["custom_attributes", "dict - attribute_key -> value to set", "extract"]
+    ],
+    "messaging.conversation.mute": [
+      ["conversation", "la conversation Acme", "target"]
+    ],
+    "messaging.conversation.unmute": [
+      ["conversation", "la conversation Acme", "target"]
+    ],
+    "messaging.conversation.toggle_priority": [
+      ["conversation", "extract - conversation", "extract"],
+      ["priority", "str - urgent | high | medium | low | none", "extract"]
+    ],
+    "messaging.conversation.toggle_status": [
+      ["conversation", "extract - conversation", "extract"],
+      ["status", "str - open | pending | resolved | snoozed", "extract"],
+      ["snooze_until", "datetime - required when status=snoozed", "extract"]
+    ],
+    "messaging.conversation.toggle_typing": [
+      ["conversation", "extract - conversation", "extract"],
+      ["typing_status", "str - on | off", "extract"]
+    ],
+    "messaging.conversation.transcript": [
+      ["conversation", "extract - conversation", "extract"],
+      ["contact", "extract - recipient email/contact for the transcript", "extract"]
+    ],
+    "messaging.message.send": [
+      ["conversation", "extract - conversation", "extract"],
+      ["message_text", "str - message text", "extract"],
+      ["attachments", "list[str] - attachment file paths", "extract"],
+      ["message_type", "str - text | image | video | audio | file | location | template", "extract"],
+      ["template_id", "extract - template to use for the message", "extract"]
+    ],
+    "messaging.message.update": [
+      ["conversation", "extract - conversation", "extract"],
+      ["message", "extract - message to edit", "extract"],
+      ["message_text", "str - new text", "extract"]
+    ],
+    "messaging.message.delete": [
+      ["conversation", "extract - conversation", "extract"],
+      ["message", "extract - message to delete", "extract"]
+    ],
+    "messaging.message.retry": [
+      ["conversation", "extract - conversation", "extract"],
+      ["message", "extract - failed message to retry", "extract"]
+    ],
+    "messaging.campaign.create": [
+      ["campaign_name", "str - new campaign name", "extract"],
+      ["audience", "extract - recipients/contacts of the campaign", "extract"],
+      ["channel", "str - email | whatsapp | sms | telegram | web_widget", "extract"],
+      ["message", "str - campaign message body", "extract"]
+    ],
+    "messaging.campaign.update": [
+      ["campaign", "la campagne relance", "target"],
+      ["campaign_name", "str - new name", "extract"],
+      ["audience", "extract - recipients/contacts of the campaign", "extract"],
+      ["channel", "str - channel", "extract"],
+      ["message", "str - campaign message body", "extract"]
+    ],
+    "messaging.campaign.delete": [
+      ["campaign", "la campagne relance", "target"]
+    ],
+    "messaging.inbox.create": [
+      ["inbox", "str - new inbox name", "extract"],
+      ["channel", "str - api | web_widget | email | line | telegram | whatsapp | sms", "extract"]
+    ],
+    "messaging.inbox.update": [
+      ["inbox", "la boîte Inbox support", "target"],
+      ["channel", "str - channel", "extract"]
+    ],
+    "messaging.inbox.delete": [
+      ["inbox", "la boîte Inbox support", "target"]
+    ],
+    "messaging.inbox.register_webhook": [
+      ["inbox", "la boîte Inbox support", "target"],
+      ["webhook_url", "str - webhook url", "extract"]
+    ],
+    "messaging.macro.create": [
+      ["macro_name", "str - new macro name", "extract"],
+      ["action", "str - actions the macro performs", "extract"]
+    ],
+    "messaging.macro.update": [
+      ["macro", "la macro relance", "target"],
+      ["macro_name", "str - new name", "extract"],
+      ["action", "str - actions the macro performs", "extract"]
+    ],
+    "messaging.macro.delete": [
+      ["macro", "la macro relance", "target"]
+    ],
+    "messaging.macro.execute": [
+      ["macro", "la macro relance", "target"],
+      ["conversation", "extract - conversation(s) to run the macro on", "extract"]
+    ],
+    "messaging.canned_response.create": [
+      ["content", "str - canned response content", "extract"]
+    ],
+    "messaging.canned_response.update": [
+      ["canned_response", "la réponse type paiement", "target"],
+      ["content", "str - new content", "extract"]
+    ],
+    "messaging.canned_response.delete": [
+      ["canned_response", "la réponse type paiement", "target"]
+    ],
+    "messaging.automation_rule.create": [
+      ["rule_name", "str - new rule name", "extract"],
+      ["condition", "str - trigger conditions", "extract"],
+      ["action", "str - actions to perform", "extract"]
+    ],
+    "messaging.automation_rule.update": [
+      ["automation_rule", "la règle tri entrant", "target"],
+      ["rule_name", "str - new name", "extract"],
+      ["condition", "str - trigger conditions", "extract"],
+      ["action", "str - actions to perform", "extract"]
+    ],
+    "messaging.automation_rule.delete": [
+      ["automation_rule", "la règle tri entrant", "target"]
+    ],
+    "messaging.automation_rule.clone": [
+      ["automation_rule", "la règle tri entrant", "target"]
+    ],
+    "messaging.notification.list": [
+      ["conversation", "extract - notifications of this conversation", "extract"],
+      ["unread_only", "bool - only list unread notifications", "extract"]
+    ],
+    "messaging.notification.mark_read": [
+      ["conversation", "extract - notifications of this conversation", "extract"],
+      ["unread_only", "bool - only mark unread notifications", "extract"]
+      
+    ],
+    "messaging.notification.snooze": [
+      ["conversation", "extract - notifications to snooze", "extract"],
+      ["snooze_until", "datetime - until when to snooze", "extract"]
+    ]
+  }
+}

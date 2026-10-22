@@ -1,0 +1,115 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px' }}}%%
+
+graph TB
+    subgraph Frontend["🖥️ Frontend — React / Vite SPA"]
+        UI["Interface Utilisateur<br/>(Conversations, Odoo, Gmail,<br/>OnlyOffice, Vikunja, Chatwoot)"]
+    end
+
+    subgraph API["🔌 API Layer — FastAPI"]
+        ROUTER["main.py — Routeur SPA"]
+        API_VIITO["api.py — Conversations,<br/>Messages, Pipeline Entry"]
+        API_GMAIL["api.py — Gmail OAuth,<br/>Messages, Send"]
+        API_ODOO["odoo_api.py — Status,<br/>List, Detail"]
+        API_ONLYOFFICE["web.py — OnlyOffice<br/>Callback, Convert"]
+        SPA["SPA Middleware<br/>(index.html pour /, /odoo, /gmail, ...)"]
+    end
+
+    subgraph Execution["⚙️ Agentic Pipeline — LangGraph StateGraph"]
+        ROUTER["Router<br/>Classification 3 stages<br/>(domaine → action → attributs)"]
+        DISPATCH["Dispatcher<br/>13 domaines → file d'attente"]
+        EXECUTOR["Executor<br/>Lookup registre → execute"]
+        VALIDATOR{"Validator<br/>2 types de verdicts"}
+        STRUCT["→ Échec structurel<br/>status error / action deferred"]
+        SEMANTIC["→ Mismatch sémantique<br/>LLM juge : résultats vs requête"]
+        ADVANCE["Advance Domain<br/>Pop next domain"]
+        FORMATTER["Formatter<br/>Réponse LLM en français<br/>(escalade honnête si échec)"]
+        LOGGER["Logger<br/>Trace d'exécution"]
+    end
+
+    subgraph Executors["🔧 Exécuteurs — 9 backends"]
+        EX_ODOO["Odoo<br/>XML-RPC :8069"]
+        EX_GMAIL["Gmail<br/>REST + OAuth2"]
+        EX_STALWART["Stalwart<br/>JMAP :8089"]
+        EX_ONLYOFFICE["OnlyOffice<br/>REST + JWT :8093"]
+        EX_VIKUNJA["Vikunja<br/>REST :3456"]
+        EX_CHATWOOT["Chatwoot<br/>REST :3000"]
+        EX_RAG["RAG<br/>activiitykdb :8787<br/>+ Qdrant :6333"]
+        EX_FILES["File Manager<br/>Système local"]
+        EX_GENERAL["General<br/>Réponse LLM directe"]
+    end
+
+    subgraph State["💾 État & Mémoire"]
+        MEMORY_CONVERSATIONS["memory/<br/>conversations.json"]
+        MEMORY_TOKENS["memory/<br/>gmail_tokens.json"]
+        MEMORY_CKPT["memory/<br/>execution_ckpt.sqlite"]
+        MEMORY_FILES["memory/files/<br/>Stockage local"]
+        TOOLS_ATTR["tools/attr_defs/<br/>13 schémas JSON"]
+    end
+
+    %% ── Frontend → API ──────────────────────────────────────────
+    UI -->|"POST /api/conversations/{id}/messages"| ROUTER
+    UI -->|"GET /api/gmail/status"| ROUTER
+    UI -->|"GET /api/odoo/status"| ROUTER
+    UI -->|"GET /gmail/callback"| ROUTER
+
+    ROUTER --> API_VIITO
+    ROUTER --> API_GMAIL
+    ROUTER --> API_ODOO
+    ROUTER --> API_ONLYOFFICE
+    ROUTER --> SPA
+
+    %% ── API → Pipeline ──────────────────────────────────────────
+    API_VIITO -->|"run_turn(query, history)<br/>la classification est DANS le graph"| ROUTER
+    ROUTER -->|"router_output<br/>{domains, actions, fields}"| DISPATCH
+    DISPATCH --> EXECUTOR
+    EXECUTOR --> VALIDATOR
+
+    %% ── 2 boucles de retry séparées ─────────────────────────────
+    VALIDATOR -->|"échec structurel"| STRUCT
+    STRUCT -->|"retry exécution<br/>(même domaine, ≤2)"| EXECUTOR
+    STRUCT -.->|"retry épuisé"| FORMATTER
+
+    VALIDATOR -->|"mismatch sémantique"| SEMANTIC
+    SEMANTIC -->|"reroute<br/>pipeline complet (≤2)"| ROUTER
+
+    VALIDATOR -->|"next_domain"| ADVANCE
+    ADVANCE -->|"pop suivant"| EXECUTOR
+    VALIDATOR -->|"done"| FORMATTER
+
+    FORMATTER --> LOGGER
+    LOGGER -->|"Réponse finale"| UI
+
+    %% ── Execution → Executors ───────────────────────────────────
+    EXECUTOR -->|"crm, accounting,<br/>sales, hr, contacts"| EX_ODOO
+    EXECUTOR -->|"email_action"| EX_GMAIL
+    EXECUTOR -->|"email_action<br/>(fallback)"| EX_STALWART
+    EXECUTOR -->|"office"| EX_ONLYOFFICE
+    EXECUTOR -->|"tasking"| EX_VIKUNJA
+    EXECUTOR -->|"messaging"| EX_CHATWOOT
+    EXECUTOR -->|"knowledge_kb"| EX_RAG
+    EXECUTOR -->|"file_management"| EX_FILES
+    EXECUTOR -->|"general, calendaring,<br/>odoo_list, ..."| EX_GENERAL
+
+    %% ── Executors → State ───────────────────────────────────────
+    EX_ODOO --> MEMORY_CONVERSATIONS
+    EX_GMAIL --> MEMORY_TOKENS
+    EXECUTOR -.->|"checkpoint"| MEMORY_CKPT
+    EX_FILES --> MEMORY_FILES
+    ROUTER --> TOOLS_ATTR
+
+    %% ── Style ───────────────────────────────────────────────────
+    classDef frontend fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1
+    classDef api fill:#FFF3E0,stroke:#E65100,stroke-width:2px,color:#BF360C
+    classDef execution fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
+    classDef executors fill:#FCE4EC,stroke:#AD1457,stroke-width:2px,color:#880E4F
+    classDef state fill:#ECEFF1,stroke:#546E7A,stroke-width:2px,color:#263238
+    classDef decision fill:#FFF9C4,stroke:#F9A825,stroke-width:2px,color:#F57F17
+    classDef verdict fill:#FFE0B2,stroke:#E65100,stroke-width:1.5px,color:#BF360C
+
+    class UI frontend
+    class ROUTER,API_VIITO,API_GMAIL,API_ODOO,API_ONLYOFFICE,SPA api
+    class DISPATCH,EXECUTOR,ROUTER,ADVANCE,FORMATTER,LOGGER execution
+    class VALIDATOR decision
+    class STRUCT,SEMANTIC verdict
+    class EX_ODOO,EX_GMAIL,EX_STALWART,EX_ONLYOFFICE,EX_VIKUNJA,EX_CHATWOOT,EX_RAG,EX_FILES,EX_GENERAL executors
+    class MEMORY_CONVERSATIONS,MEMORY_TOKENS,MEMORY_CKPT,MEMORY_FILES,TOOLS_ATTR state

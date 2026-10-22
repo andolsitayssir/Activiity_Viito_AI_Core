@@ -1,0 +1,1236 @@
+id,query,tool,domains,actions
+1,Annule le rapprochement de la ligne Solenco.,Odoo,accounting,account.bank.statement.line.action_undo_reconciliation
+2,Defait le rapprochement du relevé s'il te plaît.,Odoo,accounting,account.bank.statement.line.action_undo_reconciliation
+3,Crée une nouvelle écriture de journal s'il te plaît.,Odoo,accounting,account.journal.action_create_new
+4,Crée une saisie comptable s'il te plaît.,Odoo,accounting,account.journal.action_create_new
+5,Crée la facture fournisseur de TechNova.,Odoo,accounting,account.journal.action_create_vendor_bill
+6,Saisis la facture d'achat de BatiNord.,Odoo,accounting,account.journal.action_create_vendor_bill
+7,Récupère les e-factures en attente s'il te plaît.,Odoo,accounting,account.journal.button_fetch_in_einvoices
+8,Importe les factures electroniques s'il te plaît.,Odoo,accounting,account.journal.button_fetch_in_einvoices
+9,Crée un relevé bancaire s'il te plaît.,Odoo,accounting,account.journal.create_bank_statement
+10,Ajoute un relevé bancaire du mois s'il te plaît.,Odoo,accounting,account.journal.create_bank_statement
+11,Crée le paiement client de Artemis Design.,Odoo,accounting,account.journal.create_customer_payment
+12,Saisis l'encaissement de LogiTrans.,Odoo,accounting,account.journal.create_customer_payment
+13,Crée le paiement fournisseur de Atelier Martin.,Odoo,accounting,account.journal.create_supplier_payment
+14,Saisis le règlement a Cora Group.,Odoo,accounting,account.journal.create_supplier_payment
+15,Duplique la facture BureauPlus.,Odoo,accounting,account.move.action_duplicate
+16,Copie l'écriture BureauPlus.,Odoo,accounting,account.move.action_duplicate
+17,Force l'enregistrement du paiement de la facture BioMarche.,Odoo,accounting,account.move.action_force_register_payment
+18,Force l'enregistrement du paiement de la facture TechNova.,Odoo,accounting,account.move.action_force_register_payment
+19,Télécharge la facture TechNova en PDF.,Odoo,accounting,account.move.action_invoice_download_pdf
+20,Récupère le PDF de la facture BioMarche.,Odoo,accounting,account.move.action_invoice_download_pdf
+21,Valide la facture Medisys et envoie-la au client.,Odoo,"accounting, email_action","account.move.action_post, email.email_submission.set"
+22,Valide la facture TechNova et envoie-la au client.,Odoo,"accounting, email_action","account.move.action_post, email.email_submission.set"
+23,Valide la facture Dupont & Fils et envoie-la au client.,Odoo,"accounting, email_action","account.move.action_post, email.email_submission.set"
+24,Valide la facture Verdeco et envoie-la au client.,Odoo,"accounting, email_action","account.move.action_post, email.email_submission.set"
+25,Valide la facture Solenco.,Odoo,accounting,account.move.action_post
+26,Poste la facture de Solenco.,Odoo,accounting,account.move.action_post
+27,Imprime la facture Medisys.,Odoo,accounting,account.move.action_print_pdf
+28,Imprime le PDF de l'écriture BureauPlus.,Odoo,accounting,account.move.action_print_pdf
+29,Enregistre le paiement de Solenco et mets a jour la fiche client.,Odoo,"accounting, contacts","account.move.action_register_payment, res.partner.search_read"
+30,Enregistre le paiement de TechNova et mets a jour la fiche client.,Odoo,"accounting, contacts","account.move.action_register_payment, res.partner.search_read"
+31,Enregistre le paiement de BureauPlus et mets a jour la fiche client.,Odoo,"accounting, contacts","account.move.action_register_payment, res.partner.search_read"
+32,Enregistre le paiement de BioMarche et mets a jour la fiche client.,Odoo,"accounting, contacts","account.move.action_register_payment, res.partner.search_read"
+33,Enregistre le paiement de la facture Medisys.,Odoo,accounting,account.move.action_register_payment
+34,Saisis le règlement de BatiNord.,Odoo,accounting,account.move.action_register_payment
+35,Crée un avoir pour la facture BureauPlus.,Odoo,accounting,account.move.action_reverse
+36,Revers la facture BatiNord en avoir.,Odoo,accounting,account.move.action_reverse
+37,Envoie la facture LogiTrans au client et transmets-la en copie a clients@boutique.fr.,Odoo,"accounting, email_action","account.move.action_send_and_print, email.email_submission.set"
+38,Envoie la facture BatiNord au client et transmets-la en copie a clients@boutique.fr.,Odoo,"accounting, email_action","account.move.action_send_and_print, email.email_submission.set"
+39,Envoie la facture Verdeco au client et transmets-la en copie a contact@domaine.fr.,Odoo,"accounting, email_action","account.move.action_send_and_print, email.email_submission.set"
+40,Envoie la facture Medisys au client et transmets-la en copie a rh@equipe.fr.,Odoo,"accounting, email_action","account.move.action_send_and_print, email.email_submission.set"
+41,Envoie et imprime la facture Dupont & Fils.,Odoo,accounting,account.move.action_send_and_print
+42,Envoie la facture BureauPlus au client.,Odoo,accounting,account.move.action_send_and_print
+43,Transforme la facture BureauPlus en avoir.,Odoo,accounting,account.move.action_switch_move_type
+44,Bascule Solenco en note de credit.,Odoo,accounting,account.move.action_switch_move_type
+45,Bloque le paiement de la facture Artemis Design.,Odoo,accounting,account.move.action_toggle_block_payment
+46,Active le blocage de règlement pour LogiTrans.,Odoo,accounting,account.move.action_toggle_block_payment
+47,Annule l'écriture comptable Solenco.,Odoo,accounting,account.move.button_cancel
+48,Clôture la facture TechNova en annulee.,Odoo,accounting,account.move.button_cancel
+49,Repasse la facture Atelier Martin en brouillon.,Odoo,accounting,account.move.button_draft
+50,Repasse la facture Dupont & Fils.,Odoo,accounting,account.move.button_draft
+51,Hache l'écriture Atelier Martin du journal.,Odoo,accounting,account.move.button_hash
+52,Verrouille l'écriture TechNova avec un hash.,Odoo,accounting,account.move.button_hash
+53,Demande l'annulation de la facture BureauPlus.,Odoo,accounting,account.move.button_request_cancel
+54,Sollicite la validation d'annulation pour TechNova.,Odoo,accounting,account.move.button_request_cancel
+55,Vérifie la continuité des numéros de factures Medisys.,Odoo,accounting,account.move.check_move_sequence_chain
+56,Contrôle la séquence des écritures Medisys.,Odoo,accounting,account.move.check_move_sequence_chain
+57,Crée une facture pour BureauPlus.,Odoo,accounting,account.move.create
+58,Crée une écriture de 1 250 EUR pour Verdeco.,Odoo,accounting,account.move.create
+59,Récupère le taux de change pour la facture BioMarche.,Odoo,accounting,account.move.get_currency_rate
+60,Affiche le taux de conversion de Atelier Martin.,Odoo,accounting,account.move.get_currency_rate
+61,Assigne la ligne en attente au rapprochement de BatiNord.,Odoo,accounting,account.move.js_assign_outstanding_line
+62,Rapproche la ligne ouverte de LogiTrans.,Odoo,accounting,account.move.js_assign_outstanding_line
+63,Affiche les paiements de la facture BatiNord.,Odoo,accounting,account.move.open_payments
+64,Montre les règlements de Medisys.,Odoo,accounting,account.move.open_payments
+65,Ouvre le rapprochement pour la facture Verdeco.,Odoo,accounting,account.move.open_reconcile_view
+66,Lance le rapprochement bancaire de Artemis Design.,Odoo,accounting,account.move.open_reconcile_view
+67,Crée les avoirs des factures selectionnees s'il te plaît.,Odoo,accounting,account.move.reversal.reverse_moves
+68,Reverse les écritures de LogiTrans.,Odoo,accounting,account.move.reversal.reverse_moves
+69,Affiche les factures de BureauPlus.,Odoo,accounting,account.move.search_read
+70,Recherche la facture de 18 450 EUR.,Odoo,accounting,account.move.search_read
+71,Supprime la facture brouillon Dupont & Fils.,Odoo,accounting,account.move.unlink
+72,Efface l'écriture Dupont & Fils.,Odoo,accounting,account.move.unlink
+73,Modifie la facture Verdeco.,Odoo,accounting,account.move.write
+74,Corrige le montant de la facture Artemis Design.,Odoo,accounting,account.move.write
+75,Annule le paiement de TechNova.,Odoo,accounting,account.payment.action_cancel
+76,Clôture le règlement 12 800 EUR.,Odoo,accounting,account.payment.action_cancel
+77,Repasse le paiement Solenco en brouillon.,Odoo,accounting,account.payment.action_draft
+78,Remet le règlement 540 EUR en draft.,Odoo,accounting,account.payment.action_draft
+79,Valide le paiement 1 250 EUR et poste la facture de Dupont & Fils.,Odoo,accounting,"account.payment.action_post, account.move.action_post"
+80,Valide le paiement 12 800 EUR et poste la facture de TechNova.,Odoo,accounting,"account.payment.action_post, account.move.action_post"
+81,Valide le paiement 1 250 EUR et poste la facture de BatiNord.,Odoo,accounting,"account.payment.action_post, account.move.action_post"
+82,Valide le paiement 12 800 EUR et poste la facture de Solenco.,Odoo,accounting,"account.payment.action_post, account.move.action_post"
+83,Valide le paiement de 540 EUR.,Odoo,accounting,account.payment.action_post
+84,Poste le règlement 7 200 EUR TTC de Cora Group.,Odoo,accounting,account.payment.action_post
+85,Rejette le paiement de Cora Group.,Odoo,accounting,account.payment.action_reject
+86,Refuse le règlement 3 400 EUR HT.,Odoo,accounting,account.payment.action_reject
+87,Valide le paiement TechNova.,Odoo,accounting,account.payment.action_validate
+88,Approuve le règlement de 1 250 EUR.,Odoo,accounting,account.payment.action_validate
+89,Marque le paiement Atelier Martin comme envoyé.,Odoo,accounting,account.payment.mark_as_sent
+90,Indique que le règlement 7 200 EUR TTC est parti.,Odoo,accounting,account.payment.mark_as_sent
+91,Crée les paiements pour les factures selectionnees s'il te plaît.,Odoo,accounting,account.payment.register.create_payments
+92,Génère les règlements des factures de Verdeco.,Odoo,accounting,account.payment.register.create_payments
+93,Calcule les taxes pour le montant 1 250 EUR.,Odoo,accounting,account.tax.compute_all
+94,Calcule la TVA sur 540 EUR.,Odoo,accounting,account.tax.compute_all
+95,Crée un calendrier 'Projet demenagement bureaux'.,Nextcloud,calendaring,calendar.create
+96,Crée un agenda 'Vacances' s'il te plaît.,Nextcloud,calendaring,calendar.create
+97,Crée un calendrier 'Projet reorganisation'.,Nextcloud,calendaring,calendar.create
+98,"Crée un agenda 'Vacances', merci.",Nextcloud,calendaring,calendar.create
+99,Crée un calendrier 'Projet refonte du site'.,Nextcloud,calendaring,calendar.create
+100,Crée un agenda 'Vacances' maintenant.,Nextcloud,calendaring,calendar.create
+101,Crée un calendrier 'Projet migration ERP'.,Nextcloud,calendaring,calendar.create
+102,Affiche mes calendriers s'il te plaît.,Nextcloud,calendaring,calendar.list
+103,Liste les agendas partages avec moi s'il te plaît.,Nextcloud,calendaring,calendar.list
+104,"Affiche mes calendriers, merci.",Nextcloud,calendaring,calendar.list
+105,"Liste les agendas partages avec moi, merci.",Nextcloud,calendaring,calendar.list
+106,Affiche mes calendriers maintenant.,Nextcloud,calendaring,calendar.list
+107,Liste les agendas partages avec moi maintenant.,Nextcloud,calendaring,calendar.list
+108,Affiche mes calendriers tout de suite.,Nextcloud,calendaring,calendar.list
+109,Crée la réunion ce soir et envoie l'invitation aux participants.,Nextcloud,"calendaring, email_action","event.create, email.email_submission.set"
+110,Crée la réunion le mois dernier et envoie l'invitation aux participants.,Nextcloud,"calendaring, email_action","event.create, email.email_submission.set"
+111,Crée la réunion avant le 30 et envoie l'invitation aux participants.,Nextcloud,"calendaring, email_action","event.create, email.email_submission.set"
+112,Crée la réunion jeudi matin et envoie l'invitation aux participants.,Nextcloud,"calendaring, email_action","event.create, email.email_submission.set"
+113,Crée un événement avant le 30 a 10h.,Nextcloud,calendaring,event.create
+114,Ajoute une réunion ce soir.,Nextcloud,calendaring,event.create
+115,Planifie une tache a jeudi matin.,Nextcloud,calendaring,event.create
+116,Crée un événement le 5 mai a 10h.,Nextcloud,calendaring,event.create
+117,Ajoute une réunion avant le 30.,Nextcloud,calendaring,event.create
+118,Planifie une tache a ce soir.,Nextcloud,calendaring,event.create
+119,Crée un événement la semaine prochaine a 10h.,Nextcloud,calendaring,event.create
+120,Supprime l'événement de ce soir.,Nextcloud,calendaring,event.delete
+121,Annule la réunion de avant le 30.,Nextcloud,calendaring,event.delete
+122,Supprime l'événement de lundi.,Nextcloud,calendaring,event.delete
+123,Annule la réunion de lundi.,Nextcloud,calendaring,event.delete
+124,Supprime l'événement de jeudi matin.,Nextcloud,calendaring,event.delete
+125,Annule la réunion de la semaine prochaine.,Nextcloud,calendaring,event.delete
+126,Supprime l'événement de le mois dernier.,Nextcloud,calendaring,event.delete
+127,Affiche mes disponibilités jeudi matin et crée la tache 'Préparation'.,Nextcloud,"calendaring, tasking","event.free_busy, tasking.task.create"
+128,Affiche mes disponibilités ce soir et crée la tache 'Préparation'.,Nextcloud,"calendaring, tasking","event.free_busy, tasking.task.create"
+129,Affiche mes disponibilités dans deux heures et crée la tache 'Préparation'.,Nextcloud,"calendaring, tasking","event.free_busy, tasking.task.create"
+130,Affiche mes disponibilités dans trois jours et crée la tache 'Préparation'.,Nextcloud,"calendaring, tasking","event.free_busy, tasking.task.create"
+131,Affiche mes disponibilités le mois dernier.,Nextcloud,calendaring,event.free_busy
+132,Montre quand je suis libre avant le 30.,Nextcloud,calendaring,event.free_busy
+133,Affiche mes disponibilités la semaine prochaine.,Nextcloud,calendaring,event.free_busy
+134,Montre quand je suis libre dans trois jours.,Nextcloud,calendaring,event.free_busy
+135,Affiche mes disponibilités dans trois jours.,Nextcloud,calendaring,event.free_busy
+136,Montre quand je suis libre lundi.,Nextcloud,calendaring,event.free_busy
+137,Affiche mes disponibilités jeudi matin.,Nextcloud,calendaring,event.free_busy
+138,Récupère les details de plusieurs événements s'il te plaît.,Nextcloud,calendaring,event.multiget
+139,Affiche les événements selectionnes s'il te plaît.,Nextcloud,calendaring,event.multiget
+140,"Récupère les details de plusieurs événements, merci.",Nextcloud,calendaring,event.multiget
+141,"Affiche les événements selectionnes, merci.",Nextcloud,calendaring,event.multiget
+142,Récupère les details de plusieurs événements maintenant.,Nextcloud,calendaring,event.multiget
+143,Affiche les événements selectionnes maintenant.,Nextcloud,calendaring,event.multiget
+144,Récupère les details de plusieurs événements tout de suite.,Nextcloud,calendaring,event.multiget
+145,Affiche les événements de la semaine prochaine s'il te plaît.,Nextcloud,calendaring,event.query
+146,Liste mes rendez-vous le mois dernier.,Nextcloud,calendaring,event.query
+147,"Affiche les événements de la semaine prochaine, merci.",Nextcloud,calendaring,event.query
+148,Liste mes rendez-vous avant le 30.,Nextcloud,calendaring,event.query
+149,Affiche les événements de la semaine prochaine maintenant.,Nextcloud,calendaring,event.query
+150,Liste mes rendez-vous dans trois jours.,Nextcloud,calendaring,event.query
+151,Affiche les événements de la semaine prochaine tout de suite.,Nextcloud,calendaring,event.query
+152,Rend la réunion hebdomadaire s'il te plaît.,Nextcloud,calendaring,event.recurrence
+153,Répète l'événement tous les lundis s'il te plaît.,Nextcloud,calendaring,event.recurrence
+154,"Rend la réunion hebdomadaire, merci.",Nextcloud,calendaring,event.recurrence
+155,"Répète l'événement tous les lundis, merci.",Nextcloud,calendaring,event.recurrence
+156,Rend la réunion hebdomadaire maintenant.,Nextcloud,calendaring,event.recurrence
+157,Répète l'événement tous les lundis maintenant.,Nextcloud,calendaring,event.recurrence
+158,Rend la réunion hebdomadaire tout de suite.,Nextcloud,calendaring,event.recurrence
+159,Ajoute un rappel a l'événement de le 5 mai.,Nextcloud,calendaring,event.reminder
+160,Programme une alerte 15 minutes avant la réunion s'il te plaît.,Nextcloud,calendaring,event.reminder
+161,Ajoute un rappel a l'événement de dans trois jours.,Nextcloud,calendaring,event.reminder
+162,"Programme une alerte 15 minutes avant la réunion, merci.",Nextcloud,calendaring,event.reminder
+163,Ajoute un rappel a l'événement de vendredi.,Nextcloud,calendaring,event.reminder
+164,Programme une alerte 15 minutes avant la réunion maintenant.,Nextcloud,calendaring,event.reminder
+165,Ajoute un rappel a l'événement de avant le 30.,Nextcloud,calendaring,event.reminder
+166,Synchronise mon agenda s'il te plaît.,Nextcloud,calendaring,event.sync
+167,Récupère les changements depuis la derniere synchro s'il te plaît.,Nextcloud,calendaring,event.sync
+168,"Synchronise mon agenda, merci.",Nextcloud,calendaring,event.sync
+169,"Récupère les changements depuis la derniere synchro, merci.",Nextcloud,calendaring,event.sync
+170,Synchronise mon agenda maintenant.,Nextcloud,calendaring,event.sync
+171,Récupère les changements depuis la derniere synchro maintenant.,Nextcloud,calendaring,event.sync
+172,Synchronise mon agenda tout de suite.,Nextcloud,calendaring,event.sync
+173,Crée une tache 'Relancer BioMarche' avec échéance dans trois jours.,Nextcloud,calendaring,task.create
+174,Ajoute la tache 'Rediger le rapport' a mon agenda s'il te plaît.,Nextcloud,calendaring,task.create
+175,Crée une tache 'Relancer BureauPlus' avec échéance vendredi.,Nextcloud,calendaring,task.create
+176,"Ajoute la tache 'Rediger le rapport' a mon agenda, merci.",Nextcloud,calendaring,task.create
+177,Crée une tache 'Relancer BureauPlus' avec échéance dans trois jours.,Nextcloud,calendaring,task.create
+178,Ajoute la tache 'Rediger le rapport' a mon agenda maintenant.,Nextcloud,calendaring,task.create
+179,Crée une tache 'Relancer Cora Group' avec échéance vendredi.,Nextcloud,calendaring,task.create
+180,Affiche toutes les branches de la societe s'il te plaît.,Odoo,contacts,res.company.action_all_company_branches
+181,Liste les entités de LogiTrans.,Odoo,contacts,res.company.action_all_company_branches
+182,"Affiche toutes les branches de la societe, merci.",Odoo,contacts,res.company.action_all_company_branches
+183,Liste les entités de Dupont & Fils.,Odoo,contacts,res.company.action_all_company_branches
+184,Affiche toutes les branches de la societe maintenant.,Odoo,contacts,res.company.action_all_company_branches
+185,Liste les entités de Verdeco.,Odoo,contacts,res.company.action_all_company_branches
+186,Affiche toutes les branches de la societe tout de suite.,Odoo,contacts,res.company.action_all_company_branches
+187,Affiche l'adresse de facturation de LogiTrans.,Odoo,contacts,res.partner.address_get
+188,Donne l'adresse de livraison de Dupont & Fils.,Odoo,contacts,res.partner.address_get
+189,Affiche l'adresse de facturation de TechNova.,Odoo,contacts,res.partner.address_get
+190,Donne l'adresse de livraison de BureauPlus.,Odoo,contacts,res.partner.address_get
+191,Affiche l'adresse de facturation de BioMarche.,Odoo,contacts,res.partner.address_get
+192,Donne l'adresse de livraison de Artemis Design.,Odoo,contacts,res.partner.address_get
+193,Affiche l'adresse de facturation de Verdeco.,Odoo,contacts,res.partner.address_get
+194,Duplique la fiche de Pierre Moreau.,Odoo,contacts,res.partner.copy
+195,Copie le contact Ines Bouzid en tant que nouveau.,Odoo,contacts,res.partner.copy
+196,Duplique la fiche de Marie Lambert.,Odoo,contacts,res.partner.copy
+197,Copie le contact Lucas Girard en tant que nouveau.,Odoo,contacts,res.partner.copy
+198,Duplique la fiche de Jean Dupont.,Odoo,contacts,res.partner.copy
+199,Copie le contact Nadia Haddad en tant que nouveau.,Odoo,contacts,res.partner.copy
+200,Duplique la fiche de Sophie Bernard.,Odoo,contacts,res.partner.copy
+201,Crée le contact Sophie Bernard et envoie-lui un email de bienvenue.,Odoo,"contacts, email_action","res.partner.create, email.email_submission.set"
+202,Crée le contact Karim Benali et envoie-lui un email de bienvenue.,Odoo,"contacts, email_action","res.partner.create, email.email_submission.set"
+203,Crée le contact Marie Lambert et envoie-lui un email de bienvenue.,Odoo,"contacts, email_action","res.partner.create, email.email_submission.set"
+204,Crée le contact Lucas Girard et envoie-lui un email de bienvenue.,Odoo,"contacts, email_action","res.partner.create, email.email_submission.set"
+205,Crée un contact pour Sophie Bernard.,Odoo,contacts,res.partner.create
+206,Ajoute Medisys comme partenaire.,Odoo,contacts,res.partner.create
+207,Crée la fiche contact de Sophie Bernard.,Odoo,contacts,res.partner.create
+208,Crée un contact pour Hugo Lefebvre.,Odoo,contacts,res.partner.create
+209,Ajoute TechNova comme partenaire.,Odoo,contacts,res.partner.create
+210,Crée la fiche contact de Claire Fontaine.,Odoo,contacts,res.partner.create
+211,Crée un contact pour Thomas Petit.,Odoo,contacts,res.partner.create
+212,Crée la societe LogiTrans et prepare un devis pour elle.,Odoo,"contacts, sales","res.partner.create_company, sale.order.create"
+213,Crée la societe Cora Group et prepare un devis pour elle.,Odoo,"contacts, sales","res.partner.create_company, sale.order.create"
+214,Crée la societe Medisys et prepare un devis pour elle.,Odoo,"contacts, sales","res.partner.create_company, sale.order.create"
+215,Crée la societe Artemis Design et prepare un devis pour elle.,Odoo,"contacts, sales","res.partner.create_company, sale.order.create"
+216,Crée la societe Solenco et son contact principal.,Odoo,contacts,res.partner.create_company
+217,Ajoute Artemis Design et son dirigeant comme contact.,Odoo,contacts,res.partner.create_company
+218,Crée la societe Dupont & Fils et son contact principal.,Odoo,contacts,res.partner.create_company
+219,Ajoute TechNova et son dirigeant comme contact.,Odoo,contacts,res.partner.create_company
+220,Crée la societe LogiTrans et son contact principal.,Odoo,contacts,res.partner.create_company
+221,Ajoute Atelier Martin et son dirigeant comme contact.,Odoo,contacts,res.partner.create_company
+222,Crée la societe BureauPlus et son contact principal.,Odoo,contacts,res.partner.create_company
+223,Trouve ou crée le contact sav@service.fr.,Odoo,contacts,res.partner.find_or_create
+224,Cherche le contact sav@service.fr et crée-le si besoin.,Odoo,contacts,res.partner.find_or_create
+225,Trouve ou crée le contact contact@domaine.fr.,Odoo,contacts,res.partner.find_or_create
+226,Cherche le contact rh@equipe.fr et crée-le si besoin.,Odoo,contacts,res.partner.find_or_create
+227,Trouve ou crée le contact compta@groupe.fr.,Odoo,contacts,res.partner.find_or_create
+228,Cherche le contact direction@entreprise.fr et crée-le si besoin.,Odoo,contacts,res.partner.find_or_create
+229,Trouve ou crée le contact rh@equipe.fr.,Odoo,contacts,res.partner.find_or_create
+230,Ouvre l'entité commerciale de Artemis Design.,Odoo,contacts,res.partner.open_commercial_entity
+231,Affiche la fiche commerciale de BioMarche.,Odoo,contacts,res.partner.open_commercial_entity
+232,Ouvre l'entité commerciale de BureauPlus.,Odoo,contacts,res.partner.open_commercial_entity
+233,Affiche la fiche commerciale de Solenco.,Odoo,contacts,res.partner.open_commercial_entity
+234,Ouvre l'entité commerciale de TechNova.,Odoo,contacts,res.partner.open_commercial_entity
+235,Affiche la fiche commerciale de BureauPlus.,Odoo,contacts,res.partner.open_commercial_entity
+236,Ouvre l'entité commerciale de BatiNord.,Odoo,contacts,res.partner.open_commercial_entity
+237,Groupe les contacts par societe s'il te plaît.,Odoo,contacts,res.partner.read_group
+238,Compte les contacts par ville s'il te plaît.,Odoo,contacts,res.partner.read_group
+239,"Groupe les contacts par societe, merci.",Odoo,contacts,res.partner.read_group
+240,"Compte les contacts par ville, merci.",Odoo,contacts,res.partner.read_group
+241,Groupe les contacts par societe maintenant.,Odoo,contacts,res.partner.read_group
+242,Compte les contacts par ville maintenant.,Odoo,contacts,res.partner.read_group
+243,Groupe les contacts par societe tout de suite.,Odoo,contacts,res.partner.read_group
+244,Recherche le contact Sophie Bernard.,Odoo,contacts,res.partner.search_read
+245,Affiche la liste des contacts de Cora Group.,Odoo,contacts,res.partner.search_read
+246,Recherche le contact Claire Fontaine.,Odoo,contacts,res.partner.search_read
+247,Affiche la liste des contacts de LogiTrans.,Odoo,contacts,res.partner.search_read
+248,Recherche le contact Jean Dupont.,Odoo,contacts,res.partner.search_read
+249,Affiche la liste des contacts de Medisys.,Odoo,contacts,res.partner.search_read
+250,Recherche le contact Lucas Girard.,Odoo,contacts,res.partner.search_read
+251,Supprime le contact Pierre Moreau.,Odoo,contacts,res.partner.unlink
+252,Efface la fiche de Ines Bouzid.,Odoo,contacts,res.partner.unlink
+253,Supprime le contact Claire Fontaine.,Odoo,contacts,res.partner.unlink
+254,Efface la fiche de Lucas Girard.,Odoo,contacts,res.partner.unlink
+255,Supprime le contact Hugo Lefebvre.,Odoo,contacts,res.partner.unlink
+256,Efface la fiche de Sophie Bernard.,Odoo,contacts,res.partner.unlink
+257,Supprime le contact Karim Benali.,Odoo,contacts,res.partner.unlink
+258,Mets a jour la fiche de Lucas Girard.,Odoo,contacts,res.partner.write
+259,Modifie l'adresse du contact Emma Rousseau.,Odoo,contacts,res.partner.write
+260,Mets a jour la fiche de Ines Bouzid.,Odoo,contacts,res.partner.write
+261,Modifie l'adresse du contact Pierre Moreau.,Odoo,contacts,res.partner.write
+262,Mets a jour la fiche de Sophie Bernard.,Odoo,contacts,res.partner.write
+263,Modifie l'adresse du contact Lucas Girard.,Odoo,contacts,res.partner.write
+264,Mets a jour la fiche de Jean Dupont.,Odoo,contacts,res.partner.write
+265,Archive le lead Dupont & Fils.,Odoo,crm,crm.lead.action_archive
+266,Met de cote la piste BatiNord.,Odoo,crm,crm.lead.action_archive
+267,Archive le lead TechNova.,Odoo,crm,crm.lead.action_archive
+268,Repousse la réunion avec BatiNord a la semaine prochaine.,Odoo,crm,crm.lead.action_reschedule_meeting
+269,Déplace le rendez-vous du lead Artemis Design a vendredi.,Odoo,crm,crm.lead.action_reschedule_meeting
+270,Repousse la réunion avec BureauPlus a jeudi matin.,Odoo,crm,crm.lead.action_reschedule_meeting
+271,Restaure le lead Solenco que j'avais archive.,Odoo,crm,crm.lead.action_restore
+272,Réactive la piste perdue Verdeco.,Odoo,crm,crm.lead.action_restore
+273,Restaure le lead Verdeco que j'avais archive.,Odoo,crm,crm.lead.action_restore
+274,Planifie une réunion avec Verdeco et ajoute-la a mon agenda.,Odoo,"crm, calendaring","crm.lead.action_schedule_meeting, event.create"
+275,Planifie une réunion avec Medisys et ajoute-la a mon agenda.,Odoo,"crm, calendaring","crm.lead.action_schedule_meeting, event.create"
+276,Planifie une réunion avec Solenco et ajoute-la a mon agenda.,Odoo,"crm, calendaring","crm.lead.action_schedule_meeting, event.create"
+277,Planifie une réunion avec BioMarche et ajoute-la a mon agenda.,Odoo,"crm, calendaring","crm.lead.action_schedule_meeting, event.create"
+278,Planifie une réunion pour le lead Cora Group.,Odoo,crm,crm.lead.action_schedule_meeting
+279,Cale un rendez-vous avec TechNova.,Odoo,crm,crm.lead.action_schedule_meeting
+280,Organise un appel avec le prospect BatiNord.,Odoo,crm,crm.lead.action_schedule_meeting
+281,Marque le lead BureauPlus comme perdu.,Odoo,crm,crm.lead.action_set_lost
+282,Clôture la piste BioMarche en echec.,Odoo,crm,crm.lead.action_set_lost
+283,Passe l'opportunité BatiNord en perdu.,Odoo,crm,crm.lead.action_set_lost
+284,Marque l'opportunité Dupont & Fils comme gagnee et confirme la commande.,Odoo,"crm, sales","crm.lead.action_set_won, sale.order.action_confirm"
+285,Marque l'opportunité Atelier Martin comme gagnee et confirme la commande.,Odoo,"crm, sales","crm.lead.action_set_won, sale.order.action_confirm"
+286,Marque l'opportunité Verdeco comme gagnee et confirme la commande.,Odoo,"crm, sales","crm.lead.action_set_won, sale.order.action_confirm"
+287,Marque l'opportunité BioMarche comme gagnee et confirme la commande.,Odoo,"crm, sales","crm.lead.action_set_won, sale.order.action_confirm"
+288,Marque l'opportunité Atelier Martin comme gagnee.,Odoo,crm,crm.lead.action_set_won
+289,Clôture en succes le lead LogiTrans.,Odoo,crm,crm.lead.action_set_won
+290,Passe la piste Solenco en gagne.,Odoo,crm,crm.lead.action_set_won
+291,Affiche les doublons possibles pour le prospect Artemis Design.,Odoo,crm,crm.lead.action_show_potential_duplicates
+292,Montre les leads en double de Cora Group.,Odoo,crm,crm.lead.action_show_potential_duplicates
+293,Affiche les doublons possibles pour le prospect Solenco.,Odoo,crm,crm.lead.action_show_potential_duplicates
+294,Désarchive le lead TechNova.,Odoo,crm,crm.lead.action_unarchive
+295,Remet en avant la piste Verdeco.,Odoo,crm,crm.lead.action_unarchive
+296,Désarchive le lead Medisys.,Odoo,crm,crm.lead.action_unarchive
+297,Convertit le lead BatiNord en opportunité puis crée le devis.,Odoo,"crm, sales","crm.lead.convert_opportunity, sale.order.create"
+298,Convertit le lead Cora Group en opportunité puis crée le devis.,Odoo,"crm, sales","crm.lead.convert_opportunity, sale.order.create"
+299,Convertit le lead BureauPlus en opportunité puis crée le devis.,Odoo,"crm, sales","crm.lead.convert_opportunity, sale.order.create"
+300,Convertit le lead LogiTrans en opportunité puis crée le devis.,Odoo,"crm, sales","crm.lead.convert_opportunity, sale.order.create"
+301,Convertit le lead BatiNord en opportunité.,Odoo,crm,crm.lead.convert_opportunity
+302,Transforme le prospect Verdeco en opportunité.,Odoo,crm,crm.lead.convert_opportunity
+303,Convertit le lead LogiTrans en opportunité.,Odoo,crm,crm.lead.convert_opportunity
+304,Crée un lead pour TechNova.,Odoo,crm,crm.lead.create
+305,Ajoute Verdeco comme nouveau prospect dans le CRM.,Odoo,crm,crm.lead.create
+306,Enregistre une nouvelle piste commerciale pour Cora Group.,Odoo,crm,crm.lead.create
+307,Consigne le compte rendu de ma réunion avec BatiNord.,Odoo,crm,crm.lead.log_meeting
+308,Log une note de réunion pour le lead BureauPlus.,Odoo,crm,crm.lead.log_meeting
+309,Consigne le compte rendu de ma réunion avec Dupont & Fils.,Odoo,crm,crm.lead.log_meeting
+310,Enregistre la raison de la perte du lead Medisys.,Odoo,crm,crm.lead.lost.action_lost_reason_apply
+311,Applique le motif de perte pour la piste Cora Group.,Odoo,crm,crm.lead.lost.action_lost_reason_apply
+312,Enregistre la raison de la perte du lead BatiNord.,Odoo,crm,crm.lead.lost.action_lost_reason_apply
+313,Fusionne les deux opportunités BioMarche en une seule.,Odoo,crm,crm.lead.merge_opportunity
+314,Regroupe les leads en double de Medisys.,Odoo,crm,crm.lead.merge_opportunity
+315,Fusionne les deux opportunités Medisys en une seule.,Odoo,crm,crm.lead.merge_opportunity
+316,Recalcule le scoring IA des leads s'il te plaît.,Odoo,crm,crm.lead.pls.update.action_update_crm_lead_probabilities
+317,Met a jour les probabilités du modele de scoring s'il te plaît.,Odoo,crm,crm.lead.pls.update.action_update_crm_lead_probabilities
+318,"Recalcule le scoring IA des leads, merci.",Odoo,crm,crm.lead.pls.update.action_update_crm_lead_probabilities
+319,Affiche les leads de la pipeline s'il te plaît.,Odoo,crm,crm.lead.search_read
+320,Recherche les opportunités de Solenco dans le CRM.,Odoo,crm,crm.lead.search_read
+321,Liste tous les prospects en cours de suivi s'il te plaît.,Odoo,crm,crm.lead.search_read
+322,Supprime le lead de Atelier Martin.,Odoo,crm,crm.lead.unlink
+323,Efface la piste commerciale de Medisys.,Odoo,crm,crm.lead.unlink
+324,Supprime le lead de Cora Group.,Odoo,crm,crm.lead.unlink
+325,Mets a jour le lead TechNova avec ses coordonnées.,Odoo,crm,crm.lead.write
+326,Modifie le statut du prospect Solenco.,Odoo,crm,crm.lead.write
+327,Corrige le numéro de téléphone du lead Atelier Martin.,Odoo,crm,crm.lead.write
+328,Applique la conversion du lead Dupont & Fils en opportunité.,Odoo,crm,crm.lead2opportunity.partner.action_apply
+329,Valide le passage de Artemis Design en opportunité.,Odoo,crm,crm.lead2opportunity.partner.action_apply
+330,Applique la conversion du lead TechNova en opportunité.,Odoo,crm,crm.lead2opportunity.partner.action_apply
+331,Convertit en masse les leads selectionnes s'il te plaît.,Odoo,crm,crm.lead2opportunity.partner.mass.action_mass_convert
+332,Passe tous les prospects en opportunité s'il te plaît.,Odoo,crm,crm.lead2opportunity.partner.mass.action_mass_convert
+333,"Convertit en masse les leads selectionnes, merci.",Odoo,crm,crm.lead2opportunity.partner.mass.action_mass_convert
+334,Fusionne les opportunités selectionnees de Solenco.,Odoo,crm,crm.merge.opportunity.action_merge
+335,Combine les doublons d'opportunités de BatiNord.,Odoo,crm,crm.merge.opportunity.action_merge
+336,Fusionne les opportunités selectionnees de LogiTrans.,Odoo,crm,crm.merge.opportunity.action_merge
+337,Affecte les leads a Marie Lambert et previens-le par message.,Odoo,"crm, messaging","crm.team.action_assign_leads, messaging.message.send"
+338,Affecte les leads a Claire Fontaine et previens-le par message.,Odoo,"crm, messaging","crm.team.action_assign_leads, messaging.message.send"
+339,Affecte les leads a Karim Benali et previens-le par message.,Odoo,"crm, messaging","crm.team.action_assign_leads, messaging.message.send"
+340,Affecte les leads a Sophie Bernard et previens-le par message.,Odoo,"crm, messaging","crm.team.action_assign_leads, messaging.message.send"
+341,Affecte les leads non assignes a Thomas Petit.,Odoo,crm,crm.team.action_assign_leads
+342,Repartit les pistes entre les commerciaux s'il te plaît.,Odoo,crm,crm.team.action_assign_leads
+343,Affecte les leads non assignes a Pierre Moreau.,Odoo,crm,crm.team.action_assign_leads
+344,Affiche la prevision de ventes de l'equipe s'il te plaît.,Odoo,crm,crm.team.action_opportunity_forecast
+345,Montre le forecast des opportunités s'il te plaît.,Odoo,crm,crm.team.action_opportunity_forecast
+346,"Affiche la prevision de ventes de l'equipe, merci.",Odoo,crm,crm.team.action_opportunity_forecast
+347,Ouvre ma pipeline commerciale s'il te plaît.,Odoo,crm,crm.team.action_your_pipeline
+348,Affiche le pipeline de l'equipe s'il te plaît.,Odoo,crm,crm.team.action_your_pipeline
+349,"Ouvre ma pipeline commerciale, merci.",Odoo,crm,crm.team.action_your_pipeline
+350,Copie la pièce jointe note_interne.docx vers un autre email.,Stalwart,email_action,email.blob.copy
+351,Réutilise l'attachement devis_2026-118.pdf.,Stalwart,email_action,email.blob.copy
+352,Récupère la pièce jointe de l'email BioMarche.,Stalwart,email_action,email.blob.get
+353,Télécharge l'attachement devis_2026-118.pdf.,Stalwart,email_action,email.blob.get
+354,Recherche la pièce jointe compte_rendu_reunion.docx dans mes emails.,Stalwart,email_action,email.blob.lookup
+355,Trouve l'attachement presentation_v2.pptx.,Stalwart,email_action,email.blob.lookup
+356,Ajoute la pièce jointe presentation_v2.pptx a l'email.,Stalwart,email_action,email.blob.upload
+357,Joint le fichier facture_2026-045.pdf au mail.,Stalwart,email_action,email.blob.upload
+358,Copie l'email TechNova vers le dossier archive.,Stalwart,email_action,email.email.copy
+359,Duplique l'email Medisys dans un autre dossier.,Stalwart,email_action,email.email.copy
+360,Affiche l'email de Lucas Girard.,Stalwart,email_action,email.email.get
+361,Récupère le mail de Dupont & Fils.,Stalwart,email_action,email.email.get
+362,Montre l'email reçu de Solenco.,Stalwart,email_action,email.email.get
+363,Importe le fichier planning_chantier.pdf comme email.,Stalwart,email_action,email.email.import
+364,Importe l'email depuis cahier_des_charges.docx.,Stalwart,email_action,email.email.import
+365,Analyse le contenu de l'email Verdeco.,Stalwart,email_action,email.email.parse
+366,Extrait les données de l'email Medisys.,Stalwart,email_action,email.email.parse
+367,Analyse le contenu de l'email BatiNord.,Stalwart,email_action,email.email.parse
+368,Recherche les emails de Medisys.,Stalwart,email_action,email.email.query
+369,Liste les mails du dossier Verdeco.,Stalwart,email_action,email.email.query
+370,Recherche les emails de Verdeco.,Stalwart,email_action,email.email.query
+371,Récupère les nouveaux emails depuis la derniere synchro s'il te plaît.,Stalwart,email_action,email.email.query_changes
+372,Liste les mails changes depuis hier s'il te plaît.,Stalwart,email_action,email.email.query_changes
+373,"Récupère les nouveaux emails depuis la derniere synchro, merci.",Stalwart,email_action,email.email.query_changes
+374,Recherche la mention Artemis Design dans mes emails.,Stalwart,email_action,email.email.search_snippet
+375,Cherche un extrait du mail de BioMarche.,Stalwart,email_action,email.email.search_snippet
+376,Modifie le brouillon d'email s'il te plaît.,Stalwart,email_action,email.email.set
+377,Met a jour l'email Solenco.,Stalwart,email_action,email.email.set
+378,"Modifie le brouillon d'email, merci.",Stalwart,email_action,email.email.set
+379,Liste les emails envoyés ce mois-ci s'il te plaît.,Stalwart,email_action,email.email_submission.query
+380,Recherche les mails envoyés a LogiTrans.,Stalwart,email_action,email.email_submission.query
+381,Envoie l'email a Atelier Martin avec la pièce jointe planning_chantier.pdf.,Stalwart,email_action,"email.email_submission.set, email.blob.upload"
+382,Envoie l'email a Artemis Design avec la pièce jointe facture_2026-045.pdf.,Stalwart,email_action,"email.email_submission.set, email.blob.upload"
+383,Envoie l'email a Medisys avec la pièce jointe contrat_annexe.pdf.,Stalwart,email_action,"email.email_submission.set, email.blob.upload"
+384,Envoie l'email a Verdeco avec la pièce jointe devis_2026-118.pdf.,Stalwart,email_action,"email.email_submission.set, email.blob.upload"
+385,Réponds a l'email de Hugo Lefebvre pour confirmer la réunion la semaine prochaine.,Stalwart,"email_action, calendaring","email.email_submission.set, event.create"
+386,Réponds a l'email de Emma Rousseau pour confirmer la réunion le mois dernier.,Stalwart,"email_action, calendaring","email.email_submission.set, event.create"
+387,Réponds a l'email de Thomas Petit pour confirmer la réunion avant le 30.,Stalwart,"email_action, calendaring","email.email_submission.set, event.create"
+388,Réponds a l'email de Pierre Moreau pour confirmer la réunion le 5 mai.,Stalwart,"email_action, calendaring","email.email_submission.set, event.create"
+389,Envoie un email a LogiTrans.,Stalwart,email_action,email.email_submission.set
+390,Réponds a l'email de Thomas Petit.,Stalwart,email_action,email.email_submission.set
+391,Affiche mes identités d'envoi s'il te plaît.,Stalwart,email_action,email.identity.get
+392,Liste les adresses d'expéditeur configurees s'il te plaît.,Stalwart,email_action,email.identity.get
+393,Ajoute une nouvelle identité d'envoi direction@entreprise.fr.,Stalwart,email_action,email.identity.set
+394,Modifie l'adresse d'expédition rh@equipe.fr.,Stalwart,email_action,email.identity.set
+395,Crée un dossier archive pour les emails de plus d'un an s'il te plaît.,Stalwart,email_action,email.mailbox.create
+396,Crée le dossier 'Factures' dans ma boite mail s'il te plaît.,Stalwart,email_action,email.mailbox.create
+397,Supprime le dossier BioMarche.,Stalwart,email_action,email.mailbox.delete
+398,Efface le dossier 'Anciens mails' s'il te plaît.,Stalwart,email_action,email.mailbox.delete
+399,Affiche le contenu de la boite de reception s'il te plaît.,Stalwart,email_action,email.mailbox.get
+400,Liste mes dossiers email s'il te plaît.,Stalwart,email_action,email.mailbox.get
+401,Recherche un dossier email s'il te plaît.,Stalwart,email_action,email.mailbox.query
+402,Liste les boites mail de l'utilisateur s'il te plaît.,Stalwart,email_action,email.mailbox.query
+403,Renomme le dossier Artemis Design.,Stalwart,email_action,email.mailbox.rename
+404,Renomme le dossier 'Spam' en 'Indesirables' s'il te plaît.,Stalwart,email_action,email.mailbox.rename
+405,Reorganise mes dossiers email s'il te plaît.,Stalwart,email_action,email.mailbox.set
+406,Met a jour le dossier Medisys.,Stalwart,email_action,email.mailbox.set
+407,Affiche l'etat des notifications push s'il te plaît.,Stalwart,email_action,email.push_subscription.get
+408,Liste les abonnements push actifs s'il te plaît.,Stalwart,email_action,email.push_subscription.get
+409,Active les notifications de nouveaux mails s'il te plaît.,Stalwart,email_action,email.push_subscription.set
+410,Abonne la boite mail aux alertes push s'il te plaît.,Stalwart,email_action,email.push_subscription.set
+411,Affiche ma quota email s'il te plaît.,Stalwart,email_action,email.quota.get
+412,Indique l'espace restant dans la boite mail s'il te plaît.,Stalwart,email_action,email.quota.get
+413,Affiche mes filtres email s'il te plaît.,Stalwart,email_action,email.sieve_script.query
+414,Liste les règles de tri actuelles s'il te plaît.,Stalwart,email_action,email.sieve_script.query
+415,Crée une règle qui classe les emails de BioMarche dans le dossier 'Prospects'.,Stalwart,email_action,"email.sieve_script.set, email.mailbox.create"
+416,Crée une règle qui classe les emails de LogiTrans dans le dossier 'Prospects'.,Stalwart,email_action,"email.sieve_script.set, email.mailbox.create"
+417,Crée une règle qui classe les emails de Medisys dans le dossier 'Prospects'.,Stalwart,email_action,"email.sieve_script.set, email.mailbox.create"
+418,Crée une règle qui classe les emails de Verdeco dans le dossier 'Prospects'.,Stalwart,email_action,"email.sieve_script.set, email.mailbox.create"
+419,Crée une règle pour classer les emails de LogiTrans.,Stalwart,email_action,email.sieve_script.set
+420,Ajoute un filtre pour les mails de Solenco.,Stalwart,email_action,email.sieve_script.set
+421,Vérifie la règle de messagerie avant de l'activer s'il te plaît.,Stalwart,email_action,email.sieve_script.validate
+422,Teste le script Sieve s'il te plaît.,Stalwart,email_action,email.sieve_script.validate
+423,Envoie le contenu du mail a Solenco.,Stalwart,email_action,email.smtp.data
+424,Envoie ce message par SMTP s'il te plaît.,Stalwart,email_action,email.smtp.data
+425,Envoie l'email depuis l'adresse compta@groupe.fr.,Stalwart,email_action,email.smtp.mail_from
+426,Prepare l'expédition depuis compta@groupe.fr.,Stalwart,email_action,email.smtp.mail_from
+427,Ajoute sav@service.fr en destinataire.,Stalwart,email_action,email.smtp.rcpt_to
+428,Envoie une copie a direction@entreprise.fr.,Stalwart,email_action,email.smtp.rcpt_to
+429,Affiche la conversation avec Claire Fontaine.,Stalwart,email_action,email.thread.get
+430,Montre le fil de discussion avec Medisys.,Stalwart,email_action,email.thread.get
+431,Récupère les mises a jour du fil avec TechNova.,Stalwart,email_action,email.thread.get_changes
+432,Liste les nouveaux messages du fil Verdeco.,Stalwart,email_action,email.thread.get_changes
+433,Active une réponse automatique d'absence s'il te plaît.,Stalwart,email_action,email.vacation_response.set
+434,Configure le message d'absence pour la semaine prochaine s'il te plaît.,Stalwart,email_action,email.vacation_response.set
+435,Copie devis_2026-118.pdf vers le dossier audit securite.,Nextcloud,file_management,file.copy
+436,Duplique planning_chantier.pdf dans un autre dossier.,Nextcloud,file_management,file.copy
+437,Copie budget_2026.xlsx vers le dossier lancement produit.,Nextcloud,file_management,file.copy
+438,Duplique devis_2026-118.pdf dans un autre dossier.,Nextcloud,file_management,file.copy
+439,Supprime le fichier contrat_annexe.pdf.,Nextcloud,file_management,file.delete
+440,Efface facture_2026-045.pdf (vers la corbeille).,Nextcloud,file_management,file.delete
+441,Supprime le fichier facture_2026-045.pdf.,Nextcloud,file_management,file.delete
+442,Efface presentation_v2.pptx (vers la corbeille).,Nextcloud,file_management,file.delete
+443,Ouvre cahier_des_charges.docx dans l'editeur de documents.,Nextcloud,file_management,file.direct_editing
+444,Lance la modification directe de compte_rendu_reunion.docx.,Nextcloud,file_management,file.direct_editing
+445,Ouvre proposition_commerciale.pdf dans l'editeur de documents.,Nextcloud,file_management,file.direct_editing
+446,Lance la modification directe de note_interne.docx.,Nextcloud,file_management,file.direct_editing
+447,Télécharge le fichier note_interne.docx.,Nextcloud,file_management,file.get
+448,Récupère cahier_des_charges.docx depuis le cloud.,Nextcloud,file_management,file.get
+449,Ouvre le fichier cahier_des_charges.docx.,Nextcloud,file_management,file.get
+450,Télécharge le fichier devis_2026-118.pdf.,Nextcloud,file_management,file.get
+451,Crée le dossier lancement produit.,Nextcloud,file_management,file.mkcol
+452,Crée un nouveau dossier 'Archives' s'il te plaît.,Nextcloud,file_management,file.mkcol
+453,Crée le dossier demenagement bureaux.,Nextcloud,file_management,file.mkcol
+454,"Crée un nouveau dossier 'Archives', merci.",Nextcloud,file_management,file.mkcol
+455,Déplace note_interne.docx dans le dossier du projet migration ERP et attache-le a la tache.,Nextcloud,"file_management, tasking","file.move, tasking.attachment.upload"
+456,Déplace budget_2026.xlsx dans le dossier du projet lancement produit et attache-le a la tache.,Nextcloud,"file_management, tasking","file.move, tasking.attachment.upload"
+457,Déplace cahier_des_charges.docx dans le dossier du projet campagne ete et attache-le a la tache.,Nextcloud,"file_management, tasking","file.move, tasking.attachment.upload"
+458,Déplace facture_2026-045.pdf dans le dossier du projet reorganisation et attache-le a la tache.,Nextcloud,"file_management, tasking","file.move, tasking.attachment.upload"
+459,Déplace suivi_clients.xlsx vers le dossier refonte du site.,Nextcloud,file_management,file.move
+460,Renomme devis_2026-118.pdf en rapport_final.docx.,Nextcloud,file_management,file.move
+461,Déplace budget_2026.xlsx dans la corbeille.,Nextcloud,file_management,file.move
+462,Déplace contrat_annexe.pdf vers le dossier demenagement bureaux.,Nextcloud,file_management,file.move
+463,Liste les fichiers du dossier projet Nova.,Nextcloud,file_management,file.propfind
+464,Affiche le contenu du dossier racine s'il te plaît.,Nextcloud,file_management,file.propfind
+465,Liste les fichiers du dossier migration ERP.,Nextcloud,file_management,file.propfind
+466,"Affiche le contenu du dossier racine, merci.",Nextcloud,file_management,file.propfind
+467,Liste les fichiers du dossier lancement produit.,Nextcloud,file_management,file.propfind
+468,Ajoute rapport_trimestriel.docx aux favoris.,Nextcloud,file_management,file.proppatch
+469,Applique le tag 'important' au fichier rapport_trimestriel.docx.,Nextcloud,file_management,file.proppatch
+470,Ajoute un commentaire sur facture_2026-045.pdf.,Nextcloud,file_management,file.proppatch
+471,Ajoute suivi_clients.xlsx aux favoris.,Nextcloud,file_management,file.proppatch
+472,Upload note_interne.docx puis ajoute-le a la base de connaissances.,Nextcloud,"file_management, knowledge_kb","file.put, kb.ingest.document"
+473,Upload devis_2026-118.pdf puis ajoute-le a la base de connaissances.,Nextcloud,"file_management, knowledge_kb","file.put, kb.ingest.document"
+474,Upload suivi_clients.xlsx puis ajoute-le a la base de connaissances.,Nextcloud,"file_management, knowledge_kb","file.put, kb.ingest.document"
+475,Upload presentation_v2.pptx puis ajoute-le a la base de connaissances.,Nextcloud,"file_management, knowledge_kb","file.put, kb.ingest.document"
+476,Upload le fichier planning_chantier.pdf.,Nextcloud,file_management,file.put
+477,Depose suivi_clients.xlsx dans le dossier partage.,Nextcloud,file_management,file.put
+478,Upload le fichier suivi_clients.xlsx.,Nextcloud,file_management,file.put
+479,Depose devis_2026-118.pdf dans le dossier partage.,Nextcloud,file_management,file.put
+480,Partage facture_2026-045.pdf avec Thomas Petit et previens-le par message.,Nextcloud,"file_management, messaging","file.share.create, messaging.message.send"
+481,Partage planning_chantier.pdf avec Hugo Lefebvre et previens-le par message.,Nextcloud,"file_management, messaging","file.share.create, messaging.message.send"
+482,Partage facture_2026-045.pdf avec Jean Dupont et previens-le par message.,Nextcloud,"file_management, messaging","file.share.create, messaging.message.send"
+483,Partage planning_chantier.pdf avec Jean Dupont et previens-le par message.,Nextcloud,"file_management, messaging","file.share.create, messaging.message.send"
+484,Partage compte_rendu_reunion.docx avec Hugo Lefebvre.,Nextcloud,file_management,file.share.create
+485,Crée un lien de partage pour rapport_trimestriel.docx.,Nextcloud,file_management,file.share.create
+486,Donne accès au dossier extension atelier a Marie Lambert.,Nextcloud,file_management,file.share.create
+487,Partage presentation_v2.pptx avec Sophie Bernard.,Nextcloud,file_management,file.share.create
+488,Retire le partage de proposition_commerciale.pdf.,Nextcloud,file_management,file.share.delete
+489,Supprime le lien de partage de facture_2026-045.pdf.,Nextcloud,file_management,file.share.delete
+490,Retire le partage de budget_2026.xlsx.,Nextcloud,file_management,file.share.delete
+491,Supprime le lien de partage de suivi_clients.xlsx.,Nextcloud,file_management,file.share.delete
+492,Transfère la propriété du dossier reorganisation a Pierre Moreau.,Nextcloud,file_management,file.share.transfer
+493,Donne le fichier proposition_commerciale.pdf a Hugo Lefebvre definitivement.,Nextcloud,file_management,file.share.transfer
+494,Transfère la propriété du dossier audit securite a Thomas Petit.,Nextcloud,file_management,file.share.transfer
+495,Donne le fichier suivi_clients.xlsx a Claire Fontaine definitivement.,Nextcloud,file_management,file.share.transfer
+496,Modifie les droits du partage de compte_rendu_reunion.docx.,Nextcloud,file_management,file.share.update
+497,Change le mot de passe du lien de proposition_commerciale.pdf.,Nextcloud,file_management,file.share.update
+498,Modifie les droits du partage de suivi_clients.xlsx.,Nextcloud,file_management,file.share.update
+499,Change le mot de passe du lien de rapport_trimestriel.docx.,Nextcloud,file_management,file.share.update
+500,Affiche les fichiers supprimes s'il te plaît.,Nextcloud,file_management,file.trashbin.list
+501,Liste le contenu de la corbeille s'il te plaît.,Nextcloud,file_management,file.trashbin.list
+502,"Affiche les fichiers supprimes, merci.",Nextcloud,file_management,file.trashbin.list
+503,"Liste le contenu de la corbeille, merci.",Nextcloud,file_management,file.trashbin.list
+504,Vide la corbeille definitivement s'il te plaît.,Nextcloud,file_management,file.trashbin.purge
+505,Supprime definitivement devis_2026-118.pdf.,Nextcloud,file_management,file.trashbin.purge
+506,"Vide la corbeille definitivement, merci.",Nextcloud,file_management,file.trashbin.purge
+507,Supprime definitivement cahier_des_charges.docx.,Nextcloud,file_management,file.trashbin.purge
+508,Restaure le fichier cahier_des_charges.docx depuis la corbeille.,Nextcloud,file_management,file.trashbin.restore
+509,Remet budget_2026.xlsx a sa place.,Nextcloud,file_management,file.trashbin.restore
+510,Restaure le fichier suivi_clients.xlsx depuis la corbeille.,Nextcloud,file_management,file.trashbin.restore
+511,Remet note_interne.docx a sa place.,Nextcloud,file_management,file.trashbin.restore
+512,Affiche les versions du fichier facture_2026-045.pdf.,Nextcloud,file_management,file.version.list
+513,Liste l'historique de compte_rendu_reunion.docx.,Nextcloud,file_management,file.version.list
+514,Affiche les versions du fichier compte_rendu_reunion.docx.,Nextcloud,file_management,file.version.list
+515,Liste l'historique de note_interne.docx.,Nextcloud,file_management,file.version.list
+516,Restaure la version precedente de suivi_clients.xlsx.,Nextcloud,file_management,file.version.restore
+517,Revient a la version du mois dernier de note_interne.docx.,Nextcloud,file_management,file.version.restore
+518,Restaure la version precedente de facture_2026-045.pdf.,Nextcloud,file_management,file.version.restore
+519,Revient a la version du mois dernier de presentation_v2.pptx.,Nextcloud,file_management,file.version.restore
+520,Bonjour s'il te plaît.,none,general,general
+521,Salut s'il te plaît.,none,general,general
+522,Que peux-tu faire ? s'il te plaît.,none,general,general
+523,Aide-moi s'il te plaît s'il te plaît.,none,general,general
+524,Merci s'il te plaît.,none,general,general
+525,Au revoir s'il te plaît.,none,general,general
+526,Quelle heure est-il ? s'il te plaît.,none,general,general
+527,À quoi ca sert ? s'il te plaît.,none,general,general
+528,Peux-tu m'aider ? s'il te plaît.,none,general,general
+529,C'est tout pour aujourd'hui s'il te plaît.,none,general,general
+530,"Bonjour, merci.",none,general,general
+531,"Salut, merci.",none,general,general
+532,"Que peux-tu faire ?, merci.",none,general,general
+533,"Aide-moi s'il te plaît, merci.",none,general,general
+534,"Merci, merci.",none,general,general
+535,"Au revoir, merci.",none,general,general
+536,"Quelle heure est-il ?, merci.",none,general,general
+537,"À quoi ca sert ?, merci.",none,general,general
+538,"Peux-tu m'aider ?, merci.",none,general,general
+539,"C'est tout pour aujourd'hui, merci.",none,general,general
+540,Planifie un entretien avec le candidat Marie Lambert.,Odoo,hr,hr.applicant.action_create_meeting
+541,Cale un rendez-vous de recrutement avec Hugo Lefebvre.,Odoo,hr,hr.applicant.action_create_meeting
+542,Envoie un email au candidat Lucas Girard.,Odoo,hr,hr.applicant.action_send_email
+543,Relance le candidat Karim Benali par email.,Odoo,hr,hr.applicant.action_send_email
+544,Archive la candidature de Jean Dupont.,Odoo,hr,hr.applicant.archive_applicant
+545,Clôture le dossier de Jean Dupont.,Odoo,hr,hr.applicant.archive_applicant
+546,Crée le dossier employe de Ines Bouzid et crée aussi son contact.,Odoo,"hr, contacts","hr.applicant.create_employee_from_applicant, res.partner.create"
+547,Crée le dossier employe de Marie Lambert et crée aussi son contact.,Odoo,"hr, contacts","hr.applicant.create_employee_from_applicant, res.partner.create"
+548,Crée le dossier employe de Jean Dupont et crée aussi son contact.,Odoo,"hr, contacts","hr.applicant.create_employee_from_applicant, res.partner.create"
+549,Crée le dossier employe de Hugo Lefebvre et crée aussi son contact.,Odoo,"hr, contacts","hr.applicant.create_employee_from_applicant, res.partner.create"
+550,Transforme le candidat Karim Benali en employe.,Odoo,hr,hr.applicant.create_employee_from_applicant
+551,Crée la fiche employe depuis la candidature de Jean Dupont.,Odoo,hr,hr.applicant.create_employee_from_applicant
+552,Approuve les heures supplementaires de Karim Benali.,Odoo,hr,hr.attendance.action_approve_overtime
+553,Valide le rachat d'heures de Claire Fontaine.,Odoo,hr,hr.attendance.action_approve_overtime
+554,Refuse les heures supplementaires de Jean Dupont.,Odoo,hr,hr.attendance.action_refuse_overtime
+555,Rejette le rachat d'heures de Claire Fontaine.,Odoo,hr,hr.attendance.action_refuse_overtime
+556,Affiche l'URL du kiosque de pointage s'il te plaît.,Odoo,hr,hr.attendance.get_kiosk_url
+557,Donne le lien du kiosk de présence s'il te plaît.,Odoo,hr,hr.attendance.get_kiosk_url
+558,Affiche la hiérarchie des départements s'il te plaît.,Odoo,hr,hr.department.get_department_hierarchy
+559,Montre l'organigramme du service s'il te plaît.,Odoo,hr,hr.department.get_department_hierarchy
+560,Archive la fiche de Karim Benali.,Odoo,hr,hr.employee.action_archive
+561,Met de cote l'employe Emma Rousseau.,Odoo,hr,hr.employee.action_archive
+562,Archive la fiche de Sophie Bernard.,Odoo,hr,hr.employee.action_archive
+563,Crée un compte utilisateur pour Hugo Lefebvre.,Odoo,hr,hr.employee.action_create_user
+564,Crée un login pour l'employe Karim Benali.,Odoo,hr,hr.employee.action_create_user
+565,Crée les comptes utilisateurs en lot s'il te plaît.,Odoo,hr,hr.employee.action_create_users
+566,Crée les logins des nouveaux employes s'il te plaît.,Odoo,hr,hr.employee.action_create_users
+567,Affiche les contacts lies a Sophie Bernard.,Odoo,hr,hr.employee.action_related_contacts
+568,Montre le carnet de Hugo Lefebvre.,Odoo,hr,hr.employee.action_related_contacts
+569,Désarchive la fiche de Ines Bouzid.,Odoo,hr,hr.employee.action_unarchive
+570,Réactive l'employe Claire Fontaine.,Odoo,hr,hr.employee.action_unarchive
+571,Crée une fiche employe pour Hugo Lefebvre.,Odoo,hr,hr.employee.create
+572,Ajoute Marie Lambert dans l'effectif.,Odoo,hr,hr.employee.create
+573,Enregistre le nouvel employe Pierre Moreau.,Odoo,hr,hr.employee.create
+574,Génère un badge pour Thomas Petit.,Odoo,hr,hr.employee.generate_random_barcode
+575,Crée le code-barres de Nadia Haddad.,Odoo,hr,hr.employee.generate_random_barcode
+576,Affiche la liste des employes s'il te plaît.,Odoo,hr,hr.employee.search_read
+577,Recherche la fiche de Karim Benali.,Odoo,hr,hr.employee.search_read
+578,"Affiche la liste des employes, merci.",Odoo,hr,hr.employee.search_read
+579,Supprime la fiche employe de Ines Bouzid.,Odoo,hr,hr.employee.unlink
+580,Efface le dossier de Thomas Petit.,Odoo,hr,hr.employee.unlink
+581,Supprime la fiche employe de Pierre Moreau.,Odoo,hr,hr.employee.unlink
+582,Mets a jour la fiche de Karim Benali.,Odoo,hr,hr.employee.write
+583,Modifie les coordonnées de l'employe Marie Lambert.,Odoo,hr,hr.employee.write
+584,Mets a jour la fiche de Marie Lambert.,Odoo,hr,hr.employee.write
+585,Approuve la note de frais de Claire Fontaine.,Odoo,hr,hr.expense.action_approve
+586,Valide les frais de Pierre Moreau.,Odoo,hr,hr.expense.action_approve
+587,Paye la note de frais de Jean Dupont et comptabilise-la.,Odoo,"hr, accounting","hr.expense.action_pay, account.move.action_post"
+588,Paye la note de frais de Sophie Bernard et comptabilise-la.,Odoo,"hr, accounting","hr.expense.action_pay, account.move.action_post"
+589,Paye la note de frais de Emma Rousseau et comptabilise-la.,Odoo,"hr, accounting","hr.expense.action_pay, account.move.action_post"
+590,Paye la note de frais de Marie Lambert et comptabilise-la.,Odoo,"hr, accounting","hr.expense.action_pay, account.move.action_post"
+591,Marque la note de frais de Nadia Haddad comme payee.,Odoo,hr,hr.expense.action_pay
+592,Regle les frais de Thomas Petit.,Odoo,hr,hr.expense.action_pay
+593,Comptabilise la note de frais de Pierre Moreau.,Odoo,hr,hr.expense.action_post
+594,Poste les frais de Ines Bouzid en écriture.,Odoo,hr,hr.expense.action_post
+595,Refuse la note de frais de Hugo Lefebvre.,Odoo,hr,hr.expense.action_refuse
+596,Rejette les frais de Karim Benali.,Odoo,hr,hr.expense.action_refuse
+597,Repasse la note de frais de Ines Bouzid en brouillon.,Odoo,hr,hr.expense.action_reset
+598,Remet les frais de Lucas Girard en draft.,Odoo,hr,hr.expense.action_reset
+599,Decoupe la note de frais de Thomas Petit.,Odoo,hr,hr.expense.action_split_wizard
+600,Divise les frais de Jean Dupont en deux notes.,Odoo,hr,hr.expense.action_split_wizard
+601,Soumet la note de frais a approbation s'il te plaît.,Odoo,hr,hr.expense.action_submit
+602,Envoie ma note de frais en validation s'il te plaît.,Odoo,hr,hr.expense.action_submit
+603,Crée la note de frais depuis proposition_commerciale.pdf puis soumets-la en approbation.,Odoo,hr,"hr.expense.create_expense_from_attachments, hr.expense.action_submit"
+604,Crée la note de frais depuis budget_2026.xlsx puis soumets-la en approbation.,Odoo,hr,"hr.expense.create_expense_from_attachments, hr.expense.action_submit"
+605,Crée la note de frais depuis note_interne.docx puis soumets-la en approbation.,Odoo,hr,"hr.expense.create_expense_from_attachments, hr.expense.action_submit"
+606,Crée la note de frais depuis contrat_annexe.pdf puis soumets-la en approbation.,Odoo,hr,"hr.expense.create_expense_from_attachments, hr.expense.action_submit"
+607,Crée une note de frais depuis la pièce jointe budget_2026.xlsx.,Odoo,hr,hr.expense.create_expense_from_attachments
+608,Crée les frais a partir du justificatif budget_2026.xlsx.,Odoo,hr,hr.expense.create_expense_from_attachments
+609,Approuve le congé de Hugo Lefebvre et ajoute son absence a l'agenda.,Odoo,"hr, calendaring","hr.leave.action_approve, event.create"
+610,Approuve le congé de Emma Rousseau et ajoute son absence a l'agenda.,Odoo,"hr, calendaring","hr.leave.action_approve, event.create"
+611,Approuve le congé de Claire Fontaine et ajoute son absence a l'agenda.,Odoo,"hr, calendaring","hr.leave.action_approve, event.create"
+612,Approuve le congé de Sophie Bernard et ajoute son absence a l'agenda.,Odoo,"hr, calendaring","hr.leave.action_approve, event.create"
+613,Approuve le congé de Ines Bouzid.,Odoo,hr,hr.leave.action_approve
+614,Valide la demande de congé de Pierre Moreau.,Odoo,hr,hr.leave.action_approve
+615,Renvoie le congé de Thomas Petit en approbation.,Odoo,hr,hr.leave.action_back_to_approval
+616,Remet la demande de congé en validation s'il te plaît.,Odoo,hr,hr.leave.action_back_to_approval
+617,Annule le congé de Claire Fontaine.,Odoo,hr,hr.leave.action_cancel
+618,Clôture la demande de congé de Emma Rousseau.,Odoo,hr,hr.leave.action_cancel
+619,Refuse le congé de Thomas Petit.,Odoo,hr,hr.leave.action_refuse
+620,Rejette la demande de congé de Jean Dupont.,Odoo,hr,hr.leave.action_refuse
+621,Approuve l'allocation de congé de Pierre Moreau.,Odoo,hr,hr.leave.allocation.action_approve
+622,Valide le solde de congé de Lucas Girard.,Odoo,hr,hr.leave.allocation.action_approve
+623,Refuse l'allocation de congé de Pierre Moreau.,Odoo,hr,hr.leave.allocation.action_refuse
+624,Rejette le solde de congé de Jean Dupont.,Odoo,hr,hr.leave.allocation.action_refuse
+625,Duplique la règle d'automatisation Verdeco.,Chatwoot,messaging,messaging.automation_rule.clone
+626,Duplique la règle d'automatisation Cora Group.,Chatwoot,messaging,messaging.automation_rule.clone
+627,"Crée une règle : si le message contient 'remboursement', ajoute le label s'il te plaît.",Chatwoot,messaging,messaging.automation_rule.create
+628,Ajoute une automatisation pour router les tickets urgents s'il te plaît.,Chatwoot,messaging,messaging.automation_rule.create
+629,Supprime la règle d'automatisation Medisys.,Chatwoot,messaging,messaging.automation_rule.delete
+630,Efface la règle de routage s'il te plaît.,Chatwoot,messaging,messaging.automation_rule.delete
+631,Modifie la règle d'automatisation Cora Group.,Chatwoot,messaging,messaging.automation_rule.update
+632,Change la condition de la règle de routage s'il te plaît.,Chatwoot,messaging,messaging.automation_rule.update
+633,Crée une campagne de relance pour BatiNord.,Chatwoot,messaging,messaging.campaign.create
+634,Lance une campagne SMS vers les clients inactifs s'il te plaît.,Chatwoot,messaging,messaging.campaign.create
+635,Supprime la campagne Verdeco.,Chatwoot,messaging,messaging.campaign.delete
+636,Annule la campagne de relance s'il te plaît.,Chatwoot,messaging,messaging.campaign.delete
+637,Modifie la campagne BioMarche.,Chatwoot,messaging,messaging.campaign.update
+638,Change le message de la campagne s'il te plaît.,Chatwoot,messaging,messaging.campaign.update
+639,Crée une réponse type 'Merci pour votre achat' s'il te plaît.,Chatwoot,messaging,messaging.canned_response.create
+640,Ajoute un modele de réponse pour Solenco.,Chatwoot,messaging,messaging.canned_response.create
+641,Supprime la réponse type Verdeco.,Chatwoot,messaging,messaging.canned_response.delete
+642,Efface le modele de réponse s'il te plaît.,Chatwoot,messaging,messaging.canned_response.delete
+643,Modifie la réponse type BatiNord.,Chatwoot,messaging,messaging.canned_response.update
+644,Corrige le modele de réponse s'il te plaît.,Chatwoot,messaging,messaging.canned_response.update
+645,Assigne la conversation Artemis Design a Karim Benali.,Chatwoot,messaging,messaging.conversation.assign
+646,Attribue le ticket a Claire Fontaine.,Chatwoot,messaging,messaging.conversation.assign
+647,Crée une conversation avec Emma Rousseau.,Chatwoot,messaging,messaging.conversation.create
+648,Ouvre un nouveau ticket pour Solenco.,Chatwoot,messaging,messaging.conversation.create
+649,Ajoute le champ 'SIRET' a la conversation Dupont & Fils.,Chatwoot,messaging,messaging.conversation.custom_attributes
+650,Définit l'attribut personnalise du ticket s'il te plaît.,Chatwoot,messaging,messaging.conversation.custom_attributes
+651,Supprime la conversation avec Emma Rousseau.,Chatwoot,messaging,messaging.conversation.delete
+652,Efface le ticket de LogiTrans.,Chatwoot,messaging,messaging.conversation.delete
+653,Ajoute le label 'urgence' au ticket LogiTrans.,Chatwoot,messaging,messaging.conversation.labels
+654,Étiquette la conversation de Thomas Petit.,Chatwoot,messaging,messaging.conversation.labels
+655,Coupe les notifications de la conversation Artemis Design.,Chatwoot,messaging,messaging.conversation.mute
+656,Mute le ticket de Pierre Moreau.,Chatwoot,messaging,messaging.conversation.mute
+657,Ajoute Karim Benali a la conversation.,Chatwoot,messaging,messaging.conversation.participants
+658,Retire Ines Bouzid de la conversation BureauPlus.,Chatwoot,messaging,messaging.conversation.participants
+659,Affiche la conversation avec Nadia Haddad.,Chatwoot,messaging,messaging.conversation.read
+660,Montre le ticket de Cora Group.,Chatwoot,messaging,messaging.conversation.read
+661,Mets le ticket de Artemis Design en priorité haute.,Chatwoot,messaging,messaging.conversation.toggle_priority
+662,Baisse la priorité de la conversation Dupont & Fils.,Chatwoot,messaging,messaging.conversation.toggle_priority
+663,Resolu le ticket de Medisys.,Chatwoot,messaging,messaging.conversation.toggle_status
+664,Ouvre de nouveau la conversation de Lucas Girard.,Chatwoot,messaging,messaging.conversation.toggle_status
+665,Affiche que je suis en train d'ecrire a Nadia Haddad.,Chatwoot,messaging,messaging.conversation.toggle_typing
+666,Arrete l'indicateur de saisie dans la conversation s'il te plaît.,Chatwoot,messaging,messaging.conversation.toggle_typing
+667,Envoie la transcription de la conversation a compta@groupe.fr.,Chatwoot,"messaging, email_action","messaging.conversation.transcript, email.email_submission.set"
+668,Envoie la transcription de la conversation a contact@domaine.fr.,Chatwoot,"messaging, email_action","messaging.conversation.transcript, email.email_submission.set"
+669,Envoie la transcription de la conversation a rh@equipe.fr.,Chatwoot,"messaging, email_action","messaging.conversation.transcript, email.email_submission.set"
+670,Envoie la transcription de la conversation a sav@service.fr.,Chatwoot,"messaging, email_action","messaging.conversation.transcript, email.email_submission.set"
+671,Envoie la transcription de la conversation a clients@boutique.fr.,Chatwoot,messaging,messaging.conversation.transcript
+672,Envoie le compte rendu du ticket TechNova par email.,Chatwoot,messaging,messaging.conversation.transcript
+673,Réactive les notifications de la conversation Cora Group.,Chatwoot,messaging,messaging.conversation.unmute
+674,Debloque les alertes du ticket Sophie Bernard.,Chatwoot,messaging,messaging.conversation.unmute
+675,Modifie la conversation de BioMarche.,Chatwoot,messaging,messaging.conversation.update
+676,Met a jour le ticket Verdeco.,Chatwoot,messaging,messaging.conversation.update
+677,Crée une nouvelle boite de reception WhatsApp s'il te plaît.,Chatwoot,messaging,messaging.inbox.create
+678,Ajoute une inbox email clients@boutique.fr.,Chatwoot,messaging,messaging.inbox.create
+679,Supprime la boite de reception BioMarche.,Chatwoot,messaging,messaging.inbox.delete
+680,Retire l'inbox Facebook s'il te plaît.,Chatwoot,messaging,messaging.inbox.delete
+681,Enregistre un webhook pour l'inbox Cora Group.,Chatwoot,messaging,messaging.inbox.register_webhook
+682,Configure la notification HTTP de l'inbox s'il te plaît.,Chatwoot,messaging,messaging.inbox.register_webhook
+683,Modifie la boite de reception Verdeco.,Chatwoot,messaging,messaging.inbox.update
+684,Met a jour la configuration de l'inbox s'il te plaît.,Chatwoot,messaging,messaging.inbox.update
+685,Crée un macro 'Réponse commerciale' s'il te plaît.,Chatwoot,messaging,messaging.macro.create
+686,Ajoute un raccourci d'actions pour les tickets s'il te plaît.,Chatwoot,messaging,messaging.macro.create
+687,Supprime le macro Dupont & Fils.,Chatwoot,messaging,messaging.macro.delete
+688,Efface le raccourci d'actions s'il te plaît.,Chatwoot,messaging,messaging.macro.delete
+689,Exécute le macro de cloture et resolu le ticket de Verdeco.,Chatwoot,messaging,"messaging.macro.execute, messaging.conversation.toggle_status"
+690,Exécute le macro de cloture et resolu le ticket de LogiTrans.,Chatwoot,messaging,"messaging.macro.execute, messaging.conversation.toggle_status"
+691,Exécute le macro de cloture et resolu le ticket de Solenco.,Chatwoot,messaging,"messaging.macro.execute, messaging.conversation.toggle_status"
+692,Exécute le macro de cloture et resolu le ticket de Atelier Martin.,Chatwoot,messaging,"messaging.macro.execute, messaging.conversation.toggle_status"
+693,Exécute le macro 'Fermeture' sur le ticket TechNova.,Chatwoot,messaging,messaging.macro.execute
+694,Applique le macro de réponse au client Karim Benali.,Chatwoot,messaging,messaging.macro.execute
+695,Modifie le macro Cora Group.,Chatwoot,messaging,messaging.macro.update
+696,Corrige le raccourci d'actions s'il te plaît.,Chatwoot,messaging,messaging.macro.update
+697,Supprime le message de Nadia Haddad.,Chatwoot,messaging,messaging.message.delete
+698,Retire mon message de la conversation s'il te plaît.,Chatwoot,messaging,messaging.message.delete
+699,Renvoie le message en erreur a Emma Rousseau.,Chatwoot,messaging,messaging.message.retry
+700,Retente l'envoi du message a BureauPlus.,Chatwoot,messaging,messaging.message.retry
+701,Envoie un message a Claire Fontaine.,Chatwoot,messaging,messaging.message.send
+702,Réponds au client BatiNord.,Chatwoot,messaging,messaging.message.send
+703,Traduis le message de Atelier Martin puis réponds-lui en français.,Chatwoot,messaging,"messaging.message.translate, messaging.message.send"
+704,Traduis le message de Cora Group puis réponds-lui en français.,Chatwoot,messaging,"messaging.message.translate, messaging.message.send"
+705,Traduis le message de Dupont & Fils puis réponds-lui en français.,Chatwoot,messaging,"messaging.message.translate, messaging.message.send"
+706,Traduis le message de Verdeco puis réponds-lui en français.,Chatwoot,messaging,"messaging.message.translate, messaging.message.send"
+707,Traduis le message du client BatiNord.,Chatwoot,messaging,messaging.message.translate
+708,Traduit le dernier message de Nadia Haddad.,Chatwoot,messaging,messaging.message.translate
+709,Modifie le message envoyé a Marie Lambert.,Chatwoot,messaging,messaging.message.update
+710,Corrige le message dans la conversation LogiTrans.,Chatwoot,messaging,messaging.message.update
+711,Affiche mes notifications de la messagerie s'il te plaît.,Chatwoot,messaging,messaging.notification.list
+712,Liste les alertes du support s'il te plaît.,Chatwoot,messaging,messaging.notification.list
+713,"Marque la notification comme lue, merci.",Chatwoot,messaging,messaging.notification.mark_read
+714,Acquitte l'alerte du ticket BatiNord.,Chatwoot,messaging,messaging.notification.mark_read
+715,Reporte la notification de LogiTrans.,Chatwoot,messaging,messaging.notification.snooze
+716,Snooze l'alerte du ticket s'il te plaît.,Chatwoot,messaging,messaging.notification.snooze
+717,Affiche l'erreur de sauvegarde du document cahier_des_charges.docx.,OnlyOffice,office,office.callback.error
+718,Vérifie l'erreur de save de presentation_v2.pptx.,OnlyOffice,office,office.callback.error
+719,Confirme la sauvegarde forcee de facture_2026-045.pdf.,OnlyOffice,office,office.callback.force_save
+720,Valide le force-save de rapport_trimestriel.docx.,OnlyOffice,office,office.callback.force_save
+721,Vérifie l'enregistrement du document rapport_trimestriel.docx.,OnlyOffice,office,office.callback.save_ready
+722,Contrôle que facture_2026-045.pdf a bien ete sauvegarde.,OnlyOffice,office,office.callback.save_ready
+723,Deconnecte Ines Bouzid de l'edition de proposition_commerciale.pdf.,OnlyOffice,office,office.command.drop
+724,Retire Emma Rousseau de la coedition de facture_2026-045.pdf.,OnlyOffice,office,office.command.drop
+725,Deconnecte Nadia Haddad de l'edition de facture_2026-045.pdf.,OnlyOffice,office,office.command.drop
+726,Force l'enregistrement du document note_interne.docx.,OnlyOffice,office,office.command.forcesave
+727,Sauvegarde maintenant proposition_commerciale.pdf sans fermer l'editeur.,OnlyOffice,office,office.command.forcesave
+728,Force l'enregistrement du document compte_rendu_reunion.docx.,OnlyOffice,office,office.command.forcesave
+729,Affiche qui edite actuellement planning_chantier.pdf.,OnlyOffice,office,office.command.info
+730,Donne le statut du document contrat_annexe.pdf.,OnlyOffice,office,office.command.info
+731,Affiche qui edite actuellement note_interne.docx.,OnlyOffice,office,office.command.info
+732,Met a jour les métadonnées du document contrat_annexe.pdf.,OnlyOffice,office,office.command.meta
+733,Change le titre du document note_interne.docx.,OnlyOffice,office,office.command.meta
+734,Met a jour les métadonnées du document suivi_clients.xlsx.,OnlyOffice,office,office.command.meta
+735,Affiche la version du serveur OnlyOffice s'il te plaît.,OnlyOffice,office,office.command.version
+736,Donne la version de OnlyOffice Docs s'il te plaît.,OnlyOffice,office,office.command.version
+737,"Affiche la version du serveur OnlyOffice, merci.",OnlyOffice,office,office.command.version
+738,Convertit note_interne.docx en PDF puis partage-le avec Emma Rousseau.,OnlyOffice,"office, file_management","office.converter.convert, file.share.create"
+739,Convertit facture_2026-045.pdf en PDF puis partage-le avec Claire Fontaine.,OnlyOffice,"office, file_management","office.converter.convert, file.share.create"
+740,Convertit proposition_commerciale.pdf en PDF puis partage-le avec Pierre Moreau.,OnlyOffice,"office, file_management","office.converter.convert, file.share.create"
+741,Convertit budget_2026.xlsx en PDF puis partage-le avec Nadia Haddad.,OnlyOffice,"office, file_management","office.converter.convert, file.share.create"
+742,Convertit rapport_trimestriel.docx en PDF.,OnlyOffice,office,office.converter.convert
+743,Transforme le fichier note_interne.docx en DOCX.,OnlyOffice,office,office.converter.convert
+744,Exporte planning_chantier.pdf en XLSX.,OnlyOffice,office,office.converter.convert
+745,Génère le rapport via docbuilder et envoie-le a clients@boutique.fr.,OnlyOffice,"office, email_action","office.docbuilder.generate, email.email_submission.set"
+746,Génère le rapport via docbuilder et envoie-le a rh@equipe.fr.,OnlyOffice,"office, email_action","office.docbuilder.generate, email.email_submission.set"
+747,Génère le rapport via docbuilder et envoie-le a direction@entreprise.fr.,OnlyOffice,"office, email_action","office.docbuilder.generate, email.email_submission.set"
+748,Génère le rapport via docbuilder et envoie-le a compta@groupe.fr.,OnlyOffice,"office, email_action","office.docbuilder.generate, email.email_submission.set"
+749,Génère un document DOCX a partir du modele s'il te plaît.,OnlyOffice,office,office.docbuilder.generate
+750,Crée le rapport devis_2026-118.pdf par script de generation.,OnlyOffice,office,office.docbuilder.generate
+751,"Génère un document DOCX a partir du modele, merci.",OnlyOffice,office,office.docbuilder.generate
+752,Passe presentation_v2.pptx en lecture seule.,OnlyOffice,office,office.editor.deny_editing
+753,Bloque la modification de rapport_trimestriel.docx.,OnlyOffice,office,office.editor.deny_editing
+754,Passe contrat_annexe.pdf en lecture seule.,OnlyOffice,office,office.editor.deny_editing
+755,Télécharge rapport_trimestriel.docx en PDF et ajoute-le a l'espace de connaissances.,OnlyOffice,"office, knowledge_kb","office.editor.download_as, kb.export.pdf"
+756,Télécharge budget_2026.xlsx en PDF et ajoute-le a l'espace de connaissances.,OnlyOffice,"office, knowledge_kb","office.editor.download_as, kb.export.pdf"
+757,Télécharge presentation_v2.pptx en PDF et ajoute-le a l'espace de connaissances.,OnlyOffice,"office, knowledge_kb","office.editor.download_as, kb.export.pdf"
+758,Télécharge devis_2026-118.pdf en PDF et ajoute-le a l'espace de connaissances.,OnlyOffice,"office, knowledge_kb","office.editor.download_as, kb.export.pdf"
+759,Télécharge le document en PPTX.,OnlyOffice,office,office.editor.download_as
+760,Exporte compte_rendu_reunion.docx au format PDF.,OnlyOffice,office,office.editor.download_as
+761,Télécharge le document en DOCX.,OnlyOffice,office,office.editor.download_as
+762,Insère une image dans suivi_clients.xlsx.,OnlyOffice,office,office.editor.insert_image
+763,Ajoute le logo dans le document presentation_v2.pptx.,OnlyOffice,office,office.editor.insert_image
+764,Insère une image dans cahier_des_charges.docx.,OnlyOffice,office,office.editor.insert_image
+765,Lance le publipostage avec les données de Solenco.,OnlyOffice,office,office.editor.mail_merge
+766,Génère les courriers depuis le fichier rapport_trimestriel.docx.,OnlyOffice,office,office.editor.mail_merge
+767,Lance le publipostage avec les données de BioMarche.,OnlyOffice,office,office.editor.mail_merge
+768,Actualise rapport_trimestriel.docx dans l'editeur sans recharger.,OnlyOffice,office,office.editor.refresh_file
+769,Recharge les données de budget_2026.xlsx.,OnlyOffice,office,office.editor.refresh_file
+770,Actualise devis_2026-118.pdf dans l'editeur sans recharger.,OnlyOffice,office,office.editor.refresh_file
+771,Affiche l'historique des versions de note_interne.docx.,OnlyOffice,office,office.editor.refresh_history
+772,Montre les révisions de presentation_v2.pptx.,OnlyOffice,office,office.editor.refresh_history
+773,Affiche l'historique des versions de suivi_clients.xlsx.,OnlyOffice,office,office.editor.refresh_history
+774,Lance le remplissage du formulaire PDF cahier_des_charges.docx.,OnlyOffice,office,office.editor.start_filling
+775,Demarre la saisie du formulaire cahier_des_charges.docx.,OnlyOffice,office,office.editor.start_filling
+776,Lance le remplissage du formulaire PDF devis_2026-118.pdf.,OnlyOffice,office,office.editor.start_filling
+777,Récupère les infos du fichier note_interne.docx.,OnlyOffice,office,office.wopi.check_file_info
+778,Vérifie les droits sur planning_chantier.pdf.,OnlyOffice,office,office.wopi.check_file_info
+779,Récupère les infos du fichier facture_2026-045.pdf.,OnlyOffice,office,office.wopi.check_file_info
+780,Liste le contenu du dossier projet Nova via WOPI.,OnlyOffice,office,office.wopi.enumerate_children
+781,Affiche les fichiers du dossier s'il te plaît.,OnlyOffice,office,office.wopi.enumerate_children
+782,Télécharge le contenu de suivi_clients.xlsx via WOPI.,OnlyOffice,office,office.wopi.get_file
+783,Récupère le fichier planning_chantier.pdf.,OnlyOffice,office,office.wopi.get_file
+784,Télécharge le contenu de planning_chantier.pdf via WOPI.,OnlyOffice,office,office.wopi.get_file
+785,Verrouille budget_2026.xlsx puis enregistre les changements.,OnlyOffice,office,"office.wopi.lock, office.wopi.put_file"
+786,Verrouille note_interne.docx puis enregistre les changements.,OnlyOffice,office,"office.wopi.lock, office.wopi.put_file"
+787,Verrouille cahier_des_charges.docx puis enregistre les changements.,OnlyOffice,office,"office.wopi.lock, office.wopi.put_file"
+788,Verrouille suivi_clients.xlsx puis enregistre les changements.,OnlyOffice,office,"office.wopi.lock, office.wopi.put_file"
+789,Verrouille le fichier budget_2026.xlsx pour edition.,OnlyOffice,office,office.wopi.lock
+790,Prend le verrou sur suivi_clients.xlsx.,OnlyOffice,office,office.wopi.lock
+791,Enregistre le contenu modifie de note_interne.docx.,OnlyOffice,office,office.wopi.put_file
+792,Sauvegarde les changements de contrat_annexe.pdf.,OnlyOffice,office,office.wopi.put_file
+793,Enregistre le contenu modifie de contrat_annexe.pdf.,OnlyOffice,office,office.wopi.put_file
+794,Crée un nouveau fichier depuis planning_chantier.pdf.,OnlyOffice,office,office.wopi.put_relative
+795,Enregistre facture_2026-045.pdf sous un autre nom.,OnlyOffice,office,office.wopi.put_relative
+796,Prolonge le verrou du fichier rapport_trimestriel.docx.,OnlyOffice,office,office.wopi.refresh_lock
+797,Renouvelle le lock de compte_rendu_reunion.docx.,OnlyOffice,office,office.wopi.refresh_lock
+798,Renomme le fichier devis_2026-118.pdf via WOPI.,OnlyOffice,office,office.wopi.rename
+799,Renomme budget_2026.xlsx en devis_2026-118.pdf.,OnlyOffice,office,office.wopi.rename
+800,Déverrouille le fichier proposition_commerciale.pdf.,OnlyOffice,office,office.wopi.unlock
+801,Relâche le verrou de rapport_trimestriel.docx.,OnlyOffice,office,office.wopi.unlock
+802,Crée la facture d'acompte pour la commande Verdeco.,Odoo,sales,sale.advance.payment.inv.create_invoices
+803,Facture l'avance sur la commande Cora Group.,Odoo,sales,sale.advance.payment.inv.create_invoices
+804,Crée la facture d'acompte pour la commande Atelier Martin.,Odoo,sales,sale.advance.payment.inv.create_invoices
+805,Annule la commande de BioMarche.,Odoo,sales,sale.order.action_cancel
+806,Clôture le devis Verdeco en annule.,Odoo,sales,sale.order.action_cancel
+807,Annule la commande de Artemis Design.,Odoo,sales,sale.order.action_cancel
+808,Clôture le devis TechNova en annule.,Odoo,sales,sale.order.action_cancel
+809,Confirme la commande de Artemis Design et crée la facture d'acompte.,Odoo,sales,"sale.order.action_confirm, sale.advance.payment.inv.create_invoices"
+810,Confirme la commande de TechNova et crée la facture d'acompte.,Odoo,sales,"sale.order.action_confirm, sale.advance.payment.inv.create_invoices"
+811,Confirme la commande de BioMarche et crée la facture d'acompte.,Odoo,sales,"sale.order.action_confirm, sale.advance.payment.inv.create_invoices"
+812,Confirme la commande de BureauPlus et crée la facture d'acompte.,Odoo,sales,"sale.order.action_confirm, sale.advance.payment.inv.create_invoices"
+813,Confirme la commande de Cora Group.,Odoo,sales,sale.order.action_confirm
+814,Valide le devis de Verdeco et crée les livraisons.,Odoo,sales,sale.order.action_confirm
+815,Confirme l'ordre de vente Dupont & Fils.,Odoo,sales,sale.order.action_confirm
+816,Confirme la commande de Medisys.,Odoo,sales,sale.order.action_confirm
+817,Repasse la commande Medisys en brouillon.,Odoo,sales,sale.order.action_draft
+818,Remet le devis de Medisys en draft.,Odoo,sales,sale.order.action_draft
+819,Repasse la commande TechNova en brouillon.,Odoo,sales,sale.order.action_draft
+820,Remet le devis de Dupont & Fils en draft.,Odoo,sales,sale.order.action_draft
+821,Verrouille la commande BatiNord.,Odoo,sales,sale.order.action_lock
+822,Bloque la modification du devis BatiNord.,Odoo,sales,sale.order.action_lock
+823,Verrouille la commande Solenco.,Odoo,sales,sale.order.action_lock
+824,Ouvre l'assistant de remise pour la commande BioMarche.,Odoo,sales,sale.order.action_open_discount_wizard
+825,Applique une remise sur le devis Cora Group.,Odoo,sales,sale.order.action_open_discount_wizard
+826,Ouvre l'assistant de remise pour la commande Cora Group.,Odoo,sales,sale.order.action_open_discount_wizard
+827,Affiche l'apercu de la commande Solenco dans le portail.,Odoo,sales,sale.order.action_preview_sale_order
+828,Prévisualise le devis TechNova cote client.,Odoo,sales,sale.order.action_preview_sale_order
+829,Affiche l'apercu de la commande Dupont & Fils dans le portail.,Odoo,sales,sale.order.action_preview_sale_order
+830,Envoie le devis de Artemis Design au client par email.,Odoo,"sales, email_action","sale.order.action_quotation_send, email.email_submission.set"
+831,Envoie le devis de LogiTrans au client par email.,Odoo,"sales, email_action","sale.order.action_quotation_send, email.email_submission.set"
+832,Envoie le devis de Atelier Martin au client par email.,Odoo,"sales, email_action","sale.order.action_quotation_send, email.email_submission.set"
+833,Envoie le devis de BatiNord au client par email.,Odoo,"sales, email_action","sale.order.action_quotation_send, email.email_submission.set"
+834,Envoie le devis Atelier Martin au client.,Odoo,sales,sale.order.action_quotation_send
+835,Envoie la quotation a LogiTrans par email.,Odoo,sales,sale.order.action_quotation_send
+836,Envoie le devis Cora Group au client.,Odoo,sales,sale.order.action_quotation_send
+837,Marque le devis BatiNord comme envoyé.,Odoo,sales,sale.order.action_quotation_sent
+838,Indique que la quotation TechNova a bien ete envoyée.,Odoo,sales,sale.order.action_quotation_sent
+839,Marque le devis Cora Group comme envoyé.,Odoo,sales,sale.order.action_quotation_sent
+840,Déverrouille la commande Cora Group.,Odoo,sales,sale.order.action_unlock
+841,Debloque la modification du devis Atelier Martin.,Odoo,sales,sale.order.action_unlock
+842,Déverrouille la commande BioMarche.,Odoo,sales,sale.order.action_unlock
+843,Met a jour les prix de la commande TechNova depuis la liste de prix.,Odoo,sales,sale.order.action_update_prices
+844,Réapplique les tarifs du catalogue sur BatiNord.,Odoo,sales,sale.order.action_update_prices
+845,Met a jour les prix de la commande Atelier Martin depuis la liste de prix.,Odoo,sales,sale.order.action_update_prices
+846,Réapplique les taxes sur la commande Medisys.,Odoo,sales,sale.order.action_update_taxes
+847,Recalcule les taxes du devis Solenco.,Odoo,sales,sale.order.action_update_taxes
+848,Réapplique les taxes sur la commande Dupont & Fils.,Odoo,sales,sale.order.action_update_taxes
+849,Affiche les factures liees a la commande BatiNord.,Odoo,sales,sale.order.action_view_invoice
+850,Montre la facture du devis BioMarche.,Odoo,sales,sale.order.action_view_invoice
+851,Affiche les factures liees a la commande Dupont & Fils.,Odoo,sales,sale.order.action_view_invoice
+852,Crée un devis pour Verdeco.,Odoo,sales,sale.order.create
+853,Prepare une commande pour BureauPlus.,Odoo,sales,sale.order.create
+854,Crée une quotation pour le client BureauPlus.,Odoo,sales,sale.order.create
+855,Crée un devis pour Cora Group.,Odoo,sales,sale.order.create
+856,Crée le devis depuis la pièce jointe contrat_annexe.pdf et télécharge le fichier.,Odoo,"sales, file_management","sale.order.create_document_from_attachment, file.get"
+857,Crée le devis depuis la pièce jointe rapport_trimestriel.docx et télécharge le fichier.,Odoo,"sales, file_management","sale.order.create_document_from_attachment, file.get"
+858,Crée le devis depuis la pièce jointe compte_rendu_reunion.docx et télécharge le fichier.,Odoo,"sales, file_management","sale.order.create_document_from_attachment, file.get"
+859,Crée le devis depuis la pièce jointe suivi_clients.xlsx et télécharge le fichier.,Odoo,"sales, file_management","sale.order.create_document_from_attachment, file.get"
+860,Crée une commande a partir de la pièce jointe compte_rendu_reunion.docx.,Odoo,sales,sale.order.create_document_from_attachment
+861,Génère un devis depuis le document proposition_commerciale.pdf.,Odoo,sales,sale.order.create_document_from_attachment
+862,Crée une commande a partir de la pièce jointe devis_2026-118.pdf.,Odoo,sales,sale.order.create_document_from_attachment
+863,Récupère la derniere transaction du portail pour LogiTrans.,Odoo,sales,sale.order.get_portal_last_transaction
+864,Affiche le dernier paiement client de BioMarche.,Odoo,sales,sale.order.get_portal_last_transaction
+865,Récupère la derniere transaction du portail pour Verdeco.,Odoo,sales,sale.order.get_portal_last_transaction
+866,Ajoute un produit du catalogue a la commande BatiNord.,Odoo,sales,sale.order.line.action_add_from_catalog
+867,Ajoute Sophie Bernard au panier de la commande LogiTrans.,Odoo,sales,sale.order.line.action_add_from_catalog
+868,Ajoute un produit du catalogue a la commande Dupont & Fils.,Odoo,sales,sale.order.line.action_add_from_catalog
+869,Capture le paiement de la commande Atelier Martin.,Odoo,sales,sale.order.payment_action_capture
+870,Encaissement de la commande BioMarche.,Odoo,sales,sale.order.payment_action_capture
+871,Capture le paiement de la commande Dupont & Fils.,Odoo,sales,sale.order.payment_action_capture
+872,Annule le paiement de la commande BioMarche.,Odoo,sales,sale.order.payment_action_void
+873,Void le paiement du devis LogiTrans.,Odoo,sales,sale.order.payment_action_void
+874,Annule le paiement de la commande Cora Group.,Odoo,sales,sale.order.payment_action_void
+875,Affiche les commandes de Artemis Design.,Odoo,sales,sale.order.search_read
+876,Recherche le devis 2 999 EUR.,Odoo,sales,sale.order.search_read
+877,Liste les commandes en cours s'il te plaît.,Odoo,sales,sale.order.search_read
+878,Affiche les commandes de BioMarche.,Odoo,sales,sale.order.search_read
+879,Supprime la commande de TechNova.,Odoo,sales,sale.order.unlink
+880,Efface le brouillon de devis TechNova.,Odoo,sales,sale.order.unlink
+881,Supprime la commande de Medisys.,Odoo,sales,sale.order.unlink
+882,Efface le brouillon de devis BioMarche.,Odoo,sales,sale.order.unlink
+883,Modifie la commande BatiNord.,Odoo,sales,sale.order.write
+884,Mets a jour le devis de Cora Group avec les nouvelles quantites.,Odoo,sales,sale.order.write
+885,Modifie la commande BioMarche.,Odoo,sales,sale.order.write
+886,Mets a jour le devis de BatiNord avec les nouvelles quantites.,Odoo,sales,sale.order.write
+887,Assigne la tache a Marie Lambert.,Vikunja,tasking,tasking.assignee.add
+888,Affecte cette tache a Ines Bouzid.,Vikunja,tasking,tasking.assignee.add
+889,Remplace tous les assignes de la tache par Emma Rousseau.,Vikunja,tasking,tasking.assignee.bulk
+890,Repartit les taches entre Marie Lambert et Emma Rousseau.,Vikunja,tasking,tasking.assignee.bulk
+891,Retire Karim Benali de la tache.,Vikunja,tasking,tasking.assignee.remove
+892,Desassigne Hugo Lefebvre de la tache.,Vikunja,tasking,tasking.assignee.remove
+893,Supprime la pièce jointe de la tache s'il te plaît.,Vikunja,tasking,tasking.attachment.delete
+894,Retire suivi_clients.xlsx de la tache.,Vikunja,tasking,tasking.attachment.delete
+895,Télécharge la pièce jointe de la tache projet Nova.,Vikunja,tasking,tasking.attachment.download
+896,Récupère note_interne.docx de la tache.,Vikunja,tasking,tasking.attachment.download
+897,Attache le fichier budget_2026.xlsx a la tache.,Vikunja,tasking,tasking.attachment.upload
+898,Joint proposition_commerciale.pdf a la tache campagne ete.,Vikunja,tasking,tasking.attachment.upload
+899,Crée la colonne 'A faire' dans le kanban s'il te plaît.,Vikunja,tasking,tasking.bucket.create
+900,Ajoute le bucket 'En cours' au projet migration ERP.,Vikunja,tasking,tasking.bucket.create
+901,Supprime la colonne 'Terminé' s'il te plaît.,Vikunja,tasking,tasking.bucket.delete
+902,Efface le bucket du kanban s'il te plaît.,Vikunja,tasking,tasking.bucket.delete
+903,Passe la tache dans la colonne 'Terminé' et notifie l'equipe s'il te plaît.,Vikunja,"tasking, messaging","tasking.bucket.move_task, messaging.notification.list"
+904,"Passe la tache dans la colonne 'Terminé' et notifie l'equipe, merci.",Vikunja,"tasking, messaging","tasking.bucket.move_task, messaging.notification.list"
+905,Passe la tache dans la colonne 'Terminé' et notifie l'equipe maintenant.,Vikunja,"tasking, messaging","tasking.bucket.move_task, messaging.notification.list"
+906,Passe la tache dans la colonne 'Terminé' et notifie l'equipe tout de suite.,Vikunja,"tasking, messaging","tasking.bucket.move_task, messaging.notification.list"
+907,Déplace la tache vers la colonne 'Terminé' s'il te plaît.,Vikunja,tasking,tasking.bucket.move_task
+908,Passe la tache au bucket 'En cours' s'il te plaît.,Vikunja,tasking,tasking.bucket.move_task
+909,Renomme la colonne 'A faire' en 'Backlog' s'il te plaît.,Vikunja,tasking,tasking.bucket.update
+910,Modifie le bucket du projet audit securite.,Vikunja,tasking,tasking.bucket.update
+911,Ajoute un commentaire sur la tache demenagement bureaux.,Vikunja,tasking,tasking.comment.create
+912,Commente la tache s'il te plaît.,Vikunja,tasking,tasking.comment.create
+913,Supprime le commentaire de la tache s'il te plaît.,Vikunja,tasking,tasking.comment.delete
+914,Efface le commentaire sur campagne ete.,Vikunja,tasking,tasking.comment.delete
+915,Modifie le commentaire de la tache s'il te plaît.,Vikunja,tasking,tasking.comment.update
+916,Corrige le commentaire sur la tache extension atelier.,Vikunja,tasking,tasking.comment.update
+917,Ajoute le label 'urgent' a la tache s'il te plaît.,Vikunja,tasking,tasking.label.add
+918,Étiquette la tache projet Nova.,Vikunja,tasking,tasking.label.add
+919,Remplace tous les labels de la tache s'il te plaît.,Vikunja,tasking,tasking.label.bulk
+920,Recolore les étiquettes de la tache s'il te plaît.,Vikunja,tasking,tasking.label.bulk
+921,Retire le label de la tache s'il te plaît.,Vikunja,tasking,tasking.label.remove
+922,Enlève l'étiquette de la tache campagne ete.,Vikunja,tasking,tasking.label.remove
+923,Affiche mes notifications de taches s'il te plaît.,Vikunja,tasking,tasking.notification.list
+924,Liste les alertes du projet demenagement bureaux.,Vikunja,tasking,tasking.notification.list
+925,Marque la notification comme lue s'il te plaît.,Vikunja,tasking,tasking.notification.mark_read
+926,Acquitte l'alerte de la tache migration ERP.,Vikunja,tasking,tasking.notification.mark_read
+927,Crée le projet lancement produit.,Vikunja,tasking,tasking.project.create
+928,Crée un nouveau projet 'Site web' s'il te plaît.,Vikunja,tasking,tasking.project.create
+929,Crée le projet refonte du site.,Vikunja,tasking,tasking.project.create
+930,Supprime le projet campagne ete.,Vikunja,tasking,tasking.project.delete
+931,Efface le projet refonte du site.,Vikunja,tasking,tasking.project.delete
+932,Duplique le projet audit securite.,Vikunja,tasking,tasking.project.duplicate
+933,Copie le projet audit securite en tant que modele.,Vikunja,tasking,tasking.project.duplicate
+934,Affiche les details du projet reorganisation.,Vikunja,tasking,tasking.project.read
+935,Montre le projet chantier Rive Gauche.,Vikunja,tasking,tasking.project.read
+936,Affiche les details du projet audit securite.,Vikunja,tasking,tasking.project.read
+937,Mets a jour le projet lancement produit.,Vikunja,tasking,tasking.project.update
+938,Modifie la description du projet reorganisation.,Vikunja,tasking,tasking.project.update
+939,Mets a jour le projet migration ERP.,Vikunja,tasking,tasking.project.update
+940,Lie la tache chantier Rive Gauche a la tache 'Rapport'.,Vikunja,tasking,tasking.relation.create
+941,Crée une dependance entre les deux taches s'il te plaît.,Vikunja,tasking,tasking.relation.create
+942,Supprime le lien entre les taches s'il te plaît.,Vikunja,tasking,tasking.relation.delete
+943,Retire la dependance de la tache extension atelier.,Vikunja,tasking,tasking.relation.delete
+944,Crée un lien de partage pour le projet extension atelier.,Vikunja,tasking,tasking.share.link
+945,Génère un lien public pour refonte du site.,Vikunja,tasking,tasking.share.link
+946,Partage le projet reorganisation avec Claire Fontaine.,Vikunja,tasking,tasking.share.project
+947,Donne accès au projet refonte du site a Ines Bouzid.,Vikunja,tasking,tasking.share.project
+948,Crée la tache dans migration ERP et assigne-la a Thomas Petit.,Vikunja,tasking,"tasking.task.create, tasking.assignee.add"
+949,Crée la tache dans projet Nova et assigne-la a Thomas Petit.,Vikunja,tasking,"tasking.task.create, tasking.assignee.add"
+950,Crée la tache dans chantier Rive Gauche et assigne-la a Hugo Lefebvre.,Vikunja,tasking,"tasking.task.create, tasking.assignee.add"
+951,Crée la tache dans demenagement bureaux et assigne-la a Hugo Lefebvre.,Vikunja,tasking,"tasking.task.create, tasking.assignee.add"
+952,Crée la tache 'Rediger le rapport' dans extension atelier.,Vikunja,tasking,tasking.task.create
+953,Ajoute une tache au projet extension atelier.,Vikunja,tasking,tasking.task.create
+954,Supprime la tache chantier Rive Gauche.,Vikunja,tasking,tasking.task.delete
+955,Efface la tache du projet s'il te plaît.,Vikunja,tasking,tasking.task.delete
+956,Duplique la tache lancement produit.,Vikunja,tasking,tasking.task.duplicate
+957,Copie la tache dans un autre projet s'il te plaît.,Vikunja,tasking,tasking.task.duplicate
+958,Coche la tache comme terminée s'il te plaît.,Vikunja,tasking,tasking.task.partial_update
+959,Complete partiellement la tache audit securite.,Vikunja,tasking,tasking.task.partial_update
+960,Repousse la tache a ce soir et met a jour le calendrier du projet.,Vikunja,"tasking, calendaring","tasking.task.update, event.create"
+961,Repousse la tache a lundi et met a jour le calendrier du projet.,Vikunja,"tasking, calendaring","tasking.task.update, event.create"
+962,Repousse la tache a la semaine prochaine et met a jour le calendrier du projet.,Vikunja,"tasking, calendaring","tasking.task.update, event.create"
+963,Repousse la tache a dans trois jours et met a jour le calendrier du projet.,Vikunja,"tasking, calendaring","tasking.task.update, event.create"
+964,Modifie la tache lancement produit.,Vikunja,tasking,tasking.task.update
+965,Change l'échéance de la tache s'il te plaît.,Vikunja,tasking,tasking.task.update
+966,Crée une vue liste dans le projet chantier Rive Gauche.,Vikunja,tasking,tasking.view.create
+967,Ajoute une vue kanban au projet refonte du site.,Vikunja,tasking,tasking.view.create
+968,Supprime la vue du projet audit securite.,Vikunja,tasking,tasking.view.delete
+969,Retire la vue kanban du projet projet Nova.,Vikunja,tasking,tasking.view.delete
+970,Modifie la vue du projet migration ERP.,Vikunja,tasking,tasking.view.update
+971,Réordonne les vues du projet chantier Rive Gauche.,Vikunja,tasking,tasking.view.update
+972,"D'après nos sources documentaires, trouve tous les documents contenant 'RGE 2026'.",SurfSense,knowledge_kb,kb.search.fulltext
+973,"Selon nos sources indexées, importe la vidéo de formation YouTube dans l'espace 'Onboarding'.",SurfSense,knowledge_kb,kb.ingest.youtube
+974,"Dans notre base de connaissances, quels documents ont été modifiés dans l'espace 'Veille réglementaire' depuis une semaine ?",SurfSense,knowledge_kb,kb.space.read
+975,Quel est le barème interne des frais kilométriques pour les commerciaux ?,SurfSense,knowledge_kb,kb.answer.grounded
+976,charge cette vidéo de formation comme source dans l'espace 'Onboarding'.,SurfSense,knowledge_kb,kb.ingest.youtube
+977,"Dans notre base de connaissances, génère un rapport synthétique sur les risques du projet d'extension.",SurfSense,knowledge_kb,kb.generate.report
+978,Génère une infographie présentant notre organigramme et nos process internes.,SurfSense,knowledge_kb,kb.generate.image
+979,Charge cette vidéo de formation sécurité chantier dans l'espace 'HSE'.,SurfSense,knowledge_kb,kb.ingest.youtube
+980,Quels sont les prix de nos différents fournisseurs de matériaux isolants ?,SurfSense,knowledge_kb,kb.answer.grounded
+981,"D'après nos sources documentaires, cherche les documents mentionnant 'garantie décennale' dans mes sources.",SurfSense,knowledge_kb,kb.search.fulltext
+982,"Dans notre base de connaissances, cherche les documents qui abordent la thématique de la formation professionnelle.",SurfSense,knowledge_kb,kb.search.vector
+983,"Dans notre documentation interne indexée, que dit le @Protocole de sécurité sur la procédure d'urgence ?",SurfSense,knowledge_kb,kb.answer.grounded
+984,"Dans notre base de connaissances, ajoute ce PDF technique à l'espace 'Documentation produit'.",SurfSense,knowledge_kb,kb.ingest.document
+985,"D'après nos sources documentaires, où en est le traitement du document que j'ai importé il y a 2 heures ?",SurfSense,knowledge_kb,kb.status.processing
+986,"D'après nos sources documentaires, cherche le mot exact 'obligation décennale' dans l'ensemble de mes sources.",SurfSense,knowledge_kb,kb.search.fulltext
+987,Donne les droits d'administration de l'espace 'Qualité' à Marie Dupont.,SurfSense,knowledge_kb,kb.space.update
+988,"Dans notre base interne, classe automatiquement les 20 documents en attente dans les catégories existantes.",SurfSense,knowledge_kb,kb.ingest.document
+989,"Dans notre base interne, trouve tous les documents contenant le terme 'RGE' et 'certification'.",SurfSense,knowledge_kb,kb.search.fulltext
+990,Trouve les spécifications techniques du matériau IsoVerre 300 dans nos documents.,SurfSense,knowledge_kb,kb.search.vector
+991,"Selon nos sources indexées, vérifie si les 5 documents uploadés ce matin ont fini d'être indexés.",SurfSense,knowledge_kb,kb.status.batch
+992,"Dans l'espace SurfSense, recherche les documents traitant de gestion de projet agile sans utiliser le terme exact.",SurfSense,knowledge_kb,kb.search.vector
+993,"Dans notre base de connaissances, ajoute cette page web à l'espace 'Veille réglementaire' et vérifie qu'elle a bien été indexée.",SurfSense,knowledge_kb,"kb.ingest.url, kb.status.processing"
+994,"Dans nos sources, quelles sont les norms de sécurité applicables aux chantiers de rénovation ?",SurfSense,knowledge_kb,kb.answer.grounded
+995,Trouve tous les documents liés aux certifications RGE dans notre base.,SurfSense,knowledge_kb,kb.search.fulltext
+996,"Dans notre base de connaissances, reprends la génération là où elle s'est arrêtée.",SurfSense,knowledge_kb,kb.generate.report
+997,Charge le compterendu de réunion CODIR dans l'espace 'Direction'.,SurfSense,knowledge_kb,kb.ingest.document
+998,"Dans notre documentation interne indexée, charge ce tableau Excel comme nouvelle source dans mon espace.",SurfSense,knowledge_kb,kb.ingest.document
+999,"Dans notre base de connaissances, crée un podcast de 3 minutes résumant les 5 documents clés de l'espace 'Documentation produit'.",SurfSense,knowledge_kb,kb.generate.podcast
+1000,"Dans notre base interne, crée un vidéo de synthèse pour présenter les résultats de l'étude.",SurfSense,knowledge_kb,kb.generate.video
+1001,"Dans notre base interne, trie toutes les sources ajoutées dans la base cette semaine par thème automatiquement.",SurfSense,knowledge_kb,kb.ingest.document
+1002,"Selon nos sources indexées, ajoute une note 'À valider par le service juridique' sur cette source.",SurfSense,knowledge_kb,kb.note.create
+1003,Quelles sont les tendances du marché BTP identifiées dans nos veilles sectorielles ?,SurfSense,knowledge_kb,kb.answer.grounded
+1004,"D'après nos sources documentaires, la réponse a été coupée, peux-tu continuer ?",SurfSense,knowledge_kb,kb.answer.grounded
+1005,"Selon nos sources indexées, ne laisse pas l'agent générer d'images sur cet espace.",SurfSense,knowledge_kb,kb.space.update
+1006,Quels risques juridiques sont mentionnés dans nos contrats types avec les sous-traitants ?,SurfSense,knowledge_kb,kb.answer.grounded
+1007,"D'après nos sources documentaires, quelles sont les tendances du marché BTP dans mes sources de veille ?",SurfSense,knowledge_kb,kb.answer.grounded
+1008,"Dans notre base interne, recherche les informations sur 'audit énergétique' dans mes documents techniques.",SurfSense,knowledge_kb,kb.search.vector
+1009,"Dans notre documentation interne indexée, cherche le document dont le titre commence par 'Cahier des charges'.",SurfSense,knowledge_kb,kb.search.fulltext
+1010,Cherche dans nos sources les tarifs pratiqués par nos concurrents en 2025.,SurfSense,knowledge_kb,kb.search.fulltext
+1011,Supprime l'accès de l'ancien stagiaire à tous les espaces partagés.,SurfSense,knowledge_kb,kb.space.update
+1012,"Dans l'espace Surfsence, importe ces 5 fichiers Word dans la base 'Documentation technique'.",SurfSense,knowledge_kb,kb.ingest.document
+1013,"Selon nos sources indexées, qu'est-ce que l'équipe a déjà décidé à propos de ce fournisseur ?",SurfSense,knowledge_kb,kb.answer.grounded
+1014,Crée un tableau comparatif de toutes nos offres packagées clients.,SurfSense,knowledge_kb,kb.generate.report
+1015,"Selon nos sources indexées, où en est le traitement du document que j'ai importé hier ?",SurfSense,knowledge_kb,kb.status.processing
+1016,"D'après nos archives, quel a été le chiffre d'affaires des chantiers BTP l'année dernière ?",SurfSense,knowledge_kb,kb.answer.grounded
+1017,Quel est le contenu du contrat-type que nous utilisons pour les chantiers publics ?,SurfSense,knowledge_kb,kb.answer.grounded
+1018,Compile tous nos contrats actifs dans un document synthétique.,SurfSense,knowledge_kb,kb.generate.report
+1019,"Dans notre documentation interne indexée, indexe cet article de blog comme source pour ma veille.",SurfSense,knowledge_kb,kb.ingest.url
+1020,"D'après nos sources documentaires, compare le contenu du @Cahier des charges avec le @Devis fournisseur.",SurfSense,knowledge_kb,kb.answer.grounded
+1021,"Dans notre base interne, quels sont les arguments de vente principaux présents dans mes sources commerciales ?",SurfSense,knowledge_kb,kb.answer.grounded
+1022,Quel est le processus de validation des devis internes décrit dans nos procédures ?,SurfSense,knowledge_kb,kb.answer.grounded
+1023,"Dans nos documents, quelles sont les conditions de paiement habituelles avec nos fournisseurs ?",SurfSense,knowledge_kb,kb.answer.grounded
+1024,"Dans notre base de connaissances, que dit ce graphique dans l'image que je viens d'ajouter ?",SurfSense,knowledge_kb,kb.answer.grounded
+1025,"Dans l'espace SurfSense, reviens en arrière sur le classement automatique que tu viens de faire.",SurfSense,knowledge_kb,kb.space.update
+1026,Archive l'espace 'Projet showroom' maintenant qu'il est terminé.,SurfSense,knowledge_kb,kb.space.delete
+1027,"Dans notre base de connaissances, compare les différentes approches de rénovation énergétique présentées dans mes documents.",SurfSense,knowledge_kb,kb.answer.grounded
+1028,"Dans l'espace SurfSense, charge le fichier Excel 'Données ventes' comme source dans l'espace 'Commercial'.",SurfSense,knowledge_kb,kb.ingest.document
+1029,"D'après nos sources documentaires, crée un podcast de 5 minutes résumant ces documents.",SurfSense,knowledge_kb,kb.generate.podcast
+1030,Crée un espace partagé dédié au projet de certification ISO 9001.,SurfSense,knowledge_kb,kb.space.create
+1031,"Selon nos sources indexées, quelles sont les informations les plus récentes dans mes sources sur l'isolation thermique ?",SurfSense,knowledge_kb,kb.answer.grounded
+1032,"D'après nos sources documentaires, ajoute cette page web à mon espace 'Étude de marché'.",SurfSense,knowledge_kb,kb.ingest.url
+1033,"Dans l'espace SurfSense, compare les différentes propositions techniques de mes fournisseurs.",SurfSense,knowledge_kb,kb.answer.grounded
+1034,Cherche les documents mentionnant les aides MaPrimeRénov' dans notre base.,SurfSense,knowledge_kb,kb.search.fulltext
+1035,"Dans notre documentation interne indexée, génère une image illustrant le concept présenté dans ce document.",SurfSense,knowledge_kb,kb.generate.image
+1036,"Dans surfsence, crée un sous-dossier 'Contrats 2026' dans mon espace 'Documentation juridique'.",SurfSense,knowledge_kb,kb.space.create
+1037,Mets à jour la source 'Barème fournisseurs Q3' avec les nouveaux tarifs.,SurfSense,knowledge_kb,kb.ingest.document
+1038,"Selon nos sources indexées, ajoute une note sur cette source : 'à vérifier avec le service juridique'.",SurfSense,knowledge_kb,kb.note.create
+1039,"Dans notre base de connaissances, recherche les documents traitant de 'norme NF' sans utiliser le terme exact.",SurfSense,knowledge_kb,kb.search.vector
+1040,Supprime les doublons détectés dans l'espace 'Documentation produit'.,SurfSense,knowledge_kb,kb.space.update
+1041,Importe les 15 fichiers du serveur partagé dans l'espace 'Archives techniques'.,SurfSense,knowledge_kb,kb.ingest.document
+1042,"Dans notre base interne, affiche l'historique des actions effectuées sur 'Documentation juridique'.",SurfSense,knowledge_kb,kb.space.read
+1043,"dans surfsence, crée un visuel pour accompagner ce rapport.",SurfSense,knowledge_kb,kb.generate.image
+1044,"Dans notre base interne, recherche les informations sur 'taxe d'apprentissage' dans mes sources comptables.",SurfSense,knowledge_kb,kb.search.vector
+1045,Retrouve le cahier des charges type que nous utilisons pour les appels d'offres.,SurfSense,knowledge_kb,kb.search.fulltext
+1046,Classe automatiquement les 30 nouveaux documents par catégorie dans mon espace.,SurfSense,knowledge_kb,kb.ingest.document
+1047,"Dans notre base, quelles sont les excuses d'absence acceptées par le service RH ?",SurfSense,knowledge_kb,kb.answer.grounded
+1048,Produis un comparatif visuel des tarifs de nos 5 principaux fournisseurs.,SurfSense,knowledge_kb,kb.generate.image
+1049,Quel budget pr�voir pour r�nover une salle de bain de 6m� ?,general,general,conseil personnel
+1050,Quel budget pr�voir pour un voyage de 3 semaines en Asie du Sud-Est ?,general,general,conseil personnel
+1051,Comment surmonter le syndrome de la page blanche quand j'�cris mon livre ?,general,general,conseil personnel
+1052,Quels r�glages utiliser pour photographier un portrait en lumi�re naturelle ?,general,general,conseil personnel
+1053,Comment progresser en peinture � l'huile quand on d�bute ?,general,general,conseil personnel
+1054,Quel est le co�t moyen d'une extension de maison de 20m� ?,general,general,conseil personnel
+1055,Comment calculer la marge b�n�ficiaire id�ale sur des travaux de r�novation immobili�re ?,general,general,conseil professionnel - finance
+1056,Quelle structure narrative choisir pour un recueil de nouvelles ?,general,general,conseil professionnel - �dition
+1058,Dans quel ordre planifier les travaux d'une r�novation compl�te de maison ?,general,general,conseil personnel
+1059,Quels documents pr�parer pour un voyage en famille hors de l'Union Europ�enne ?,general,general,conseil personnel
+1060,Quelles aides existent pour financer l'isolation de ma maison en 2026 ?,general,general,conseil personnel
+1061,Comment composer une m�lodie simple � la guitare quand on d�bute ?,general,general,conseil personnel
+1062,Quels exercices de respiration aident � g�rer le stress avant une pr�sentation ?,general,general,conseil personnel
+1063,Quelle est la meilleure p�riode pour visiter le Japon en �vitant la foule ?,general,general,conseil personnel
+1064,Comment structurer une vid�o YouTube pour qu'elle capte l'attention d�s les 10 premi�res secondes ?,general,general,conseil professionnel - marketing
+1065,Quelles d�marches effectuer deux ans avant mon d�part � la retraite ?,general,general,conseil personnel
+1066,Quelles habitudes matinales aident � �tre plus productif ?,general,general,conseil personnel
+1067,Quelle r�gularit� de publication adopter pour mon blog personnel ?,general,general,conseil professionnel - marketing
+1068,Quels logiciels gratuits recommander pour d�buter le montage vid�o ?,general,general,conseil personnel
+1069,Comment transmettre un patrimoine � mes enfants en limitant les droits de succession ?,general,general,conseil personnel
+1070,Quelles techniques de m�ditation conviennent � un d�butant tr�s occup� ?,general,general,conseil personnel
+1071,Quel mat�riel choisir pour commencer la sculpture sur bois ?,general,general,conseil personnel
+1072,Quelle fr�quence de publication adopter sur Instagram pour d�velopper une communaut� ?,general,general,conseil professionnel - marketing
+1073,Quelles techniques utiliser pour d�velopper un personnage cr�dible ?,general,general,conseil professionnel - �dition
+1074,� quel �ge dois-je commencer � racheter des trimestres pour ma retraite ?,general,general,conseil personnel
+1075,Comment structurer l'organisation d'un �v�nement caritatif pour une petite association ?,general,general,conseil professionnel - management
+1076,Comment fixer des objectifs personnels r�alistes pour l'ann�e ?,general,general,conseil personnel
+1077,Comment trouver une maison d'�dition pour mon manuscrit ?,general,general,conseil professionnel - �dition
+1078,Comment estimer le montant de ma future pension de retraite ?,general,general,conseil personnel
+1079,Comment structurer le plan de mon premier roman ?,general,general,conseil professionnel - �dition
+1080,Comment trouver une mission de b�n�volat adapt�e � mes disponibilit�s le week-end ?,general,general,conseil personnel
+1081,Quelles d�marches administratives pour cr�er une association loi 1901 ?,general,general,conseil professionnel - juridique
+1082,Quels placements privil�gier pour pr�parer ma retraite en tant qu'ind�pendant ?,general,general,conseil professionnel - finance
+1083,Quelles strat�gies de d�fiscalisation existent pour un investissement locatif ?,general,general,conseil professionnel - fiscalit�
+1084,Comment structurer un programme de course � pied pour pr�parer un semi-marathon en 12 semaines ?,general,general,conseil personnel
+1085,Comment reprendre le sport progressivement apr�s plusieurs mois d'arr�t ?,general,general,conseil personnel
+1086,Quelle est la diff�rence entre un PER individuel et un PER collectif ?,general,general,conseil personnel
+1087,Comment r�partir mon �pargne entre assurance-vie et immobilier locatif � 45 ans ?,general,general,conseil personnel
+1088,Quelle est la diff�rence entre une pompe � chaleur air-air et air-eau ?,general,general,conseil personnel
+1089,Comment choisir entre le r�gime micro-BIC et le r�gime r�el pour une petite entreprise ?,general,general,conseil professionnel - accounting
+1090,Quelles aides financi�res existent pour une entreprise industrielle qui investit dans la transition �nerg�tique ?,general,general,conseil professionnel - finance
+1091,Comment un agent immobilier peut-il am�liorer sa visibilit� en ligne ?,general,general,conseil professionnel - marketing
+1092,Quelles sont les �tapes cl�s d'un contr�le technique automobile en France ?,general,general,conseil professionnel - automobile
+1093,Comment un fonctionnaire peut-il demander une mobilit� interne dans l'administration ?,general,general,conseil professionnel - administration
+1094,"En tant que dirigeant d'une entreprise de services, quelles clauses sont indispensables dans un contrat de prestation ?",general,general,conseil professionnel - juridique
+1095,Quelle est la proc�dure pour mettre en place le CSE dans une entreprise de moins de 50 salari�s ?,general,general,conseil professionnel - RH
+1096,Comment un fonctionnaire peut-il valoriser ses ann�es de service pour une promotion interne ?,general,general,conseil professionnel - administration
+1097,"En tant que responsable RH, comment r�diger une offre d'emploi attractive pour un poste technique ?",general,general,conseil professionnel - RH
+1099,Comment structurer une strat�gie de contenu pour un garage automobile ?,general,general,conseil professionnel - marketing
+1100,Quelle strat�gie de financement choisir pour un investissement de 2M� en �quipements ?,general,general,conseil professionnel - finance
+1101,Quelles sont les bonnes pratiques pour mener un entretien annuel d'�valuation ?,general,general,conseil professionnel - RH
+1102,Comment un paysagiste peut-il utiliser les avis clients pour d�velopper son activit� ?,general,general,conseil professionnel - artisanat
+1103,Quels sont les droits d'un salari� en cas d'arr�t maladie prolong� ?,general,general,conseil professionnel - juridique
+1104,Quelles sont les principales questions qu'un directeur financier se pose sur l'optimisation de la tr�sorerie ?,general,general,conseil professionnel - finance
+1105,Quels indicateurs financiers un directeur d'agroalimentaire doit-il pr�senter � ses actionnaires ?,general,general,conseil professionnel - finance
+1106,Quels sont les 5 principaux risques juridiques d'une entreprise qui vend en ligne en Europe ?,general,general,conseil professionnel - juridique
+1107,Quelles obligations de tra�abilit� s'appliquent � un producteur agroalimentaire ?,general,general,conseil professionnel - juridique
+1108,Quelles obligations un plombier doit-il respecter pour la mise aux normes d'une installation de gaz ?,general,general,conseil professionnel - artisanat
+1109,Comment structurer un plan de formation annuel pour une petite entreprise ?,general,general,conseil professionnel - RH
+1110,Quelle strat�gie de prix adopter pour un nouveau produit face � une concurrence agressive ?,general,general,conseil professionnel - finance
+1113,Quelles sont les responsabilit�s p�nales d'un chef d'entreprise en cas d'accident du travail ?,general,general,conseil professionnel - juridique
+1114,Quels sont les risques juridiques d'un contrat verbal avec un fournisseur ?,general,general,conseil professionnel - juridique
+1115,Comment un garagiste ind�pendant peut-il anticiper sa tr�sorerie sur les 6 prochains mois ?,general,general,conseil professionnel - finance
+1116,Quelles sont les normes en vigueur pour l'installation �lectrique d'une maison individuelle ?,general,general,conseil professionnel - artisanat
+1117,Comment un artisan �lectricien peut-il d�velopper sa client�le localement ?,general,general,conseil professionnel - artisanat
+1118,Quelles questions poser en entretien pour �valuer les comp�tences techniques d'un candidat �lectricien ?,general,general,conseil professionnel - RH
+1123,Quelles sont les charges d�ductibles pour un �lectricien auto-entrepreneur ?,general,general,conseil professionnel - accounting
+1124,"En tant que paysagiste, quelles plantes conseiller pour un jardin peu ensoleill� en climat m�diterran�en ?",general,general,conseil professionnel - artisanat
+1125,Quelle est la diff�rence entre amortissement lin�aire et amortissement d�gressif ?,general,general,conseil professionnel - accounting
+1126,Quelles questions un assistant marketing devrait-il se poser avant de lancer une campagne sur les r�seaux sociaux ?,general,general,conseil professionnel - marketing
+1127,Quelles mentions obligatoires doivent figurer sur une facture en France ?,general,general,conseil professionnel - accounting
+1128,Comment traiter comptablement une provision pour litige commercial en IFRS ?,general,general,conseil professionnel - accounting
+1129,Quels sont les points de vigilance lors de la mise aux normes d'un tableau �lectrique ancien ?,general,general,conseil professionnel - artisanat
+1131,Quelle est la diff�rence entre le r�sultat net et l'EBITDA pour �valuer la sant� d'une entreprise ?,general,general,conseil professionnel - finance
+1132,Quels canaux privil�gier pour toucher une client�le locale dans le secteur du b�timent ?,general,general,conseil professionnel - marketing
+1133,Comment optimiser l�galement l'imposition d'une PME en France ?,general,general,conseil professionnel - fiscalit�
+1134,Quels indicateurs suivre pour mesurer le retour sur investissement d'une campagne publicitaire ?,general,general,conseil professionnel - marketing
+1135,Quelles sont les obligations l�gales d'un employeur lors d'un licenciement �conomique en France ?,general,general,conseil professionnel - juridique
+1136,Quelles obligations l�gales encadrent la mise en place du t�l�travail dans une entreprise ?,general,general,conseil professionnel - juridique
+1137,Comment mesurer la satisfaction client pour un restaurant sans multiplier les enqu�tes ?,general,general,conseil professionnel - marketing
+1138,R�dige une r�ponse polie � la r�clamation envoy�e par Bois & Sens.,general,general,redaction
+1139,R��cris ce paragraphe pour qu'il soit plus formel.,general,general,redaction
+1140,Condense cette proposition de 10 pages en un r�sum� d'une demi-page.,general,general,resume
+1141,Donne-moi un r�sum� en un paragraphe de cet article de recherche.,general,general,resume
+1142,R�dige une r�ponse polie � la r�clamation envoy�e par Bois & Sens.,general,general,redaction
+1143,Relis et am�liore ce paragraphe pour la grammaire et la clart�.,general,general,redaction
+1144,R�dige une r�ponse polie � la r�clamation envoy�e par Bois & Sens.,general,general,redaction
+1145,Traduis ce paragraphe en fran�ais.,general,general,traduction
+1146,Traduis cette fiche produit en allemand pour notre catalogue export.,general,general,traduction
+1147,R�sume les avantages et inconv�nients discut�s dans ce document.,general,general,resume
+1148,,,,
+1149,,,,
+1150,,,,
+1151,,,,
+1152,,,,
+1153,,,,
+1154,,,,
+1155,,,,
+1156,,,,
+1157,,,,
+1158,,,,
+1159,,,,
+1160,,,,
+1161,,,,
+1162,,,,
+1163,,,,
+1164,,,,
+1165,,,,
+1166,,,,
+1167,,,,
+1168,,,,
+1169,,,,
+1170,,,,
+1171,,,,
+1172,,,,
+1173,,,,
+1174,,,,
+1175,,,,
+1176,,,,
+1177,,,,
+1178,,,,
+1179,,,,
+1180,,,,
+1181,,,,
+1182,,,,
+1183,,,,
+1184,,,,
+1185,,,,
+1186,,,,
+1187,,,,
+1188,,,,
+1189,,,,
+1190,,,,
+1191,,,,
+1192,,,,
+1193,,,,
+1194,,,,
+1195,,,,
+1196,,,,
+1197,,,,
+1198,,,,
+1199,,,,
+1200,,,,
+1201,,,,
+1202,,,,
+1203,,,,
+1204,,,,
+1205,,,,
+1206,,,,
+1207,,,,
+1208,,,,
+1209,,,,
+1210,,,,
+1211,,,,
+1212,,,,
+1213,,,,
+1214,,,,
+1215,,,,
+1216,,,,
+1217,,,,
+1218,,,,
+1219,,,,
+1220,,,,
+1221,,,,
+1222,,,,
+1223,,,,
+1224,,,,
+1225,,,,
+1226,,,,
+1227,,,,
+1228,,,,
+1229,,,,
+1230,,,,
+1231,,,,
+1232,,,,
+1233,,,,
+1234,,,,
+1235,,,,
+1236,,,,
+1237,,,,
+1238,,,,
+1239,,,,
+1240,,,,
+1241,,,,
+1242,,,,
+1243,,,,
+1244,,,,

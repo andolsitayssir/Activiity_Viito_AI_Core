@@ -1,0 +1,420 @@
+{
+ "tasking": {
+  "tasking.task.create": [
+   [
+    "task",
+    "le titre de la nouvelle tâche",
+    "extract"
+   ],
+   [
+    "project",
+    "le projet de la nouvelle tâche",
+    "extract"
+   ],
+   ["due_day","int- jour echeance","extract"],
+   ["due_month","int- mois echeance","extract"],
+   ["due_year","int- année echeance","extract"],
+   [
+    "description",
+    "str - description de la tâche",
+    "extract"
+   ],
+   [
+    "priority",
+    "str - priorité de la tâche",
+    "extract"
+   ],
+   [
+    "assignees",
+    "les membres à assigner",
+    "extract"
+   ],
+   [
+    "labels",
+    "les libellés à ajouter",
+    "extract"
+   ],["status","str - statut de la tâche","extract"
+],
+["attachements","list[str] - noms des fichiers joints","extract"]
+ 
+  ],
+  "tasking.task.update": [
+   [
+    "task",
+    "la tâche à modifier",
+    "extract"
+   ],
+      [
+    "project",
+    "le projet de destination",
+    "extract"
+   ],
+   ["due_day","day","extract"],
+   ["due_month","month","extract"],
+   ["due_year","year","extract"],
+   ["due_hour","hour","extract"],
+    ["due_minute","minute","extract"],
+   [
+    "description",
+    "str - description de la tâche",
+    "extract"
+   ],
+   [
+    "priority",
+    "str - priorité de la tâche",
+    "extract"
+   ],
+   [
+    "assignees",
+    "les membres à assigner",
+    "extract"
+   ],
+   [
+    "labels",
+    "les libellés à ajouter",
+    "extract"
+   ],["status","str - statut de la tâche","extract"
+],
+["attachements","list[str] - noms des fichiers joints","extract"]
+ 
+  ],
+  "tasking.task.partial_update": [
+   [
+    "task",
+    "la tâche à modifier",
+    "extract"
+   ],
+      [
+    "project",
+    "le projet de destination",
+    "extract"
+   ],
+   ["due_day","int- jour echeance","extract"],
+   ["due_month","int- mois echeance","extract"],
+   ["due_year","int- année echeance","extract"],
+   [
+    "description",
+    "str - description de la tâche",
+    "extract"
+   ],
+   [
+    "priority",
+    "str - priorité de la tâche",
+    "extract"
+   ],
+   [
+    "assignees",
+    "les membres à assigner",
+    "extract"
+   ],
+   [
+    "labels",
+    "les libellés à ajouter",
+    "extract"
+   ],["status","str - statut de la tâche","extract"
+],
+["attachements","list[str] - noms des fichiers joints","extract"]
+ 
+  ],
+  "tasking.task.delete": [
+   [
+    "task",
+    "la tâche <titre>",
+    "target"
+   ],
+   [
+    "project",
+    "le projet de destination",
+    "extract"
+   ]
+  ],
+  "tasking.task.duplicate": [
+   [
+    "task",
+    "la tâche <titre>",
+    "target"
+   ],
+   [
+    "project",
+    "le projet de destination",
+    "extract"
+   ],
+   ["target_project","le projet de destination","extract"]
+  ],
+  "tasking.bucket.create": [
+   [
+    "project",
+    "le projet",
+    "extract"
+   ],
+   [
+    "title",
+    "le nom de la nouvelle colonne",
+    "extract"
+   ]
+  ],
+  "tasking.bucket.update": [
+   [
+    "bucket",
+    "la colonne à renommer",
+    "extract"
+   ],
+   [
+    "title",
+    "le nouveau nom de la colonne",
+    "extract"
+   ]
+  ],
+  "tasking.bucket.delete": [
+   [
+    "bucket",
+    "la colonne <nom>",
+    "target"
+   ]
+  ],
+  "tasking.bucket.move_task": [
+   [
+    "bucket",
+    "la colonne de destination",
+    "extract"
+   ],
+    [
+      "task",
+      "la tâche à déplacer",
+      "extract"
+    ]
+  ],
+  "tasking.project.create": [
+   [
+    "title",
+    "le nom du nouveau projet",
+    "extract"
+   ]
+  ],
+  "tasking.project.update": [
+   [
+    "project",
+    "le projet à modifier",
+    "extract"
+   ],
+   ["description","str - nouvelle description du projet","extract"]
+  ],
+  "tasking.project.delete": [
+   [
+    "project",
+    "le projet <nom>",
+    "target"
+   ]
+  ],
+  "tasking.project.duplicate": [
+   [
+    "project",
+    "le projet <nom>",
+    "target"
+   ]
+  ],
+  "tasking.project.read": [
+   [
+    "project",
+    "le projet <nom>",
+    "target"
+   ]
+  ],
+  "tasking.assignee.add": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+   [
+    "assignee",
+    "list[str]le membre à assigner",
+    "extract"
+   ],
+   ["project","le projet de destination","extract"]
+  ],
+  "tasking.assignee.remove": [
+   [
+    "assignee",
+    "le membre à retirer",
+    "extract"
+   ],
+    [
+     "task",
+     "la tâche",
+     "extract"
+    ]
+  ],
+  "tasking.assignee.bulk": [
+   [
+    "assignees",
+    "les membres à assigner",
+    "extract"
+   ],
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ]
+  ],
+  "tasking.label.add": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+   [
+    "label",
+    "le libellé à ajouter",
+    "extract"
+   ]
+  ],
+  "tasking.label.remove": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ]
+  ],
+  "tasking.label.bulk": [],
+  "tasking.comment.create": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+   [
+    "content",
+    "le contenu du commentaire",
+    "extract"
+   ]
+  ],
+  "tasking.comment.update": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+    [
+     "comment",
+     "le commentaire",
+     "extract"
+    ],
+    [
+     "content",
+     "le nouveau contenu du commentaire",
+     "extract"
+    ]
+
+  ],
+  "tasking.comment.delete": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+   [
+    "comment",
+    "le commentaire",
+    "extract"
+   ]
+  ],
+  "tasking.relation.create": [
+   [
+    "task",
+    "la tâche source",
+    "extract"
+   ],
+   [
+    "related_task",
+    "la tâche liée",
+    "extract"
+   ]
+  ],
+  "tasking.relation.delete": [
+   [
+    "task",
+    "la tâche source",
+    "extract"
+   ]
+  ],
+  "tasking.attachment.upload": [
+   [
+    "attachment",
+    "les noms des fichiers joints",
+    "extract"
+   ],["task","la tâche","extract"]
+  ],
+  "tasking.attachment.download": [
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ],
+   [
+    "attachments",
+    "les noms des pièces jointes",
+    "extract"
+   ]
+  ],
+  "tasking.attachment.delete": [
+   [
+    "attachment",
+    "le nom de la pièce jointe",
+    "extract"
+   ],
+   [
+    "task",
+    "la tâche",
+    "extract"
+   ]
+  ],
+  "tasking.share.link": [
+   [
+    "project",
+    "le projet à partager",
+    "extract"
+   ]
+  ],
+  "tasking.share.project": [
+   [
+    "project",
+    "le projet à partager",
+    "extract"
+   ],
+   [
+    "recipient",
+    "le destinataire du partage",
+    "extract"
+   ]
+  ],
+  "tasking.view.create": [
+   [
+    "project",
+    "le projet",
+    "extract"
+   ],
+   [
+    "view_name",
+    "le nom de la nouvelle vue",
+    "extract"
+   ]
+  ],
+  "tasking.view.update": [
+   [
+    "project",
+    "le projet",
+    "extract"
+   ]
+  ],
+  "tasking.view.delete": [
+   [
+    "project",
+    "le projet",
+    "extract"
+   ]
+  ],
+  "tasking.notification.list": [],
+  "tasking.notification.mark_read": []
+ }
+}

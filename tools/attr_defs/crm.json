@@ -1,0 +1,138 @@
+{
+  "crm": {
+    "crm.lead.create": [
+      
+      ["company", "nom de la societe", "extract"],
+      ["contact", "str", "extract"],
+      ["email", "email", "extract"],
+      ["phone", "number", "extract"],
+      ["revenue", "float", "extract"],
+      ["expected_revenue", "float", "extract"],
+      ["probability", "float", "extract"],
+      ["priority", "str", "extract"],
+      ["source", "str - nom de la source (ex: Site web)", "extract"],
+      ["stage", "str - nom du stade (ex: Qualified)", "extract"],
+      ["team", "str - nom de l'equipe (ex: Equipe support)", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"]
+    ],
+    "crm.lead.write": [
+      ["lead", "le lead TechNova", "target"],
+     
+      ["company", "nom de la societe", "extract"],
+      ["contact", "str", "extract"],
+      ["email", "str", "extract"],
+      ["phone", "str", "extract"],
+      ["revenue", "float", "extract"],
+      ["expected_revenue", "float", "extract"],
+      ["probability", "float", "extract"],
+      ["priority", "str", "extract"],
+      ["source", "str - nom de la source", "extract"],
+      ["stage", "str - nom du stade", "extract"],
+      ["status", "str", "extract"],
+      ["team", "str - nom de l'equipe", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["reason", "str - motif de perte", "extract"]
+    ],
+    "crm.lead.search_read": [
+      ["query", "str", "extract"],
+      ["stage", "str - nom du stade", "extract"],
+      ["status", "str", "extract"],
+      ["team", "str - nom de l'equipe", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"]
+    ],
+    "crm.lead.unlink": [
+      ["lead", "le lead TechNova", "target"]
+    ],
+    "crm.lead.action_archive": [
+      ["lead", "le lead TechNova", "target"]
+    ],
+    "crm.lead.action_restore": [
+      ["lead", "le lead TechNova", "target"]
+    ],
+    "crm.lead.action_unarchive": [
+      ["lead", "le lead TechNova", "target"]
+    ],
+    "crm.lead.action_set_won": [
+      ["lead", "le lead TechNova", "target"]
+
+    ],
+    "crm.lead.action_set_lost": [
+      ["lead", "le lead TechNova", "target"],
+      ["reason", "str - motif de perte", "extract"]
+    ],
+    "crm.lead.action_schedule_meeting": [
+      ["lead", "le lead TechNova", "target"],
+      ["meeting_day", "day", "extract"],["meeting_month", "month", "extract"],["meeting_year", "year", "extract"],
+      ["meeting_hour", "str", "extract"],
+      ["meeting_minute", "str", "extract"],
+      ["meeting_subject", "str", "extract"],
+      ["meeting_notes", "str", "extract"],
+      ["attendees", "list[str] - noms des participants", "extract"]
+    ],
+    "crm.lead.action_reschedule_meeting": [
+      ["lead", "le lead TechNova", "target"],
+      ["meeting_day", "day", "extract"],["meeting_month", "month", "extract"],["meeting_year", "year", "extract"],
+      ["meeting_hour", "str", "extract"],
+      ["meeting_minute", "str", "extract"],
+      ["meeting_subject", "str", "extract"],
+      ["attendees", "list[str] - noms des participants", "extract"]
+    ],
+    "crm.lead.log_meeting": [
+      ["lead", "le lead TechNova", "target"],
+      ["meeting_day", "day", "extract"],["meeting_month", "month", "extract"],["meeting_year", "year", "extract"],
+      ["meeting_hour", "str", "extract"],
+      ["meeting_minute", "str", "extract"],
+      ["meeting_subject", "str", "extract"],
+      ["meeting_notes", "str", "extract"],
+      ["attendees", "list[str] - noms des participants", "extract"]
+    ],
+    "crm.lead.convert_opportunity": [
+      ["lead", "le lead TechNova", "target"],
+      ["name", "str", "extract"],
+      ["company", "str - nom de la societe", "extract"],
+      ["partner", "str - nom du partenaire", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["team", "str - nom de l'equipe", "extract"]
+    ],
+    "crm.lead2opportunity.partner.action_apply": [
+      ["lead", "le lead a convertir", "target"],
+      ["name", "str", "extract"],
+      ["company", "str - nom de la societe", "extract"],
+      ["partner", "str - nom du partenaire", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["team", "str - nom de l'equipe", "extract"]
+    ],
+    "crm.lead2opportunity.partner.mass.action_mass_convert": [
+      ["leads", "list[str] - noms des leads", "extract"],
+      ["name", "str", "extract"],
+      ["company", "str - nom de la societe", "extract"],
+      ["partner", "str - nom du partenaire", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["team", "str - nom de l'equipe", "extract"]
+    ],
+    "crm.merge.opportunity.action_merge": [
+      ["merged_leads", "list[str] - noms des leads a fusionner", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["team", "str - nom de l'equipe", "extract"]
+    ],
+    "crm.lead.merge_opportunity": [
+      ["leads", "list[str]", "extract"],
+      ["assignee", "str - nom de l'assignee", "extract"],
+      ["team", "str - nom de l'equipe", "extract"]
+    ],
+    "crm.lead.lost.action_lost_reason_apply": [
+      ["leads", "list[str] - noms des leads", "extract"],
+      ["reason", "str - motif de perte", "extract"]
+    ],
+    "crm.lead.action_show_potential_duplicates": [
+      ["lead", "le lead TechNova", "target"]
+    ],
+    "crm.lead.pls.update.action_update_crm_lead_probabilities": [],
+    "crm.team.action_assign_leads": [
+      ["team", "l'équipe support", "target"],
+      ["leads", "list[str] - noms des leads", "extract"]
+    ],
+    "crm.team.action_opportunity_forecast": ["team", "l'équipe support", "target"],
+    "crm.team.action_your_pipeline": [["team", "l'équipe support", "target"],["stage", "str - nom du stade", "extract"]]
+  }
+}

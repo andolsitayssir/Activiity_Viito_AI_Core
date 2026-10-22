@@ -1,0 +1,97 @@
+[
+  {
+    "question": "Affiche les conversations en attente depuis plus de 24h",
+    "intent": "chatwoot",
+    "type": "conversations_filter"
+  },
+  {
+    "question": "Montre-moi toutes les conversations non résolues d'aujourd'hui",
+    "intent": "chatwoot",
+    "type": "conversations_filter"
+  },
+  {
+    "question": "Passe la conversation Acme Corp en priorité urgente",
+    "intent": "chatwoot",
+    "type": "conversations_toggle_priority"
+  },
+  {
+    "question": "Ajoute une tâche 'Préparer le rapport Q3' pour le 20 août",
+    "intent": "vikunja",
+    "type": "tasks_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Carreaux & Co.'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Dupont SARL'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Optima Conseil'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Marque tous les emails non lus de EcoConstruct comme lus",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque comme important l'email de Martin Lefèvre",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque tous les emails non lus de Habitat Moderne comme lus",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque comme important l'email de Michel Durand",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Quelles sont les charges déductibles pour un électricien auto-entrepreneur ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Quels indicateurs financiers un directeur d'agroalimentaire doit-il présenter à ses actionnaires ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Quelle est la différence entre amortissement linéaire et amortissement dégressif ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Comment un garagiste indépendant peut-il anticiper sa trésorerie sur les 6 prochains mois ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Fusionner les deux prospects en double pour Claire Dupuis",
+    "intent": "odoo",
+    "type": "crm_lead_merge_opportunity"
+  },
+  {
+    "question": "J'ai terminé la révision du contrat pour Marie Dubois. Envoie-lui le document final par email en lui demandant de le signer avant le 28 du mois, crée une tâche de relance automatique si je n'ai pas de retour, et ajoute une note sur sa fiche client pour tracer la date d'envoi.",
+    "intent": "odoo",
+    "type": "crm_lead_search_read"
+  },
+  {
+    "question": "Liste les prospects créés le 28 du mois",
+    "intent": "odoo",
+    "type": "crm_lead_search_read"
+  },
+  {
+    "question": "Déplacer l'affaire Dupont SARL vers l'étape Négociation",
+    "intent": "odoo",
+    "type": "crm_lead_write_stage"
+  }
+]

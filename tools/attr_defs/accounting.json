@@ -1,0 +1,247 @@
+{
+  "accounting": {
+    "account.bank.statement.line.action_undo_reconciliation": [
+      ["statement_line", "la ligne de relevé bancaire", "target"]
+    ],
+    "account.journal.action_create_new": [
+      ["journal", "le journal", "extract"],
+      ["type", "str", "extract"],
+      ["company", "la société", "extract"]
+    ],
+    "account.journal.action_create_vendor_bill": [
+      ["journal", "le journal de la facture fournisseur", "target"]
+    ],
+    "account.journal.button_fetch_in_einvoices": [
+      ["journal", "le journal de facturation électronique", "target"]
+    ],
+    "account.journal.create_bank_statement": [
+      ["journal", "le journal de banque", "extract"],
+      ["statement", "le relevé bancaire", "extract"],
+      ["bank_account", "le compte bancaire", "extract"],
+      ["from_amount", "amount", "extract"],
+      ["to_amount", "amount", "extract"],
+      ["day", "day", "extract"],["month", "month", "extract"],["year", "year", "extract"]
+    ],
+    "account.journal.create_customer_payment": [
+      ["journal", "le journal de paiement", "extract"],
+      ["customer", "le client", "extract"],
+      ["payment_amount", "amount", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_method", "le moyen de paiement", "extract"],
+      ["payment_day", "day", "extract"],["payment_month", "month", "extract"],["payment_year", "year", "extract"],
+      ["payment_reference", "ref", "extract"]
+    ],
+    "account.journal.create_supplier_payment": [
+      ["journal", "le journal de paiement", "extract"],
+      ["supplier", "le fournisseur", "extract"],
+      ["payment_amount", "amount", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_method", "le moyen de paiement", "extract"],
+      ["payment_day", "day", "extract"],["payment_month", "month", "extract"],["payment_year", "year", "extract"],
+      ["payment_reference", "ref", "extract"]
+    ],
+    "account.move.action_duplicate": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.action_force_register_payment": [
+      ["invoice", "la facture", "extract"],
+      ["payment_amount", "amount", "extract"],
+      ["payment_method", "le moyen de paiement", "extract"],
+      ["payment_day", "day", "extract"],["payment_month", "month", "extract"],["payment_year", "year", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_reference", "ref", "extract"]
+    ],
+    "account.move.action_get": [
+      ["invoice", "la facture F2026-001", "target"],
+      ["recipient_email", "email", "extract"],
+      ["body", "str", "extract"]
+    ],
+    "account.move.action_invoice_download_pdf": [
+      ["invoice", "la facture F2026-001", "target"],
+      ["customer", "le client", "extract"]
+    ],
+    "account.move.action_post": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.action_print_pdf": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.action_register_payment": [
+      ["invoice", "la facture", "extract"],
+      ["payment_amount", "amount", "extract"],
+      ["payment_method", "le moyen de paiement", "extract"],
+      ["payment_day", "day", "extract"],["payment_month", "month", "extract"],["payment_year", "year", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_reference", "ref", "extract"]
+    ],
+    "account.move.action_reverse": [
+      ["invoice", "la facture", "extract"],
+      ["reason", "str", "extract"],
+      ["day", "day", "extract"],["month", "month", "extract"],["year", "year", "extract"],
+      ["refund_method", "str", "extract"]
+    ],
+    "account.move.action_switch_move_type": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.action_toggle_block_payment": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.button_cancel": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.button_draft": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.button_hash": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.button_request_cancel": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.check_move_sequence_chain": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.create": [
+      ["type", "str", "extract"],
+      ["partner", "le partenaire", "extract"],
+      ["customer", "le client", "extract"],
+      ["supplier", "le fournisseur", "extract"],
+      ["company", "la société", "extract"],
+      ["journal", "le journal", "extract"],
+      ["invoice_number", "ref", "extract"],
+      ["invoice_day", "day", "extract"],["invoice_month", "month", "extract"],["invoice_year", "year", "extract"],
+      ["due_day", "day", "extract"],["due_month", "month", "extract"],["due_year", "year", "extract"],
+      ["amount", "amount", "extract"],
+      ["amount_without_tax", "amount", "extract"],
+      ["tax_amount", "amount", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_reference", "ref", "extract"],
+      ["body", "str", "extract"],
+      ["lines", "les lignes de facture", "extract"],
+      ["product", "le produit", "extract"],
+      ["quantity", "quantity", "extract"],
+      ["price_unit", "amount", "extract"]
+    ],
+    "account.move.get_currency_rate": [
+      ["company", "la société", "extract"],
+      ["from_currency", "currency", "extract"],
+      ["to_currency", "currency", "extract"],
+      ["day", "day", "extract"],["month", "month", "extract"],["year", "year", "extract"]
+    ],
+    "account.move.js_assign_outstanding_line": [
+      ["invoice", "la facture", "extract"],
+      ["statement_line", "la ligne de relevé bancaire", "extract"]
+    ],
+    "account.move.open_payments": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.open_reconcile_view": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.reversal.reverse_moves": [
+      ["journal", "le journal", "extract"],
+      ["company", "la société", "extract"],
+      ["reason", "str", "extract"],
+      ["day", "day", "extract"],["month", "month", "extract"],["year", "year", "extract"],
+      ["refund_method", "str", "extract"],
+      ["use_day", "day", "extract"], ["use_month", "month", "extract"], ["use_year", "year", "extract"],
+      ["is_modify", "bool", "extract"]
+    ],
+    "account.move.search_read": [
+      ["query", "str", "extract"],
+      ["invoice_number", "ref", "extract"],
+      ["partner", "le partenaire", "extract"],
+      ["customer", "le client", "extract"],
+      ["supplier", "le fournisseur", "extract"],
+      ["company", "la société", "extract"],
+      ["journal", "le journal", "extract"],
+      ["type", "str", "extract"],
+      ["status", "str", "extract"],
+      ["from_day", "day", "extract"],["from_month", "month", "extract"],["from_year", "year", "extract"],
+      ["to_day", "day", "extract"],["to_month", "month", "extract"],["to_year", "year", "extract"],
+      ["from_amount", "amount", "extract"],
+      ["to_amount", "amount", "extract"],
+      ["limit", "count", "extract"]
+    ],
+    "account.move.unlink": [
+      ["invoice", "la facture F2026-001", "target"]
+    ],
+    "account.move.write": [
+      ["invoice", "la facture", "extract"],
+      ["type", "str", "extract"],
+     
+      ["customer", "le client", "extract"],
+      ["supplier", "le fournisseur", "extract"],
+      ["invoice_number", "ref", "extract"],
+      ["invoice_day", "day", "extract"],["invoice_month", "month", "extract"],["invoice_year", "year", "extract"],
+      ["due_day", "day", "extract"],["due_month", "month", "extract"],["due_year", "year", "extract"],
+      ["amount", "amount", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_reference", "ref", "extract"],
+      ["body", "str", "extract"]
+    ],
+    "account.payment.action_cancel": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["amount","str","extract"],
+      ["name","str","extract"]
+    ],
+    "account.payment.action_draft": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["amount","str","extract"],
+      ["customer","str","extract"]
+    ],
+    "account.payment.action_post": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["amount","str","extract"],
+      ["customer","str","extract"]
+    ],
+    "account.payment.action_reject": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["amount","str","extract"],
+      ["currency","currency","extract"]
+    ],
+    "account.payment.action_validate": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["amount","str","extract"],
+      ["customer","str","extract"]
+    ],
+    "account.payment.mark_as_sent": [
+      ["payment", "le paiement P2026-001", "target"],
+      ["recipient_email", "email", "extract"],
+      ["amount","str","extract"],
+      ["customer","str","extract"]
+    ],
+    "account.payment.register.create_payments": [
+      
+      ["customer", "le client", "extract"],
+      ["supplier", "le fournisseur", "extract"],
+      ["payment_amount", "amount", "extract"],
+      ["currency", "currency", "extract"],
+      ["payment_type", "str", "extract"],
+      ["payment_day", "day", "extract"],["payment_month", "month", "extract"],["payment_year", "year", "extract"],
+      ["journal", "le journal", "extract"],
+      ["payment_method", "le moyen de paiement", "extract"],
+      ["payment_reference", "ref", "extract"]
+    ],
+    "account.tax.compute_all": [
+      ["price_unit", "amount", "extract"],
+      ["quantity", "quantity", "extract"],
+      ["currency", "currency", "extract"],
+      ["product", "le produit", "extract"],
+      ["custumer", "le partenaire", "extract"],
+      ["tax", "la taxe TVA", "extract"],
+      ["is_refund", "bool", "extract"]
+    ],
+    "res.partner.search_read": [
+      ["query", "str", "extract"],
+      ["name", "str", "extract"],
+      ["company", "la société", "extract"],
+      ["email", "email", "extract"],
+      ["phone", "phone", "extract"],
+      ["city", "str", "extract"],
+      ["is_customer", "bool", "extract"],
+      ["is_supplier", "bool", "extract"],
+      ["limit", "count", "extract"]
+    ]
+  }
+}

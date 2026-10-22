@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Écris un post LinkedIn annonçant le 10e anniversaire de notre entreprise.",
+    "intent": "general",
+    "type": "creative_writing"
+  },
+  {
+    "question": "Créer une facture pour la commande Acme Corp",
+    "intent": "workflow",
+    "type": "Odoo-ERP"
+  },
+  {
+    "question": "Affiche le rapport DMARC reçu ce mois-ci pour exemple.fr",
+    "intent": "workflow",
+    "type": "stalwart"
+  },
+  {
+    "question": "On est le 28 du mois, j'ai 4 clients qui n'ont pas encore transmis leurs pièces comptables. Envoie un email de relance personnalisé à chacun d'eux — Fleuriste Pétale, Groupe Delta Conseil, Immo Plus et Boulangerie du Marché — en précisant la date limite de vendredi et la liste des documents manquants qui se trouvent dans leurs dossiers respectifs, crée une tâche de suivi pour chaque client dans mon planning de la semaine, et génère un tableau de bord récapitulatif de l'avancement de toutes mes clôtures du mois.",
+    "intent": "multi_intent",
+    "type": "chatwoot+nextcloud+vikunja+onlyoffice"
+  },
+  {
+    "question": "Affiche les tâches de ce mois-ci",
+    "intent": "workflow",
+    "type": "vikunja"
+  },
+  {
+    "question": "Condense ce guide de 30 pages sur la conformité RGPD.",
+    "intent": "general",
+    "type": "summary"
+  },
+  {
+    "question": "Convertir le prospect de Sarah Cohen en opportunité",
+    "intent": "workflow",
+    "type": "Odoo-CRM"
+  },
+  {
+    "question": "Retrouve les minutes de la réunion de direction du mois dernier",
+    "intent": "surfsense",
+    "type": "internal_kb"
+  },
+  {
+    "question": "Propose des pistes pour réduire notre impact environnemental au quotidien.",
+    "intent": "general",
+    "type": "brainstorming"
+  },
+  {
+    "question": "Quelle est la différence entre une récession et une dépression économique ?",
+    "intent": "general",
+    "type": "general_knowledge"
+  },
+  {
+    "question": "Que dit notre base de connaissances sur les meilleures pratiques commerciales adoptées en tant que restaurateur ?",
+    "intent": "surfsense",
+    "type": "internal_kb"
+  },
+  {
+    "question": "Retrouve le dernier organigramme interne à jour de l'équipe Lancement produit Q4",
+    "intent": "surfsense",
+    "type": "internal_kb"
+  },
+  {
+    "question": "Crée un dossier partagé pour le projet 'Gala Annuel 2026' dans Nextcloud, ajoute Vincent comme membre, crée les tâches principales dans Vikunja avec échéance le 15 novembre, et prépare le modèle de rapport hebdomadaire dans ONLYOFFICE pour le suivi.",
+    "intent": "multi_intent",
+    "type": "nextcloud+vikunja+onlyoffice"
+  },
+  {
+    "question": "Notre fournisseur vient de m'appeler pour me dire qu'il ne peut pas honorer ma commande. Envoie un email urgent à nos deux fournisseurs alternatifs — Institut Beauté Zen et Garage Renaud — pour leur demander s'ils peuvent livrer 5000 tuiles de Bavent avant jeudi, modifie le menu de la semaine dans nos documents partagés en conséquence, envoie un message à toute l'équipe pour les informer du changement, et repousse la réunion de jeudi à vendredi même heure.",
+    "intent": "multi_intent",
+    "type": "chatwoot+Odoo-ERP+onlyoffice+nextcloud"
+  },
+  {
+    "question": "Corrige les fautes d'orthographe dans ce courrier.",
+    "intent": "general",
+    "type": "rewriting"
+  },
+  {
+    "question": "Ajoute un événement 'Réunion de lancement Campagne marketing rentrée' au calendrier de l'équipe",
+    "intent": "workflow",
+    "type": "nextcloud"
+  },
+  {
+    "question": "Prépare une présentation de 5 slides sur notre offre pour Bretagne Fraîcheur",
+    "intent": "workflow",
+    "type": "onlyoffice"
+  },
+  {
+    "question": "Résume les notes internes prises pendant l'entretien de recrutement de Bruno",
+    "intent": "surfsense",
+    "type": "internal_kb"
+  },
+  {
+    "question": "Réponds à Lisa Meyer en utilisant le modèle 'Confirmation de remboursement'",
+    "intent": "workflow",
+    "type": "chatwoot"
+  },
+  {
+    "question": "Retrouve les échanges internes sur la stratégie tarifaire du projet 'build agent'",
+    "intent": "surfsense",
+    "type": "internal_kb"
+  }
+]

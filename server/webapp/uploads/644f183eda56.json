@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Affiche les conversations en attente depuis plus de 24h",
+    "intent": "chatwoot",
+    "type": "conversations_filter"
+  },
+  {
+    "question": "Montre-moi toutes les conversations non résolues d'aujourd'hui",
+    "intent": "chatwoot",
+    "type": "conversations_filter"
+  },
+  {
+    "question": "Passe la conversation Acme Corp en priorité urgente",
+    "intent": "chatwoot",
+    "type": "conversations_toggle_priority"
+  },
+  {
+    "question": "Ajoute une tâche 'Préparer le rapport Q3' pour le 20 août",
+    "intent": "vikunja",
+    "type": "tasks_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Carreaux & Co.'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Dupont SARL'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Crée le projet 'Chantier Optima Conseil'",
+    "intent": "vikunja",
+    "type": "projects_create"
+  },
+  {
+    "question": "Marque tous les emails non lus de EcoConstruct comme lus",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque comme important l'email de Martin Lefèvre",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque tous les emails non lus de Habitat Moderne comme lus",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Marque comme important l'email de Michel Durand",
+    "intent": "stalwart",
+    "type": "email_flag_mark"
+  },
+  {
+    "question": "Quelles sont les charges déductibles pour un électricien auto-entrepreneur ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Quels indicateurs financiers un directeur d'agroalimentaire doit-il présenter à ses actionnaires ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Quelle est la différence entre amortissement linéaire et amortissement dégressif ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Comment un garagiste indépendant peut-il anticiper sa trésorerie sur les 6 prochains mois ?",
+    "intent": "general_question",
+    "type": "pro_comptabilite_finance"
+  },
+  {
+    "question": "Fusionner les deux prospects en double pour Claire Dupuis",
+    "intent": "odoo",
+    "type": "crm_lead_merge_opportunity"
+  },
+  {
+    "question": "J'ai terminé la révision du contrat pour Marie Dubois. Envoie-lui le document final par email en lui demandant de le signer avant le 28 du mois, crée une tâche de relance automatique si je n'ai pas de retour, et ajoute une note sur sa fiche client pour tracer la date d'envoi.",
+    "intent": "odoo",
+    "type": "crm_lead_search_read"
+  },
+  {
+    "question": "Liste les prospects créés le 28 du mois",
+    "intent": "odoo",
+    "type": "crm_lead_search_read"
+  },
+  {
+    "question": "Déplacer l'affaire Dupont SARL vers l'étape Négociation",
+    "intent": "odoo",
+    "type": "crm_lead_write_stage"
+  },
+  {
+    "question": "Génère un tableau de suivi des commandes en cours de traitement avec délai restant",
+    "intent": "onlyoffice",
+    "type": "spreadsheet_create"
+  },
+  {
+    "question": "Ouvre le fichier txt 'Bilan financier T3'.",
+    "intent": "onlyoffice",
+    "type": "document_open"
+  },
+  {
+    "question": "Ouvre le modèle 'Compte-rendu de réunion'.",
+    "intent": "onlyoffice",
+    "type": "template_open"
+  },
+  {
+    "question": "Crée un nouveau document à partir du modèle de contrat standard.",
+    "intent": "onlyoffice",
+    "type": "document_create_from_template"
+  },
+  {
+    "question": "Limite l'accès au dossier 'Contrats' aux seuls directeurs.",
+    "intent": "nextcloud",
+    "type": "folder_permissions_update"
+  },
+  {
+    "question": "Compare la version actuelle du 'Cahier des charges v2' avec celle d'il y a une semaine.",
+    "intent": "nextcloud",
+    "type": "file_version_compare"
+  },
+  {
+    "question": "Montre les différences entre les deux dernières versions du 'Business plan'.",
+    "intent": "nextcloud",
+    "type": "file_version_compare"
+  },
+  {
+    "question": "Compare les versions du document avant et après les modifications d'hier.",
+    "intent": "nextcloud",
+    "type": "file_version_compare"
+  },
+  {
+    "question": "Selon nos sources indexées, ajoute une note sur cette source : 'à vérifier avec le service juridique'.",
+    "intent": "surfsense",
+    "type": "source_note_add"
+  },
+  {
+    "question": "D'après nos sources documentaires, affiche l'historique des versions de cette note.",
+    "intent": "surfsense",
+    "type": "note_history_view"
+  },
+  {
+    "question": "Selon la base de donné interne, quelles sont les principales conclusions de mes documents sur la transition énergétique ?",
+    "intent": "surfsense",
+    "type": "documents_query"
+  },
+  {
+    "question": "Dans notre base interne, d'après mes sources, quels sont les risques identifiés sur ce projet ?",
+    "intent": "surfsense",
+    "type": "documents_query"
+  },
+  {
+    "question": "J'ai terminé la révision du contrat pour Julie Lambert. Envoie-lui le document final par email en lui demandant de le signer avant le 15 juillet, crée une tâche de relance automatique si je n'ai pas de retour, et ajoute une note sur sa fiche client pour tracer la date d'envoi.",
+    "intent": "stalwart, vikunja, odoo",
+    "type": "email_attachments + tasks_create + contacts_notes_create"
+  },
+  {
+    "question": "Notre fournisseur Boulangerie Leclerc ne peut pas honorer ma commande d'un lot de robinetterie cette semaine. Envoie un email urgent à Acme Corp pour leur demander une livraison avant vendredi 17h, crée une tâche de suivi de la commande, et informe l'équipe via un message.",
+    "intent": "stalwart, vikunja, chatwoot",
+    "type": "email_send + tasks_create + messages_create"
+  },
+  {
+    "question": "Explique-moi la différence entre un devis et un bon de commande, puis crée le devis pour l'affaire Acme Corp avec les mêmes conditions que le mois dernier.",
+    "intent": "general_question, odoo",
+    "type": "pro_juridique + sale_order_create"
+  },
+  {
+    "question": "Quelles sont les bonnes pratiques pour prioriser un backlog quand tout semble urgent ? Applique cette logique et réorganise mes tâches du projet Marketing par priorité.",
+    "intent": "general_question, vikunja",
+    "type": "pro_technique_metier + tasks_bulk_update"
+  },
+  {
+    "question": "Quelle est la formule de politesse la plus adaptée pour relancer un client sans le braquer ? Utilise-la pour rédiger et envoyer un email de relance à Michel Durand.",
+    "intent": "general_question, stalwart",
+    "type": "pro_marketing_commerce + email_send"
+  },
+  {
+    "question": "Crée un dossier 'Contrats' avec sous-dossiers par type de contrat.",
+    "intent": "nextcloud",
+    "type": "folder_create_structured"
+  },
+  {
+    "question": "Crée un lien de partage pour le document 'Procédure interne' avec accès équipe.",
+    "intent": "nextcloud",
+    "type": "file_share_link_create"
+  },
+  {
+    "question": "Crée un dossier 'Notes de service' avec structure par service.",
+    "intent": "nextcloud",
+    "type": "folder_create_structured"
+  },
+  {
+    "question": "Crée un dossier 'Archives communication' avec sous-dossiers par campagne.",
+    "intent": "nextcloud",
+    "type": "folder_create_structured"
+  }
+]

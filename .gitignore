@@ -1,0 +1,21 @@
+.env
+
+\env
+mlflow.db
+memory/execution_ckpt.sqlite
+mlruns/
+server/metrics/
+server/eval/test_data/*.xlsx
+tools-secrets.txt
+toools api list/
+server/webapp/viito_store.json
+server/webapp/frontend/node_modules/
+server/webapp/frontend/dist/
+.git_tmp/
+.pytest_cache/
+/memory/
+/metrics/runs/
+mlflow.db
+mlflow.db.bak
+
+

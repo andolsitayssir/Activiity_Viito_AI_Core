@@ -1,0 +1,209 @@
+{
+ "knowledge_kb": {
+  "kb.answer.grounded": [
+   [
+    "question",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.export.pdf": [
+   [
+    "report",
+    "le rapport mensuel",
+    "target"
+   ]
+  ],
+  "kb.generate.image": [
+   [
+    "subject",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ],
+   [
+    "format",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.generate.podcast": [
+   [
+    "subject",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.generate.report": [
+   [
+    "subject",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.generate.video": [
+   [
+    "subject",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.ingest.document": [
+   [
+    "document_names",
+    "list[str]",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ],
+   [
+    "auto_classify",
+    "bool",
+    "extract"
+   ]
+  ],
+  "kb.ingest.url": [
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.ingest.youtube": [
+   [
+    "title",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.note.create": [
+   [
+    "title",
+    "str",
+    "extract"
+   ],
+   [
+    "content",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.search.fulltext": [
+   [
+    "search_query",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.search.vector": [
+   [
+    "search_query",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.space.create": [
+   [
+    "name",
+    "str",
+    "extract"
+   ],
+   [
+    "parent_space",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.space.delete": [
+   [
+    "space",
+    "l'espace de connaissance",
+    "target"
+   ]
+  ],
+  "kb.space.read": [
+   [
+    "space",
+    "l'espace de connaissance",
+    "target"
+   ]
+  ],
+  "kb.space.update": [
+   [
+    "space",
+    "str",
+    "extract"
+   ],
+   [
+    "members",
+    "list[str]",
+    "extract"
+   ],
+   [
+    "permissions",
+    "str",
+    "extract"
+   ]
+  ],
+  "kb.status.batch": [],
+  "kb.status.processing": [
+   [
+    "document",
+    "str",
+    "extract"
+   ],
+   [
+    "space",
+    "str",
+    "extract"
+   ]
+  ]
+ }
+}

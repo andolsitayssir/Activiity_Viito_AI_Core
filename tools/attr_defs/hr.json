@@ -1,0 +1,222 @@
+{
+ "hr": {
+  "hr.leave.action_approve": [
+   ["employee", "le congé de Jean Dupont", "target"],
+   ["start_day", "day", "extract"],["start_month", "month", "extract"],["start_year", "year", "extract"],
+   ["end_day", "day", "extract"],["end_month", "month", "extract"],["end_year", "year", "extract"],
+   ["period", "int- nombre de jours", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.leave.action_refuse": [
+   ["employee", "le congé de Jean Dupont", "target"],
+   ["start_day", "day", "extract"],["start_month", "month", "extract"],["start_year", "year", "extract"],
+   ["end_day", "day", "extract"],["end_month", "month", "extract"],["end_year", "year", "extract"],
+   ["number_of_days", "number", "extract"],
+   ["period", "str", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.leave.action_cancel": [
+   ["employee", "le congé de Jean Dupont", "target"],
+   ["start_day", "day", "extract"],["start_month", "month", "extract"],["start_year", "year", "extract"],
+   ["end_day", "day", "extract"],["end_month", "month", "extract"],["end_year", "year", "extract"],
+   ["number_of_days", "number", "extract"],
+   ["period", "int- nombre de jours", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.leave.action_back_to_approval": [
+   ["employee", "le congé de Jean Dupont", "target"],
+   ["start_day", "day", "extract"],["start_month", "month", "extract"],["start_year", "year", "extract"],
+   ["end_day", "day", "extract"],["end_month", "month", "extract"],["end_year", "year", "extract"],
+   ["number_of_days", "number", "extract"],
+   ["period", "int- nombre de jours", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.leave.allocation.action_approve": [
+   ["allocation", "l'allocation congés de Jean Dupont", "target"],
+   ["number_of_days", "number", "extract"],
+   ["period", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.leave.allocation.action_refuse": [
+   ["allocation", "l'allocation congés de Jean Dupont", "target"],
+   ["number_of_days", "number", "extract"],
+   ["period", "str", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_approve": [
+    ["employee", "l'employé Jean Dupont", "extract"],
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["category", "la catégorie Repas", "extract"],
+   ["description", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_refuse": [
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["category", "la catégorie Repas", "extract"],
+   ["description", "str", "extract"],
+   ["reason", "str", "extract"],
+   ["status", "str", "extract"],
+   ["employee", "l'employé Jean Dupont", "extract"]
+  ],
+  "hr.expense.action_pay": [
+    ["employee", "l'employé Jean Dupont", "extract"],
+
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["description", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_post": [
+    ["employee", "l'employé Jean Dupont", "extract"],
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["description", "str", "eproposition_commerciale.pdfxtract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_submit": [
+    ["employee", "l'employé Jean Dupont", "extract"],
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["category", "la catégorie Repas", "extract"],
+   ["description", "str", "extract"],
+   ["attachments", "la pièce jointe facture.pdf", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_reset": [
+     ["employee", "l'employé Jean Dupont", "extract"],
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["description", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.expense.action_split_wizard": [
+     ["employee", "l'employé Jean Dupont", "extract"],
+   ["expense", "la note de frais déplacement", "target"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["category", "la catégorie Repas", "extract"],
+   ["description", "str", "extract"]
+  ],
+  "hr.expense.create_expense_from_attachments": [
+     ["employee", "l'employé Jean Dupont", "extract"],
+   ["attachments", "la pièce jointe facture.pdf", "extract"],
+   ["amount", "number", "extract"],
+   ["currency", "str", "extract"],
+   ["expense_day", "day", "extract"],["expense_month", "month", "extract"],["expense_year", "year", "extract"],
+   ["category", "la catégorie Repas", "extract"],
+   ["description", "str", "extract"]
+  ],
+  "hr.applicant.action_create_meeting": [
+   ["applicant", "le candidat Marie Durand", "extract"],
+   ["meeting_day", "day", "extract"],["meeting_month", "month", "extract"],["meeting_year", "year", "extract"],
+   ["meeting_hour", "hour", "extract"],
+   ["meeting_minute", "minute", "extract"],
+   ["meeting_subject", "str", "extract"],
+   ["attendees", "l'interviewer", "extract"]
+  ],
+  "hr.applicant.action_send_email": [
+   ["applicant", "le candidat Marie Durand", "target"],
+   ["email", "str", "extract"],
+   ["description", "str", "extract"]
+  ],
+  "hr.applicant.archive_applicant": [
+   ["applicant", "le candidat Marie Durand", "target"]
+  ],
+  "hr.applicant.create_employee_from_applicant": [
+   ["applicant", "le candidat Marie Durand", "target"],
+   ["hire_day", "day", "extract"],["hire_month", "month", "extract"],["hire_year", "year", "extract"],
+   ["job_title", "str", "extract"],
+   ["department", "le département Finance", "extract"],
+   ["email", "str", "extract"],
+   ["phone", "str", "extract"],
+   ["barcode", "str", "extract"]
+  ],
+  "hr.employee.create": [
+   ["name", "str", "extract"],
+   ["email", "str", "extract"],
+   ["phone", "str", "extract"],
+   ["job_title", "str", "extract"],
+   ["department", "le département Finance", "extract"],
+   ["barcode", "str", "extract"],
+  ["hire_day", "day", "extract"],["hire_month", "month", "extract"],["hire_year", "year", "extract"]
+  ],
+  "hr.employee.write": [
+   ["employee", "l'employé Jean Dupont", "target"],
+   ["name", "str", "extract"],
+   ["email", "str", "extract"],
+   ["phone", "str", "extract"],
+   ["job_title", "str", "extract"],
+   ["department", "le département Finance", "extract"],
+   ["barcode", "str", "extract"],
+  ["hire_day", "day", "extract"],["hire_month", "month", "extract"],["hire_year", "year", "extract"]
+  ],
+  "hr.employee.search_read": [
+   ["name", "str", "extract"],
+   ["email", "str", "extract"],
+   ["phone", "str", "extract"],
+   ["job_title", "str", "extract"],
+   ["department", "le département Finance", "extract"],
+   ["barcode", "str", "extract"],
+   ["hire_day", "day", "extract"],["hire_month", "month", "extract"],["hire_year", "year", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.employee.unlink": [
+   ["employee", "l'employé Jean Dupont", "target"]
+  ],
+  "hr.employee.action_archive": [
+   ["employee", "l'employé Jean Dupont", "target"]
+  ],
+  "hr.employee.action_unarchive": [
+   ["employee", "l'employé Jean Dupont", "target"]
+  ],
+  "hr.employee.action_create_user": [
+   ["employee", "l'employé Jean Dupont", "target"],
+   ["email", "str", "extract"]
+  ],
+  "hr.employee.action_create_users": [
+   ["employee", "l'employé Jean Dupont", "extract"],
+   ["department", "le département Finance", "extract"]
+  ],
+  "hr.employee.action_related_contacts": [
+   ["employee", "l'employé Jean Dupont", "target"]
+  ],
+  "hr.employee.generate_random_barcode": [
+   ["employee", "l'employé Jean Dupont", "target"]
+  ],
+  "hr.attendance.action_approve_overtime": [
+   ["attendance", "le pointage de Jean Dupont", "target"],
+   ["period", "int- nombre de heures", "extract"],
+   ["overtime_reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.attendance.action_refuse_overtime": [
+   ["attendance", "le pointage de Jean Dupont", "target"],
+   ["period", "str", "extract"],
+   ["overtime_reason", "str", "extract"],
+   ["status", "str", "extract"]
+  ],
+  "hr.attendance.get_kiosk_url": [],
+  "hr.department.get_department_hierarchy": [
+   ["department", "le département Finance", "target"]
+  ]
+ }
+}
